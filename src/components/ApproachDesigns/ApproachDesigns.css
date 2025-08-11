@@ -1,0 +1,22 @@
+/* ApproachDesigns.css */
+.approach-container {
+  margin: 0 auto;
+  padding: 100px;
+  text-align: center;
+  background-color: #e5e7eb;
+}
+
+.approachDesigns {
+  font-size: 35px;
+  margin-bottom: 16px;
+  font-weight: 600;
+
+}
+
+.approachDesignsText {
+  font-size: 22px;
+}
+
+.approachDesignsSpan {
+  font-weight: 600;
+}

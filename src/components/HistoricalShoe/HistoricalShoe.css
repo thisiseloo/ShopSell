@@ -1,0 +1,30 @@
+.HistoricalShoeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Responsiv üçün */
+    max-width: 1230px;
+    /* Eni məhdudlaşdırır */
+    margin: 0 auto;
+    background-color: rgb(250, 255, 234);
+}
+
+.image-side {
+    flex: 1;
+    text-align: center;
+}
+
+.HistoricalShoeImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-side {
+    flex: 1;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+    padding: 100px;
+}

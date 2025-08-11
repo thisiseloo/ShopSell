@@ -1,0 +1,10 @@
+.shopsell {
+    font-size: 250px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    text-align: center;
+    color: #f9a8d4;
+    /* color: #fbcfe8; */
+    background-color: #e5e7eb;
+    font-weight: 700;
+}

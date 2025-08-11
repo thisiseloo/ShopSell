@@ -1,0 +1,16 @@
+.custom-input input {
+    width: 150px;
+    /* Input eni */
+}
+
+.custom-btn {
+    width: 150px;
+    /* Buton eni */
+}
+
+.newsletter-section {
+    background-color: #290041;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

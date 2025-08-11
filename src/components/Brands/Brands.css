@@ -1,11 +1,16 @@
 .slider-container {
   margin: 0 auto;
-  width: 100%; /* Tam ekran eni */
-  background-color: white; /* Qırmızı fon containera */
-  padding: 17px 0; /* yuxarı aşağı padding */
-  overflow-x: hidden; /* kənara çıxmasın */
+  width: 100%;
+  /* Tam ekran eni */
+  background-color: white;
+  /* Qırmızı fon containera */
+  padding: 17px 0;
+  /* yuxarı aşağı padding */
+  overflow-x: hidden;
+  /* kənara çıxmasın */
   display: flex;
-  justify-content: center; /* İçindəkini mərkəzlə */
+  justify-content: center;
+  /* İçindəkini mərkəzlə */
 }
 
 .logo-slider {
@@ -17,11 +22,16 @@
   cursor: grab;
   user-select: none;
 
-  max-width: 1220px; /* Sabit maksimum genişlik */
-  width: 100%; /* kiçik ekranlarda da sıxışsın */
-  padding: 0 18px; /* içində sağ-sola az padding */
-  box-sizing: border-box; /* padding daxil et ölçüyə */
-  background-color: transparent; /* fon yox, çünki container-da var */
+  max-width: 1220px;
+  /* Sabit maksimum genişlik */
+  width: 100%;
+  /* kiçik ekranlarda da sıxışsın */
+  padding: 0 18px;
+  /* içində sağ-sola az padding */
+  box-sizing: border-box;
+  /* padding daxil et ölçüyə */
+  background-color: transparent;
+  /* fon yox, çünki container-da var */
 }
 
 .logo-slider::-webkit-scrollbar {
@@ -50,10 +60,3 @@
 .logo-item img:hover {
   transform: scale(1.1);
 }
-
-
-/* 
-.shop_by_brand {
-  font-size: 50px;
-  margin-top: 100px;
-} */

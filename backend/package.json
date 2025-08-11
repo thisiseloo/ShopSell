@@ -6,7 +6,7 @@
     "jsonwebtoken": "^9.0.2"
   },
   "name": "backend",
-  "homepage": "https://github.com/thisiseloo/Shopsell.git",
+  
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {

@@ -32,42 +32,42 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-100">
+    <div className="min-h-screen flex justify-center items-center bg-gray-100 px-4">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 rounded shadow-md w-full max-w-md"
+        className="bg-white p-6 sm:p-8 rounded shadow-md w-full max-w-lg sm:max-w-md"
       >
-        <h2 className="text-2xl font-bold mb-6 text-center">Hesaba giriş</h2>
+        <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center">Hesaba giriş</h2>
         {error && (
-          <div className="bg-red-100 text-red-700 p-2 mb-4 rounded">
+          <div className="bg-red-100 text-red-700 p-2 mb-4 rounded text-sm sm:text-base">
             {error}
           </div>
         )}
-        <label className="block mb-2 font-semibold">Email</label>
+        <label className="block mb-2 font-semibold text-sm sm:text-base">Email</label>
         <input
           type="email"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded mb-4"
+          className="w-full p-2 border border-gray-300 rounded mb-4 text-sm sm:text-base"
           placeholder="Emailinizi daxil edin"
         />
-        <label className="block mb-2 font-semibold">Şifrə</label>
+        <label className="block mb-2 font-semibold text-sm sm:text-base">Şifrə</label>
         <input
           type="password"
           required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded mb-6"
+          className="w-full p-2 border border-gray-300 rounded mb-6 text-sm sm:text-base"
           placeholder="Şifrənizi daxil edin"
         />
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition text-sm sm:text-base"
         >
           Daxil ol
         </button>
-        <p className="mt-4 text-center text-gray-600">
+        <p className="mt-4 text-center text-gray-600 text-sm sm:text-base">
           Hesabınız yoxdur?{" "}
           <Link to="/signup" className="text-blue-600 hover:underline">
             Qeydiyyatdan keçin

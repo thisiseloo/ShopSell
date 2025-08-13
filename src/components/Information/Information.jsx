@@ -39,14 +39,11 @@ const infoData = [
 
 const Information = () => {
   return (
-    <div className="h-[500px]">
-      <Container
-        className="pt-20 container"
-        style={{ maxWidth: "1250px" }} // 1140 - 50 = 1090 px, xl ölçüsü üçün nümunə
-      >
+    <div className="h-auto py-5">
+      <Container className="pt-4" style={{ maxWidth: "1250px" }}>
         <Row className="g-4">
           {infoData.slice(0, 3).map((item, index) => (
-            <Col md={4} key={index}>
+            <Col xs={12} md={4} key={index}>
               <Card className="h-100 shadow-sm text-center p-3">
                 <div>{item.icon}</div>
                 <Card.Body>
@@ -59,7 +56,7 @@ const Information = () => {
         </Row>
         <Row className="mt-3 g-4">
           {infoData.slice(3).map((item, index) => (
-            <Col md={6} key={index}>
+            <Col xs={12} md={6} key={index}>
               <Card className="h-100 shadow-sm text-center p-4">
                 <div>{item.icon}</div>
                 <Card.Body>

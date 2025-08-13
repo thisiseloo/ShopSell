@@ -1,16 +1,39 @@
 .custom-input input {
-    width: 150px;
-    /* Input eni */
+  width: 150px;
+  /* Desktop üçün */
 }
 
 .custom-btn {
-    width: 150px;
-    /* Buton eni */
+  width: 150px;
+  /* Desktop üçün */
+}
+.newsletter-title {
+  font-size: 40px;
+  line-height: 1.2;
 }
 
-.newsletter-section {
-    background-color: #290041;
-    border-radius: 30px;
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* Mobil üçün */
+@media (max-width: 640px) {
+  .custom-input input {
+    width: 100% !important; /* tam en */
+  }
+
+  .custom-btn {
+    width: 100% !important; /* tam en */
+  }
+
+  .newsletter-section {
+    padding: 20px 15px;
+  }
+
+  .newsletter-section h1 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+
+  .newsletter-title {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+
 }

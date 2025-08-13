@@ -86,12 +86,20 @@ export default function Navbar() {
                 </span>
               )}
             </button>
-            {showFavorites && <FavoriteDropdown />}
+            {showFavorites && (
+              <FavoriteDropdown onClose={() => setShowFavorites(false)} />
+            )}
           </div>
 
           {/* Səbət */}
           <button
-            onClick={() => navigate("/cart")}
+            onClick={() => {
+              if (location.pathname === "/cart") {
+                navigate("/"); // Əgər artıq cart səhifəsindəsə, home-a keç
+              } else {
+                navigate("/cart"); // Əks halda cart-a keç
+              }
+            }}
             className="relative text-white hover:text-green-400 transition"
           >
             <ShoppingBag className="w-6 h-6" />
@@ -160,6 +168,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
-

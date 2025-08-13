@@ -21,13 +21,13 @@ function Newsletter() {
   };
 
   return (
-    <div className="newsletter-section text-white mt-[90px] rounded-[30px] p-8 shadow-lg">
+    <div className="newsletter-section bg-[#290041] text-white mt-[90px] rounded-[30px] p-8 shadow-lg">
       <div className="container-fluid px-0">
         <div className="row align-items-center mx-0">
           {/* Sol tərəf */}
           <div className="col-lg-7 col-md-6 mb-4 mb-md-0 ps-3">
             <h1
-              className="text-uppercase fw-bold display-5 mb-[30px]"
+              className="newsletter-title text-uppercase fw-bold display-5 mb-[30px]"
               style={{ fontSize: "40px", lineHeight: "1.2" }}
             >
               Ən son təkliflərimizdən

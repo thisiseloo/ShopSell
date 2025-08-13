@@ -1,8 +1,3 @@
-// 
-
-
-
-
 import React from "react";
 
 export default function PromoOverlay({ scrollToCategories }) {
@@ -50,20 +45,28 @@ export default function PromoOverlay({ scrollToCategories }) {
         {/* Stats */}
         <div className="mt-10 flex flex-wrap justify-start gap-x-20 gap-y-6 text-left">
           <div className="flex flex-col items-start max-w-[181px]">
-            <span className="text-gray-800 font-bold text-[30px] sm:text-[35px]">200+</span>
+            <span className="text-gray-800 font-bold text-[30px] sm:text-[35px]">
+              200+
+            </span>
             <span className="text-gray-800 text-[14px] sm:text-[18px]">
               Beynəlxalq Brendlər
             </span>
           </div>
           <div className="flex flex-col items-start max-w-[260px]">
-            <span className="text-gray-900 font-bold text-[30px] sm:text-[35px]">2,000+</span>
+            <span className="text-gray-900 font-bold text-[30px] sm:text-[35px]">
+              2,000+
+            </span>
             <span className="text-gray-900 text-[14px] sm:text-[18px]">
               Yüksək Keyfiyyətli Məhsullar
             </span>
           </div>
           <div className="flex flex-col items-start max-w-[174px]">
-            <span className="text-gray-900 font-bold text-[30px] sm:text-[35px]">30,000+</span>
-            <span className="text-gray-900 text-[14px] sm:text-[18px]">Məmnun Müştərilər</span>
+            <span className="text-gray-900 font-bold text-[30px] sm:text-[35px]">
+              30,000+
+            </span>
+            <span className="text-gray-900 text-[14px] sm:text-[18px]">
+              Məmnun Müştərilər
+            </span>
           </div>
         </div>
       </div>

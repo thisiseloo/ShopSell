@@ -3,6 +3,7 @@ import Filter from "../../components/Filter/Filter";
 import womenBags from "../../data/womenBags";
 import womenShoes from "../../data/womenShoes";
 import ProductCard from "../../components/ProductCard/ProductCard";
+import Pagination from "../../components/Pagination/Pagination"; // Yeni pagination komponenti
 
 const allProducts = [
   ...womenShoes.map((item) => ({
@@ -176,7 +177,8 @@ const Women = () => {
 
   return (
     <div className="min-h-screen pb-[70px]">
-      <div className="min-h-[150px] flex items-center justify-center gap-5">
+      {/* Type buttons */}
+      <div className="flex justify-center items-center flex-wrap gap-4 min-h-[150px]">
         {[
           { label: "Ayaqqabılar", value: "shoe" },
           { label: "Çantalar", value: "bag" },
@@ -187,13 +189,14 @@ const Women = () => {
             <button
               key={btn.value}
               onClick={() => setSelectedType(btn.value)}
-              className={`px-5 py-2.5 rounded-full font-semibold text-sm md:text-base shadow-sm transition-all duration-300 transform text-white
-                ${
-                  isActive
-                    ? "bg-[#290041] opacity-100 scale-105 shadow-lg"
-                    : "bg-[#290041]/60 opacity-70 hover:opacity-100 hover:shadow-md"
-                }
-              `}
+              className={`rounded-full font-semibold shadow-sm transition-all duration-300 transform text-white
+          ${
+            isActive
+              ? "bg-[#290041] opacity-100 scale-105 shadow-lg"
+              : "bg-[#290041]/60 opacity-70 hover:opacity-100 hover:shadow-md"
+          }
+          text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-2.5
+        `}
             >
               {btn.label}
             </button>
@@ -201,95 +204,48 @@ const Women = () => {
         })}
       </div>
 
-      <div className="max-w-7xl mx-auto flex gap-8 p-6">
-        <aside className="w-1/4">
-          <Filter
-            filters={filters}
-            availableBrands={brandsList}
-            availableSizes={selectedType === "bag" ? [] : sizes}
-            availableColors={colorsList}
-            availableMaterials={{ shoe: materialsShoe, bag: materialsBag }}
-            availableHeels={heelList}
-            availableCategories={{ shoe: categoryShoe, bag: categoryBag }}
-            availableContexts={contextList}
-            onApply={applyFilters}
-            onClear={clearFilters}
-          />
-        </aside>
+      <div className="max-w-7xl mx-auto p-6">
+        <div className="flex gap-8">
+          {/* Filter sidebar */}
+          <aside className="hidden md:block md:w-1/4 lg:w-1/4">
+            <Filter
+              filters={filters}
+              availableBrands={brandsList}
+              availableSizes={selectedType === "bag" ? [] : sizes}
+              availableColors={colorsList}
+              availableMaterials={{ shoe: materialsShoe, bag: materialsBag }}
+              availableHeels={heelList}
+              availableCategories={{ shoe: categoryShoe, bag: categoryBag }}
+              availableContexts={contextList}
+              onApply={applyFilters}
+              onClear={clearFilters}
+            />
+          </aside>
 
-        <section className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {visibleProducts.length === 0 ? (
-            <p className="col-span-full text-center text-gray-500">
-              Heç bir məhsul tapılmadı.
-            </p>
-          ) : (
-            visibleProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))
-          )}
-        </section>
+          {/* Product list */}
+          <section className="flex-1">
+            {visibleProducts.length === 0 ? (
+              <p className="text-center text-gray-500">
+                Heç bir məhsul tapılmadı.
+              </p>
+            ) : (
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                {visibleProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            )}
+          </section>
+        </div>
       </div>
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex justify-center items-center gap-3 mt-6 mb-10 select-none">
-          {/* Əvvəlki düyməsi */}
-          <button
-            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-            disabled={currentPage === 1}
-            className={`px-4 py-2 rounded-full transition 
-              ${
-                currentPage === 1
-                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                  : "bg-purple-600 text-white hover:bg-purple-700 shadow-md"
-              }
-            `}
-            aria-label="Əvvəlki səhifə"
-          >
-            &#8592;
-          </button>
-
-          {/* Səhifə nömrələri */}
-          {[...Array(totalPages)].map((_, idx) => {
-            const pageNum = idx + 1;
-            const isActive = currentPage === pageNum;
-            return (
-              <button
-                key={pageNum}
-                onClick={() => setCurrentPage(pageNum)}
-                className={`min-w-[38px] h-10 flex items-center justify-center rounded-full font-semibold text-sm transition-shadow
-        ${
-          isActive
-            ? "bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white shadow-2xl scale-125 text-lg"
-            : "bg-gray-100 text-gray-700 hover:bg-purple-100 hover:text-purple-700"
-        }
-      `}
-                aria-current={isActive ? "page" : undefined}
-                aria-label={`Səhifə ${pageNum}`}
-              >
-                {pageNum}
-              </button>
-            );
-          })}
-
-          {/* Növbəti düyməsi */}
-          <button
-            onClick={() =>
-              setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-            }
-            disabled={currentPage === totalPages}
-            className={`px-4 py-2 rounded-full transition
-              ${
-                currentPage === totalPages
-                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                  : "bg-purple-600 text-white hover:bg-purple-700 shadow-md"
-              }
-            `}
-            aria-label="Növbəti səhifə"
-          >
-            &#8594;
-          </button>
-        </div>
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
       )}
     </div>
   );

@@ -54,17 +54,16 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
   return (
     <div
       onClick={() => navigate(`/product/${product.uniqueId}`)}
-      className="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300"
-      title="Daha ətraflı məlumat"
+      className="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300 w-full max-w-[300px]"
     >
-      {/* Şəkil və overlay */}
+      {/* Şəkil */}
       <div className="relative">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-48 object-cover"
+          className="w-full h-40 sm:h-48 md:h-56 object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 hover:opacity-100 flex items-center justify-center text-white font-semibold text-lg transition-opacity">
+        <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 hover:opacity-100 flex items-center justify-center text-white font-semibold text-sm sm:text-lg transition-opacity">
           Daha ətraflı məlumat
         </div>
 
@@ -74,26 +73,24 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
             e.stopPropagation();
             dispatch(toggleFavorite(product));
           }}
-          className={`absolute top-2 right-2 text-2xl ${
+          className={`absolute top-2 right-2 text-lg sm:text-2xl ${
             isFavorited ? "text-red-500" : "text-gray-400"
           } hover:text-red-600 transition-colors`}
-          aria-label="Favoritə əlavə et"
-          title="Favoritə əlavə et"
         >
-          <span style={{ fontSize: "26px", fontFamily: "Segoe UI Emoji" }}>
+          <span style={{ fontSize: "22px", fontFamily: "Segoe UI Emoji" }}>
             {isFavorited ? "❤" : "🤍"}
           </span>
         </button>
       </div>
 
       {/* Məhsul məlumatları */}
-      <div className="p-4 flex flex-col gap-2">
-        <h3 className="font-semibold text-lg truncate" title={product.name}>
+      <div className="p-3 sm:p-4 flex flex-col gap-2">
+        <h3 className="font-semibold text-base sm:text-lg truncate">
           {product.name}
         </h3>
-        <p className="text-gray-600 text-sm">{product.brand}</p>
+        <p className="text-gray-600 text-xs sm:text-sm">{product.brand}</p>
 
-        {/* ⭐ Ulduzlama */}
+        {/* Ulduzlama */}
         <div className="flex items-center">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
@@ -104,30 +101,26 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
           ))}
         </div>
 
-        <p className="font-bold text-xl text-purple-800">{product.price} AZN</p>
+        <p className="font-bold text-lg sm:text-xl text-purple-800">
+          {product.price} AZN
+        </p>
 
-        {/* Səbətə əlavə et */}
-        <div className="flex items-center justify-between mt-2">
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              dispatch(addItem(product));
-              onAddToCart?.();
-            }}
-            className="relative bg-[#290041] text-white border border-purple-700 rounded font-semibold hover:bg-gray-200 hover:!text-gray-700 hover:!border-[#290041] transition text-center w-[300px] h-[40px] text-[18px] px-0"
-            title="Səbətə əlavə et"
-          >
-            Səbətə əlavə et
-            {cartCount > 0 && (
-              <span
-                className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg"
-                title={`${cartCount} ədəd səbətdə`}
-              >
-                {cartCount}
-              </span>
-            )}
-          </button>
-        </div>
+        {/* Səbət düyməsi */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            dispatch(addItem(product));
+            onAddToCart?.();
+          }}
+          className="relative bg-[#290041] text-white border border-purple-700 rounded font-semibold hover:bg-gray-200 hover:text-gray-700 hover:border-[#290041] transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
+        >
+          Səbətə əlavə et
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
+              {cartCount}
+            </span>
+          )}
+        </button>
       </div>
     </div>
   );

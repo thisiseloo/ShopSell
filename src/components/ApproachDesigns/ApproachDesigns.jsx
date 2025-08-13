@@ -12,28 +12,9 @@ const ImageRow = () => {
   ];
 
   return (
-    <div
-      style={{
-        display: "flex",
-        gap: "20px",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        marginTop: "30px",
-      }}
-    >
+    <div className="image-row">
       {images.map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={`img-${index + 1}`}
-          style={{
-            width: "188px",
-            height: "250px",
-            objectFit: "cover",
-            marginTop: index === 1 || index === 3 || index === 5 ? "100px" : "40px",
-
-          }}
-        />
+        <img key={index} src={src} alt={`img-${index + 1}`} />
       ))}
     </div>
   );
@@ -45,12 +26,11 @@ function ApproachDesigns() {
       <div className="approachDesigns">MODA DIZAYNINA YANAŞMAMIZ</div>
       <div className="approachDesignsText">
         <span className="approachDesignsSpan">ShopSell</span> olaraq biz hər
-        addımda sizə özünüzü xüsusi hiss etdirəcək dizaynlar yaradırıq. <br />
-        Yaradıcılığı dəqiqliklə, estetikani funksionallıqla birləşdirərək,{" "}
-        trendlərə yox, <br /> zamansızlığa yönəlirik. Hər bir ayaqqabı və çantamız
-        keyfiyyətli materiallardan hazırlanır, <br /> incə detallarla
-        tamamlanaraq həm gündəlik, həm də xüsusi günlər üçün ideal seçimə
-        çevrilir.
+        addımda sizə özünüzü xüsusi hiss etdirəcək dizaynlar yaradırıq.
+        Yaradıcılığı dəqiqliklə, estetikani funksionallıqla birləşdirərək,
+        trendlərə yox, zamansızlığa yönəlirik. Hər bir ayaqqabı və çantamız
+        keyfiyyətli materiallardan hazırlanır, incə detallarla tamamlanaraq həm
+        gündəlik, həm də xüsusi günlər üçün ideal seçimə çevrilir.
       </div>
 
       <ImageRow />

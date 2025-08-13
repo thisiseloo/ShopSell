@@ -14,7 +14,6 @@ import menBags from "../../data/menBags";
 import kidsShoes from "../../data/kidsShoes";
 import kidsBags from "../../data/kidsBags";
 
-// Sənin göndərdiyin siyahılar
 const brandsList = [
   "Adidas",
   "Guess",
@@ -146,19 +145,18 @@ const ProductDetail = () => {
     dispatch(addItem({ ...product, size: selectedSize }));
   };
 
-  // Məhsulun materialını düzgün göstərmək üçün:
   const materialDisplay =
     product.type === "shoe"
       ? product.material.charAt(0).toUpperCase() + product.material.slice(1)
       : product.material.charAt(0).toUpperCase() + product.material.slice(1);
 
   return (
-    <div className="max-w-7xl mx-auto p-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg p-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-[120px] md:pb-6 pt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg p-4 md:p-6">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-[460px] object-cover rounded-lg"
+          className="w-full h-64 sm:h-80 md:h-[460px] object-cover rounded-lg"
         />
         <div className="flex flex-col gap-3">
           <h1 className="text-3xl font-bold">{product.name}</h1>
@@ -173,11 +171,10 @@ const ProductDetail = () => {
             </div>
           )}
 
-          {/* Ölçü seçimi yalnız ayaqqabılar üçün */}
           {product.type === "shoe" && (
             <div>
               <strong>Ölçü seçin:</strong>
-              <div className="flex gap-2 mt-1 mb-3">
+              <div className="flex gap-2 mt-1 mb-3 flex-wrap">
                 {sizes.map((size) => (
                   <button
                     key={size}
@@ -204,14 +201,12 @@ const ProductDetail = () => {
             <strong>Materialı:</strong> {materialDisplay}
           </div>
 
-          {/* Topuq ölçüsü yalnız ayaqqabılar üçün */}
           {product.type === "shoe" && product.heel && (
             <div>
               <strong>Topuq ölçüsü:</strong> {product.heel}
             </div>
           )}
 
-          {/* Kategoriya */}
           <div>
             <strong>Kategoriyası:</strong>{" "}
             {product.category
@@ -221,19 +216,16 @@ const ProductDetail = () => {
               : categoryBag[0]}
           </div>
 
-          {/* Ortamı yalnız çantalar üçün */}
           {product.type === "bag" && product.context && (
             <div>
               <strong>Ortamı:</strong> {product.context}
             </div>
           )}
 
-          {/* Qiymət */}
           <div className="text-purple-700 text-2xl font-semibold mt-4">
             {product.price} AZN
           </div>
 
-          {/* Səbətə əlavə et / Say idarəsi */}
           <div className="mt-6">
             {cartItem ? (
               <div className="flex items-center gap-4">
@@ -250,9 +242,7 @@ const ProductDetail = () => {
                 >
                   -
                 </button>
-                <span className="text-lg font-semibold">
-                  {cartItem.quantity}
-                </span>
+                <span className="text-lg font-semibold">{cartItem.quantity}</span>
                 <button
                   onClick={() =>
                     dispatch(

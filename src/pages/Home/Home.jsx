@@ -7,6 +7,7 @@ import ApproachDesigns from "../../components/ApproachDesigns/ApproachDesigns";
 import SocialSection from "../../components/SocialSection/SocialSection";
 import Information from "../../components/Information/Information";
 import PromoOverlay from "../../components/PromoOverlay.jsx/PromoOverlay";
+import Comments from "../../components/Comments/Comments";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ const Home = () => {
       <Categories ref={categoriesRef} />
       <SocialSection />
       <Information />
+      <Comments />
       <Shopsell />
     </div>
   );

@@ -152,14 +152,14 @@ export default function Navbar() {
 
       {/* Axtarış sahəsi */}
       {showSearch && isVisibleSearch && (
-        <div className="bg-gray-50 border-t px-4 py-3">
+        <div className="bg-gray-100 border-t px-4 py-3">
           <div className="max-w-4xl mx-auto flex">
             <input
               type="text"
               placeholder="Axtar..."
               className="w-full border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-300 text-base"
             />
-            <button className="bg-pink-400 text-white px-6 rounded-r hover:bg-pink-500 transition text-base">
+            <button className="bg-[#290041] text-white px-6 rounded-r hover:bg-[#290041]/80 transition text-base">
               Axtar
             </button>
           </div>

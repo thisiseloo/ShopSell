@@ -1,3 +1,4 @@
+/* Mövcud Shopsell tərzləri */
 .shopsell {
   font-size: 250px;
   margin: 0 auto;
@@ -8,19 +9,14 @@
   font-weight: 700;
 }
 
-/* Span içindəki "Shop" sözü üçün */
 .shopsell span {
-  color: #a78bfa; /* text-purple-300 rəngi */
+  color: #a78bfa;
   font-size: 330px;
 }
 
-/* Mobil üçün */
-@media (max-width: 640px) {
+/* Mobil üçün (gizlətmək) */
+@media (max-width: 1024px) { /* planşet və mobil üçün */
   .shopsell {
-    font-size: 80px;
-    padding-bottom: 40px;
-  }
-  .shopsell span {
-    font-size: 100px;
+    display: none;
   }
 }

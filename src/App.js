@@ -9,7 +9,6 @@ import Men from "./pages/Men/Men";
 import Kids from "./pages/Kids/Kids";
 import "./App.css";
 import CartPage from "./pages/CartPage/CartPage";
-import FashionHistory from "./pages/FashionHistory/FashionHistory";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 
@@ -25,7 +24,6 @@ function App() {
             <Route path="/men" element={<Men />} />
             <Route path="/kids" element={<Kids />} />
             <Route path="/cart" element={<CartPage />} />
-            <Route path="/fashion-history" element={<FashionHistory />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />

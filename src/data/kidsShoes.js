@@ -160,7 +160,7 @@ const kidsShoes = [
     name: "Kids Running Shoe",
     price: 147,
     image: "https://i.pinimg.com/736x/bf/fe/8d/bffe8d7d8e009d0f10df664f785d1400.jpg",
-    brand: "Puma Kids",
+    brand: "Pumaa Kids",
     color: "Red",
     size: 33,
     material: "Leather",

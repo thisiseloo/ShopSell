@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full sticky top-0 z-50 bg-[#290041] shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Sol menyular */}
         <div className="hidden md:flex space-x-6 text-[21px] font-semibold">
           {["/women", "/men", "/kids"].map((path) => {
@@ -46,12 +46,13 @@ export default function Navbar() {
         </div>
 
         {/* Logo */}
-        <Link
-          to="/"
-          className="text-4xl font-bold tracking-tight text-purple-400"
-        >
-          Shop<span className="text-pink-300 text-3xl">Sell</span>
-        </Link>
+        <div className="shopsell-img-wrapper mx-auto sm:mx-0 w-24 sm:w-25 h-[70px] overflow-hidden">
+          <img
+            src="/images/Shopsell.png"
+            alt="ShopSell Logo"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
 
         {/* Sağ ikonlar */}
         <div className="flex items-center space-x-6">
@@ -168,3 +169,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

@@ -2,14 +2,13 @@ import "./Shopsell.css";
 
 function Shopsell() {
   return (
-    <div className="shopsell">
-      <img
-        src="/images/Shopsell.png"
-        alt="ShopSell Logo"
-        className="shopsell-img"
-      />
-    </div>
+    <h2 className="shopsell">
+      {" "}
+      <span className="text-purple-300 text-[330px]">Shop</span>Sell
+    </h2>
   );
 }
 
 export default Shopsell;
+
+

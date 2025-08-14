@@ -1,44 +1,81 @@
+/* Footer başlıqları və mətn */
+footer h3 {
+  font-size: 18px;
+}
+footer a,
+footer p,
+footer span {
+  font-size: 14px;
+}
+
+/* Sosial media */
+footer .flex.items-center {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+/* Newsletter overlap */
 .newsletter-overlap {
   position: absolute;
+  top: -90px; /* yuxarı çək */
   left: 50%;
   transform: translateX(-50%);
-  top: -95px; /* yarısı footer-in içində */
-  max-width: 1120px;
-  width: 100%;
+  width: calc(100% - 20px);
+  max-width: 1200px;
   z-index: 10;
 }
 
-/* Mobil və planşet üçün də eyni effekt, amma footer padding uyğun olsun */
+/* Planşet */
 @media (max-width: 1024px) {
-  footer {
-    padding-top: 160px !important;
+  footer h3 {
+    font-size: 16px;
+  }
+  footer a,
+  footer p,
+  footer span {
+    font-size: 13px;
+  }
+  .newsletter-overlap {
+    top: -70px;
+    width: calc(100% - 20px);
   }
 }
 
+/* Telefon */
 @media (max-width: 640px) {
   footer {
-    padding-top: 140px !important;
+    text-align: center;
+  }
+  footer h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  footer a,
+  footer p,
+  footer span {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  footer .grid {
+    grid-template-columns: 1fr;
+  }
+  footer img {
+    margin: 0 auto;
+  }
+  footer .flex:not(.items-center) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-overlap {
+    top: -50px;
+    width: calc(100% - 16px);
   }
 }
 
-.newsletter-overlap {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -95px;
-  max-width: 1120px;
-  width: 100%;
-  z-index: 10;
-}
-
-@media (max-width: 1024px) {
-  footer {
-    padding-top: 160px !important;
-  }
-}
-
-@media (max-width: 640px) {
-  footer {
-    padding-top: 140px !important;
-  }
+/* Sola-sağa scroll olmaması */
+html, body {
+  overflow-x: hidden;
 }

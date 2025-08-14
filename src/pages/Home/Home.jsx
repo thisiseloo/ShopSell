@@ -8,8 +8,6 @@ import SocialSection from "../../components/SocialSection/SocialSection";
 import Information from "../../components/Information/Information";
 import PromoOverlay from "../../components/PromoOverlay.jsx/PromoOverlay";
 import Comments from "../../components/Comments/Comments";
-import Newsletter from "../../components/NewsLetter/NewsLetter";
-import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -42,9 +40,6 @@ const Home = () => {
       {/* Shopsell - heç bir yuxarı və alt boşluq */}
       <Shopsell />
 
-      {/* Newsletter + Footer */}
-      <Newsletter />
-      <Footer />
     </div>
   );
 };

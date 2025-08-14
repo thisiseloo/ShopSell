@@ -32,14 +32,17 @@
 }
 
 .image-row img {
-  width: 188px;
-  height: 250px;
+  width: 190px;
+  height: 290px;
   object-fit: cover;
-  margin-top: 40px; /* default yuxarı */
+  margin-top: 40px;
+  /* default yuxarı */
 }
 
 /* Desktop və telefon üçün 2,4,6-cı şəkillər aşağıda */
-@media (min-width: 1025px), (max-width: 767px) {
+@media (min-width: 1025px),
+(max-width: 767px) {
+
   .image-row img:nth-child(2),
   .image-row img:nth-child(4),
   .image-row img:nth-child(6) {
@@ -65,6 +68,10 @@
   .image-row img:nth-child(2),
   .image-row img:nth-child(5) {
     margin-top: 100px;
+  }
+
+  .approach-container {
+    margin-top: 50px;
   }
 }
 
@@ -95,6 +102,9 @@
   .image-row img {
     width: 48%;
     height: 200px;
-    
+  }
+
+  .approach-container {
+    margin-top: 50px;
   }
 }

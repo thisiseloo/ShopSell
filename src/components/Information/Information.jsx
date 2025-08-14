@@ -40,7 +40,7 @@ const infoData = [
 const Information = () => {
   return (
   <div className="h-auto py-5">
-    <Container className="pt-4" style={{ maxWidth: "1250px" }}>
+    <Container style={{ maxWidth: "1250px" }}>
       {/* Ümumi başlıq */}
       <h2 className="text-[35px] fw-bold mb-5">HƏR ADDIMDA RAHATLIQ</h2>
 

@@ -1,0 +1,44 @@
+.newsletter-overlap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -95px; /* yarısı footer-in içində */
+  max-width: 1120px;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Mobil və planşet üçün də eyni effekt, amma footer padding uyğun olsun */
+@media (max-width: 1024px) {
+  footer {
+    padding-top: 160px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  footer {
+    padding-top: 140px !important;
+  }
+}
+
+.newsletter-overlap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -95px;
+  max-width: 1120px;
+  width: 100%;
+  z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    padding-top: 160px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  footer {
+    padding-top: 140px !important;
+  }
+}

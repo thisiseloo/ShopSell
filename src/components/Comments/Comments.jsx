@@ -59,7 +59,7 @@ const Comments = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-8 px-4 sm:py-10 sm:px-6 lg:py-12 lg:px-8 mb-[100px]">
+    <div className="max-w-7xl mx-auto py-8 px-4 sm:py-10 sm:px-6 lg:py-12 lg:px-8">
       {/* Başlıq və oxlar */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
         <h2 className="text-[28px] sm:text-[35px] font-bold text-gray-900 text-center sm:text-left mb-3 sm:mb-0">
@@ -167,3 +167,4 @@ const Comments = () => {
 };
 
 export default Comments;
+

@@ -8,7 +8,6 @@ const images = [
   "https://i.pinimg.com/1200x/a2/3a/eb/a23aebb70290bab7d6826fcd64075ec0.jpg",
 ];
 
-// Hər sosial şəbəkə üçün icon və link
 const socialData = [
   {
     icon: FaFacebookF,
@@ -43,11 +42,7 @@ const SocialSection = () => {
               <img src={src} alt={`social-${index}`} className="gallery-img" />
 
               <div className="overlay">
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={link} target="_blank" rel="noopener noreferrer">
                   <IconComponent className="social-icon" />
                 </a>
                 <p className="overlay-text">DAHA ÇOX BAXIN</p>

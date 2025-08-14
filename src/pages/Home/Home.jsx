@@ -8,6 +8,8 @@ import SocialSection from "../../components/SocialSection/SocialSection";
 import Information from "../../components/Information/Information";
 import PromoOverlay from "../../components/PromoOverlay.jsx/PromoOverlay";
 import Comments from "../../components/Comments/Comments";
+import Newsletter from "../../components/NewsLetter/NewsLetter";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -26,15 +28,23 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <PromoOverlay scrollToCategories={scrollToCategories} />
       <Brands />
       <ApproachDesigns />
       <Categories ref={categoriesRef} />
       <SocialSection />
       <Information />
+
+      {/* Comments */}
       <Comments />
+
+      {/* Shopsell - heç bir yuxarı və alt boşluq */}
       <Shopsell />
+
+      {/* Newsletter + Footer */}
+      <Newsletter />
+      <Footer />
     </div>
   );
 };

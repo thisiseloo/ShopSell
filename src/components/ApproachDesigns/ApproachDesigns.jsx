@@ -3,7 +3,7 @@ import "./ApproachDesigns.css";
 
 const ImageRow = () => {
   const images = [
-    "https://i.pinimg.com/1200x/88/65/69/886569933ade8edcf60060a7ea768ed1.jpg",
+    "https://i.pinimg.com/736x/0b/14/05/0b1405b85ae2996c936a7428762fd2b7.jpg",
     "https://i.pinimg.com/1200x/f3/5b/d7/f35bd771be8a3545a379db62bd6fbe48.jpg",
     "https://i.pinimg.com/736x/95/e0/b0/95e0b0fe1d7b4ae5113a98c03f085e29.jpg",
     "https://i.pinimg.com/1200x/55/8a/89/558a893a3aea9eeefc16cf6998e635cd.jpg",

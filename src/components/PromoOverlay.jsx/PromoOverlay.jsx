@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PromoOverlay({ scrollToCategories }) {
   return (
-    <div className="relative w-full pt-[50px] sm:pt-0">
+    <div className="relative bg-[#D4D2D3] w-full pt-[50px] sm:pt-0">
       <img
         src="/images/promo.jpg"
         alt="Promo"
@@ -73,3 +73,5 @@ export default function PromoOverlay({ scrollToCategories }) {
     </div>
   );
 }
+
+

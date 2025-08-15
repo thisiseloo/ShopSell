@@ -23,7 +23,7 @@ const Filter = ({
 
   const [filters, setFilters] = useState(propsFilters);
   const [openSections, setOpenSections] = useState({});
-  const [isOpen, setIsOpen] = useState(false); // Telefon/planset üçün filter açılıb-bağlanması
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setFilters(propsFilters);
@@ -84,12 +84,10 @@ const Filter = ({
       >
         {title} {isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
       </button>
-      {isOpen && <div className="mt-2 flex flex-wrap gap-2">{children}</div>}
+      {isOpen && <div className="mt-1 flex flex-wrap gap-2">{children}</div>}
     </div>
   );
 
-  // Telefon/planset üçün açma düyməsi
-  // Bu düymə yalnız md ölçüdən kiçik ekranlarda görünəcək
   const FilterToggleButton = () => (
     <button
       onClick={() => setIsOpen(true)}
@@ -100,7 +98,6 @@ const Filter = ({
     </button>
   );
 
-  // Telefon/planset üçün bağlama düyməsi
   const CloseButton = () => (
     <button
       onClick={() => setIsOpen(false)}
@@ -114,10 +111,10 @@ const Filter = ({
 
   return (
     <>
-      {/* Telefon/planset üçün açma düyməsi */}
+      {/* Mobil/Tablet açma düyməsi */}
       <FilterToggleButton />
 
-      {/* Overlay (telefon/planset) */}
+      {/* Overlay (mobil/tablet) */}
       <div
         className={`
           fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden
@@ -134,20 +131,13 @@ const Filter = ({
       {/* Filter panel */}
       <div
         className={`
-          bg-white rounded-xl shadow-md
-          p-6 max-w-md h-fit
-          sticky top-4
-          ${
-            isOpen
-              ? "fixed inset-0 m-auto z-50 max-w-md max-h-[90vh] overflow-y-auto md:relative md:inset-auto md:m-0"
-              : "hidden md:block"
-          }
-          md:block
+          bg-white rounded-xl shadow-md p-6 max-w-md flex flex-col
+          md:relative
+          ${isOpen ? "fixed inset-0 m-auto z-50 max-w-md max-h-[90vh] overflow-y-auto" : "hidden md:block"}
         `}
-        style={{ maxHeight: "90vh" }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Telefon/planset üçün bağlama düyməsi */}
+        {/* Mobil/Tablet bağlama düyməsi */}
         {isOpen && <CloseButton />}
 
         <div className="text-2xl font-bold mb-6 flex items-center gap-[10px]">
@@ -171,21 +161,24 @@ const Filter = ({
           ))}
         </Section>
 
-        <Section
-          title="Ölçü"
-          isOpen={openSections["Ölçü"]}
-          toggle={() => toggleSection("Ölçü")}
-        >
-          {availableSizes.map((size) => (
-            <OptionButton
-              key={size}
-              selected={filters.size.includes(size)}
-              onClick={() => toggleFilter("size", size)}
-            >
-              {size}
-            </OptionButton>
-          ))}
-        </Section>
+        {/* Çanta üçün Ölçü filteri ləğv edildi */}
+        {availableSizes.length > 0 && !filters.category.includes("Çanta") && (
+          <Section
+            title="Ölçü"
+            isOpen={openSections["Ölçü"]}
+            toggle={() => toggleSection("Ölçü")}
+          >
+            {availableSizes.map((size) => (
+              <OptionButton
+                key={size}
+                selected={filters.size.includes(size)}
+                onClick={() => toggleFilter("size", size)}
+              >
+                {size}
+              </OptionButton>
+            ))}
+          </Section>
+        )}
 
         <Section
           title="Rəng"
@@ -336,7 +329,7 @@ const Filter = ({
           <button
             onClick={() => {
               onApply && onApply(filters);
-              setIsOpen(false); // Tətbiq etdikdən sonra filteri bağla (telefon/planset)
+              setIsOpen(false);
             }}
             className="flex-1 h-[30px] bg-pink-300 text-[14px] text-[#290041] rounded-lg font-semibold hover:bg-gray-200 transition !border !border-[#290041]"
           >

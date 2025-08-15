@@ -21,7 +21,7 @@ export default function PromoOverlay({ scrollToCategories }) {
       >
         {/* Başlıq */}
         <h2 className="text-gray-800 font-extrabold leading-tight text-[30px] sm:text-[45px] max-w-[800px]">
-          ÜSLUBUNUZU TAMAMLAYAN <br /> AYAQQABI VƏ ÇANTARI <br />
+          ÜSLUBUNUZU TAMAMLAYAN <br /> AYAQQABI VƏ ÇANTALARIMIZI <br />
           KƏŞF EDİN
         </h2>
 
@@ -35,8 +35,8 @@ export default function PromoOverlay({ scrollToCategories }) {
         {/* Düymə */}
         <div className="mt-3 flex justify-start">
           <button
-            onClick={scrollToCategories}
-            className="w-[150px] h-[40px] sm:w-[180px] sm:h-[50px] bg-gray-800 text-white text-[16px] sm:text-[18px] rounded-[40px] border-[1px] hover:!text-gray-900 hover:bg-gray-300 hover:border-gray-900 transition"
+            onClick={scrollToCategories} // <- scroll funksiyasını çağırır
+            className="w-[150px] h-[40px] sm:w-[180px] sm:h-[50px] bg-gray-800 text-white rounded-[40px] hover:bg-gray-300 transition"
           >
             Alış-veriş edin
           </button>
@@ -73,5 +73,3 @@ export default function PromoOverlay({ scrollToCategories }) {
     </div>
   );
 }
-
-

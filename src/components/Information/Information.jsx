@@ -5,8 +5,9 @@ import {
   FaPhoneAlt,
   FaShieldAlt,
   FaBoxOpen,
-  FaEnvelope,
 } from "react-icons/fa";
+import { MdDiscount } from "react-icons/md"; // <- burada əlavə etdik
+
 
 const infoData = [
   {
@@ -19,7 +20,6 @@ const infoData = [
     title: "Rahatlığınız önəmlidir",
     text: "Onlayn al, mağazadan götür.",
   },
-
   {
     icon: <FaShieldAlt size={30} className="text-danger" />,
     title: "Təhlükəsiz ödəniş",
@@ -31,11 +31,12 @@ const infoData = [
     text: "Suallarınızı cavablandırmaq üçün bazar ertəsindən cümə gününə kimi xidmətinizdəyik.",
   },
   {
-    icon: <FaEnvelope size={30} className="text-info" />,
+    icon: <MdDiscount size={30} className="text-info" />, // <- dəyişdirildi
     title: "Endirimlərimiz",
     text: "E-poçtla qeydiyyatdan keçin və əlavə 25% endirim əldə edərək növbəti alışınıza qənaət edin.",
   },
 ];
+
 
 const Information = () => {
   return (
@@ -77,3 +78,4 @@ const Information = () => {
 };
 
 export default Information;
+

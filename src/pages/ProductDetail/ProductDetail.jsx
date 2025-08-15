@@ -151,7 +151,7 @@ const ProductDetail = () => {
       : product.material.charAt(0).toUpperCase() + product.material.slice(1);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-[120px] md:pb-6 pt-6">
+    <div className="max-w-7xl mx-auto mb-[100px] px-4 sm:px-6 lg:px-8 pb-[120px] md:pb-6 pt-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg p-4 md:p-6">
         <img
           src={product.image}

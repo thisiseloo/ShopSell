@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { Menu, X, User, Heart, ShoppingBag, Search } from "lucide-react";
+import { Menu, X, User, Heart, Search } from "lucide-react";
 import { useSelector } from "react-redux";
 import { selectTotalQuantity } from "../../features/cart/cartSlice";
 import { selectFavorites } from "../../features/favorites/favoriteSlice";
 import FavoriteDropdown from "../FavoriteDropdown/FavoriteDropdown";
+import { SlBasket } from "react-icons/sl"; // <-- burada əlavə etdik
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,9 +47,13 @@ export default function Navbar() {
         </div>
 
         {/* Logo */}
-        <div className="shopsell-img-wrapper mx-auto sm:mx-0 w-24 sm:w-25 h-[70px] overflow-hidden">
+        {/* Logo */}
+        <div
+          className="shopsell-img-wrapper mx-auto sm:mx-0 w-24 sm:w-25 h-[70px] overflow-hidden cursor-pointer"
+          onClick={() => navigate("/")} // <- burada əlavə etdik
+        >
           <img
-            src="/images/Shopsell.png"
+            src="/images/shopsell_logo.png"
             alt="ShopSell Logo"
             className="w-full h-full object-cover object-center"
           />
@@ -96,14 +101,14 @@ export default function Navbar() {
           <button
             onClick={() => {
               if (location.pathname === "/cart") {
-                navigate("/"); // Əgər artıq cart səhifəsindəsə, home-a keç
+                navigate("/");
               } else {
-                navigate("/cart"); // Əks halda cart-a keç
+                navigate("/cart");
               }
             }}
             className="relative text-white hover:text-green-400 transition"
           >
-            <ShoppingBag className="w-6 h-6" />
+            <SlBasket className="w-6 h-6" /> {/* <- burada dəyişdirdik */}
             {totalQuantity > 0 && (
               <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
                 {totalQuantity}
@@ -169,4 +174,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

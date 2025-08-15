@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import commentsData from "../../data/comments";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 const Star = ({ filled, onClick }) => (
   <span
@@ -65,14 +65,14 @@ const Comments = () => {
         <h2 className="text-[28px] sm:text-[35px] font-bold text-gray-900 text-center sm:text-left mb-3 sm:mb-0">
           XOŞBƏXT MÜŞTƏRİLƏRİMİZ
         </h2>
-        <div className="flex space-x-3 mt-2 sm:mt-0">
-          <ChevronLeft
+        <div className="flex gap-[10px] space-x-3 mt-2 sm:mt-0">
+          <FaArrowLeftLong
             onClick={prev}
-            className="w-8 h-8 sm:w-10 sm:h-10 cursor-pointer text-gray-600 hover:text-gray-900 transition-colors"
+            className="w-6 h-6 sm:w-8 sm:h-8 cursor-pointer text-gray-600 hover:text-gray-900 transition-colors"
           />
-          <ChevronRight
+          <FaArrowRightLong
             onClick={next}
-            className="w-8 h-8 sm:w-10 sm:h-10 cursor-pointer text-gray-600 hover:text-gray-900 transition-colors"
+            className="w-6 h-6 sm:w-8 sm:h-8 cursor-pointer text-gray-600 hover:text-gray-900 transition-colors"
           />
         </div>
       </div>
@@ -167,4 +167,3 @@ const Comments = () => {
 };
 
 export default Comments;
-

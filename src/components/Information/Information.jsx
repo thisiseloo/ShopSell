@@ -13,7 +13,7 @@ const infoData = [
   {
     icon: <FaShippingFast size={30} className="text-primary" />,
     title: "Pulsuz çatdırılma",
-    text: "300azn-dan yuxarı sifarişlər üçün dünya üzrə pulsuz çatdırılmadan həzz alın.",
+    text: "300 ₼-dan yuxarı sifarişlər üçün dünya üzrə pulsuz çatdırılmadan həzz alın.",
   },
   {
     icon: <FaBoxOpen size={30} className="text-warning" />,
@@ -43,7 +43,7 @@ const Information = () => {
   <div className="h-auto py-5">
     <Container style={{ maxWidth: "1250px" }}>
       {/* Ümumi başlıq */}
-      <h2 className="text-[35px] fw-bold mb-5">HƏR ADDIMDA RAHATLIQ</h2>
+      <h2 className="text-[35px] text-[#1a0029] fw-bold mb-5">HƏR ADDIMDA RAHATLIQ</h2>
 
       <Row className="g-4">
         {infoData.slice(0, 3).map((item, index) => (
@@ -51,8 +51,8 @@ const Information = () => {
             <Card className="h-100 shadow-sm text-center p-3">
               <div>{item.icon}</div>
               <Card.Body>
-                <Card.Title className="fw-bold">{item.title}</Card.Title>
-                <Card.Text className="m-3">{item.text}</Card.Text>
+                <Card.Title className="fw-bold text-[#1a0029]">{item.title}</Card.Title>
+                <Card.Text className="m-3 text-[#1a0029]/80">{item.text}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -65,7 +65,7 @@ const Information = () => {
               <div>{item.icon}</div>
               <Card.Body>
                 <Card.Title className="fw-bold">{item.title}</Card.Title>
-                <Card.Text className="m-3">{item.text}</Card.Text>
+                <Card.Text className="m-3 text-[#1a0029]/80">{item.text}</Card.Text>
               </Card.Body>
             </Card>
           </Col>

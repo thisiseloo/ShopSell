@@ -26,7 +26,7 @@ const Footer = () => {
               alt="ShopSell Logo"
               className="w-28 sm:w-34 mx-auto sm:mx-0"
             />
-            <p className="text-sm text-gray-300 leading-relaxed mt-2">
+            <p className="text-sm text-gray-100 leading-relaxed mt-2">
               Zövqünüzə uyğun olan və istifadə etməkdən qürur duyacağınız həm
               qadın, həm kişi, həm də uşaq üçün ayaqqabı və çantalarımız
               mövcuddur.
@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
 
         {/* Alt yazı */}
-        <div className="bg-[#290041] text-center py-4 text-sm text-gray-400">
+        <div className="bg-[#290041] text-center py-4 text-sm text-gray-300">
           © 2025 ShopSell. Bütün hüquqlar qorunur. shopsell.az, Bakı şəhəri,
           Nizami rayonu, Bəhruz Nuriyev küçəsi 529
         </div>

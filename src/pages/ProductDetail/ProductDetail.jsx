@@ -181,7 +181,7 @@ const ProductDetail = () => {
                     onClick={() => setSelectedSize(size)}
                     className={`px-4 py-2 border rounded ${
                       selectedSize === size
-                        ? "bg-purple-700 text-white"
+                        ? "bg-pink-400 text-white"
                         : "bg-gray-100 hover:bg-gray-200"
                     }`}
                   >
@@ -208,7 +208,7 @@ const ProductDetail = () => {
           )}
 
           <div>
-            <strong>Kategoriyası:</strong>{" "}
+            <strong>Kateqoriyası:</strong>{" "}
             {product.category
               ? product.category
               : product.type === "shoe"
@@ -222,11 +222,11 @@ const ProductDetail = () => {
             </div>
           )}
 
-          <div className="text-purple-700 text-2xl font-semibold mt-4">
-            {product.price} AZN
+          <div className="text-purple-700 text-2xl font-bold mt-4">
+            {product.price} ₼
           </div>
 
-          <div className="mt-6">
+          <div>
             {cartItem ? (
               <div className="flex items-center gap-4">
                 <button
@@ -242,7 +242,9 @@ const ProductDetail = () => {
                 >
                   -
                 </button>
-                <span className="text-lg font-semibold">{cartItem.quantity}</span>
+                <span className="text-lg font-semibold">
+                  {cartItem.quantity}
+                </span>
                 <button
                   onClick={() =>
                     dispatch(
@@ -260,7 +262,9 @@ const ProductDetail = () => {
             ) : (
               <button
                 onClick={handleAddToCart}
-                className="bg-purple-700 text-white rounded-lg font-semibold hover:bg-purple-800 transition"
+                className="bg-[#290041] text-white border border-purple-700 rounded font-semibold 
+             hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] 
+             transition"
                 style={{ width: "250px", height: "50px" }}
               >
                 Səbətə əlavə et

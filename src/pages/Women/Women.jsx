@@ -225,7 +225,7 @@ const Women = () => {
           {/* Product list */}
           <section className="flex-1">
             {visibleProducts.length === 0 ? (
-              <p className="text-center text-gray-500">
+              <p className="text-center text-[#1a0029]/80">
                 Heç bir məhsul tapılmadı.
               </p>
             ) : (

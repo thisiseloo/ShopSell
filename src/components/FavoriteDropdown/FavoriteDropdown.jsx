@@ -116,7 +116,7 @@ const FavoriteDropdown = ({ onClose }) => {
         "
       >
         {favorites.length === 0 ? (
-          <p className="text-center text-gray-500">Favorit məhsul yoxdur.</p>
+          <p className="text-center text-[#1a0029]/90">Favorit məhsul yoxdur.</p>
         ) : (
           favorites.map((item) => (
             <div
@@ -132,7 +132,7 @@ const FavoriteDropdown = ({ onClose }) => {
                   alt={item.name}
                   className="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded"
                 />
-                <span className="text-sm sm:text-base font-semibold">{item.name}</span>
+                <span className="text-sm  text-[#1a0029] sm:text-base font-semibold">{item.name}</span>
               </div>
 
               <span className="text-pink-600 font-bold text-sm sm:text-base">

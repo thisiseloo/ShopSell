@@ -225,7 +225,7 @@ const Men = () => {
 
         <section className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-6">
           {visibleProducts.length === 0 ? (
-            <p className="col-span-full text-center text-gray-500">
+            <p className="col-span-full text-center text-[#1a0029]/80">
               Heç bir məhsul tapılmadı.
             </p>
           ) : (

@@ -23,9 +23,9 @@ const ImageRow = () => {
 function ApproachDesigns() {
   return (
     <div className="approach-container text-center">
-      <div className="approachDesigns">MODA DİZAYNINA YANAŞMAMIZ</div>
+      <div className="approachDesigns text-[#1a0029]">MODA DİZAYNINA YANAŞMAMIZ</div>
       <div className="approachDesignsText">
-        <span className="approachDesignsSpan">ShopSell</span> olaraq biz hər
+        <span className="approachDesignsSpan text-[#1a0029]/90">ShopSell</span> olaraq biz hər
         addımda sizə özünüzü xüsusi hiss etdirəcək dizaynlar yaradırıq.
         Yaradıcılığı dəqiqliklə, estetikani funksionallıqla birləşdirərək,
         trendlərə yox, zamansızlığa yönəlirik. Hər bir ayaqqabı və çantamız

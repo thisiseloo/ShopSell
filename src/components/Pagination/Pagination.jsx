@@ -26,7 +26,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
           disabled={currentPage === 1}
           className={`px-4 py-2 rounded-full transition ${
             currentPage === 1
-              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+              ? "bg-gray-300 text-[#1a0029]/80 cursor-not-allowed"
               : "bg-[#1a0029] text-white hover:bg-[#290041b5]"
           }`}
           aria-label="Əvvəlki səhifə"
@@ -35,7 +35,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
         </button>
 
         {/* Ortadakı rəqəmlər — fon yoxdur, yazı qara */}
-        <span className="text-black font-semibold">
+        <span className=" text-[#1a0029] font-semibold">
           {currentPage} / {totalPages}
         </span>
 
@@ -44,7 +44,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
           disabled={currentPage === totalPages}
           className={`px-4 py-2 rounded-full transition ${
             currentPage === totalPages
-              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+              ? "bg-gray-300 text-[#1a0029]/80 cursor-not-allowed"
               : "bg-[#1a0029] text-white hover:bg-[#290041b5]"
           }`}
           aria-label="Növbəti səhifə"
@@ -63,7 +63,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
         disabled={currentPage === 1}
         className={`px-4 py-2 rounded-full transition ${
           currentPage === 1
-            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+            ? "bg-gray-300 text-[#1a0029]/80 cursor-not-allowed"
             : "bg-[#1a0029] text-white hover:bg-[#290041b5]"
         }`}
         aria-label="Əvvəlki səhifə"
@@ -79,7 +79,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
             className={`px-4 py-2 rounded-full transition ${
               currentPage === page
                 ? "bg-[#2900419d] text-white"
-                : "bg-gray-200 text-gray-800 hover:bg-[#29004128]"
+                : "bg-gray-200 text-text-[#1a0029] hover:bg-[#29004128]"
             }`}
             aria-current={currentPage === page ? "page" : undefined}
             aria-label={`Səhifə ${page}`}
@@ -94,7 +94,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
         disabled={currentPage === totalPages}
         className={`px-4 py-2 rounded-full transition ${
           currentPage === totalPages
-            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+            ? "bg-gray-300 text-[#1a0029]/80 cursor-not-allowed"
             : "bg-[#1a0029] text-white hover:bg-[#290041b5]"
         }`}
         aria-label="Növbəti səhifə"

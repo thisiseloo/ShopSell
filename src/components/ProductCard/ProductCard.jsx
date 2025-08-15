@@ -85,10 +85,10 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
 
       {/* Məhsul məlumatları */}
       <div className="p-3 sm:p-4 flex flex-col gap-2">
-        <h3 className="font-semibold text-base sm:text-lg truncate">
+        <h3 className="font-semibold text-base text-[#1a0029] sm:text-lg truncate">
           {product.name}
         </h3>
-        <p className="text-gray-600 text-xs sm:text-sm">{product.brand}</p>
+        <p className="text-[#1a0029]/80 text-xs sm:text-sm">{product.brand}</p>
 
         {/* Ulduzlama */}
         <div className="flex items-center">
@@ -102,25 +102,27 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
         </div>
 
         <p className="font-bold text-lg sm:text-xl text-purple-800">
-          {product.price} AZN
+          {product.price} ₼
         </p>
 
         {/* Səbət düyməsi */}
         <button
-          onClick={(e) => {
-            e.stopPropagation();
-            dispatch(addItem(product));
-            onAddToCart?.();
-          }}
-          className="relative bg-[#290041] text-white border border-purple-700 rounded font-semibold hover:bg-gray-200 hover:text-gray-700 hover:border-[#290041] transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
-        >
-          Səbətə əlavə et
-          {cartCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
-              {cartCount}
-            </span>
-          )}
-        </button>
+  onClick={(e) => {
+    e.stopPropagation();
+    dispatch(addItem(product));
+    onAddToCart?.();
+  }}
+  className="relative bg-[#290041] text-white border border-purple-700 rounded font-semibold 
+             hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] 
+             transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
+>
+  Səbətə əlavə et
+  {cartCount > 0 && (
+    <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
+      {cartCount}
+    </span>
+  )}
+</button>
       </div>
     </div>
   );

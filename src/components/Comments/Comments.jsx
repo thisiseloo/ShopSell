@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import commentsData from "../../data/comments";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 const Star = ({ filled, onClick }) => (
   <span
     className={`cursor-pointer text-2xl sm:text-3xl transition-colors ${
-      filled ? "text-yellow-400" : "text-gray-300"
+      filled ? "text-yellow-400" : " text-[#1a0029]/20"
     }`}
     onClick={onClick}
   >
@@ -14,7 +14,12 @@ const Star = ({ filled, onClick }) => (
 );
 
 const Comments = () => {
-  const [comments, setComments] = useState(commentsData);
+  // localStorage-dan yalnız istifadəçi əlavə etdiyi şərhləri yükləyirik
+  const [userComments, setUserComments] = useState(() => {
+    const savedComments = localStorage.getItem("userComments");
+    return savedComments ? JSON.parse(savedComments) : [];
+  });
+
   const [startIndex, setStartIndex] = useState(0);
   const visibleCount = 3;
   const step = 2;
@@ -24,34 +29,43 @@ const Comments = () => {
   const [commentText, setCommentText] = useState("");
   const [rating, setRating] = useState(0);
 
+  // LocalStorage-a yalnız istifadəçi əlavə etdiyi şərhləri yazırıq
+  useEffect(() => {
+    localStorage.setItem("userComments", JSON.stringify(userComments));
+  }, [userComments]);
+
   const prev = () => {
     setStartIndex((prevIndex) =>
       prevIndex === 0
-        ? Math.max(comments.length - visibleCount, 0)
+        ? Math.max(commentsData.length + userComments.length - visibleCount, 0)
         : prevIndex - step
     );
   };
 
   const next = () => {
     setStartIndex((prevIndex) =>
-      prevIndex + step >= comments.length ? 0 : prevIndex + step
+      prevIndex + step >= commentsData.length + userComments.length
+        ? 0
+        : prevIndex + step
     );
   };
 
-  const visibleComments = comments
-    .concat(comments)
+  // visibleComments = default + istifadəçi şərhləri
+  const allComments = [...commentsData, ...userComments];
+  const visibleComments = allComments
+    .concat(allComments)
     .slice(startIndex, startIndex + visibleCount);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (rating === 0) return alert("Zəhmət olmasa ulduz seçin!");
     const newComment = {
-      id: comments.length + 1,
+      id: commentsData.length + userComments.length + 1,
       name: name + " " + surname,
       rating,
       comment: commentText,
     };
-    setComments([...comments, newComment]);
+    setUserComments([...userComments, newComment]);
     setName("");
     setSurname("");
     setCommentText("");
@@ -59,20 +73,20 @@ const Comments = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-8 px-4 sm:py-10 sm:px-6 lg:py-12 lg:px-8">
+    <div className="max-w-7xl mx-auto mt-[70px] py-8 px-4 sm:py-10 sm:px-6 lg:py-12 lg:px-8">
       {/* Başlıq və oxlar */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
-        <h2 className="text-[28px] sm:text-[35px] font-bold text-gray-900 text-center sm:text-left mb-3 sm:mb-0">
+        <h2 className="text-[28px] sm:text-[35px] font-bold text-[#1a0029] text-center sm:text-left mb-3 sm:mb-0">
           XOŞBƏXT MÜŞTƏRİLƏRİMİZ
         </h2>
         <div className="flex gap-[10px] space-x-3 mt-2 sm:mt-0">
           <FaArrowLeftLong
             onClick={prev}
-            className="w-6 h-6 sm:w-8 sm:h-8 cursor-pointer text-gray-600 hover:text-gray-900 transition-colors"
+            className="w-6 h-6 sm:w-8 sm:h-8 cursor-pointer text-[#1a0029]/80 hover:text-[#1a0029] transition-colors"
           />
           <FaArrowRightLong
             onClick={next}
-            className="w-6 h-6 sm:w-8 sm:h-8 cursor-pointer text-gray-600 hover:text-gray-900 transition-colors"
+            className="w-6 h-6 sm:w-8 sm:h-8 cursor-pointer text-[#1a0029]/80 hover:text-[#1a0029] transition-colors"
           />
         </div>
       </div>
@@ -89,17 +103,17 @@ const Comments = () => {
                 <span
                   key={i}
                   className={`text-xl sm:text-2xl ${
-                    i < t.rating ? "text-yellow-400" : "text-gray-300"
+                    i < t.rating ? "text-yellow-400" : " text-[#1a0029]/20"
                   }`}
                 >
                   ★
                 </span>
               ))}
             </div>
-            <h3 className="font-semibold mb-1 sm:mb-2 text-md sm:text-lg text-gray-800">
+            <h3 className="font-semibold mb-1 sm:mb-2 text-md sm:text-lg text-[#1a0029]/90">
               {t.name}
             </h3>
-            <p className="text-gray-600 italic text-sm sm:text-base">
+            <p className=" text-[#1a0029]/80 italic text-sm sm:text-base">
               {t.comment}
             </p>
           </div>
@@ -109,7 +123,7 @@ const Comments = () => {
       {/* Form + Şəkil + Button */}
       <div className="bg-gray-50 p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <div className="w-full md:w-3/5">
-          <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center md:text-left text-gray-900">
+          <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center md:text-left text-[#1a0029]">
             Sən də öz rəyini bizimlə paylaş
           </h3>
           <form onSubmit={handleSubmit}>

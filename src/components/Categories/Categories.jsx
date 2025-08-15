@@ -19,7 +19,7 @@ const Categories = React.forwardRef((props, ref) => {
 
   return (
     <div ref={ref}>
-      <h2 className="category-heading">KATEQORİYALAR</h2>
+      <h2 className="category-heading text-[#1a0029]">KATEQORİYALAR</h2>
       <div className="category-container">
         {categories.map((cat, i) => (
           <div key={i} className="category-item" onClick={() => handleClick(cat.title)}>

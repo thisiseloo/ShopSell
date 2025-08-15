@@ -20,13 +20,13 @@ export default function PromoOverlay({ scrollToCategories }) {
         "
       >
         {/* Başlıq */}
-        <h2 className="text-gray-800 font-extrabold leading-tight text-[30px] sm:text-[45px] max-w-[800px]">
+        <h2 className="text-[#1a0029] font-extrabold leading-tight text-[30px] sm:text-[45px] max-w-[800px]">
           ÜSLUBUNUZU TAMAMLAYAN <br /> AYAQQABI VƏ ÇANTALARIMIZI <br />
           KƏŞF EDİN
         </h2>
 
         {/* Paraqraf */}
-        <p className="text-gray-800 mt-3 leading-relaxed text-[14px] sm:text-[18px] max-w-[660px]">
+        <p className="text-[#1a0029] mt-3 leading-relaxed text-[14px] sm:text-[18px] max-w-[660px]">
           Zövqünüzə uyğun və fərdiliyinizi ön plana çıxaracaq şəkildə
           hazırlanmış, müxtəlif və incəliklə işlənmiş ayaqqabı və çantalarımızın
           geniş çeşidini nəzərdən keçirin.
@@ -37,8 +37,8 @@ export default function PromoOverlay({ scrollToCategories }) {
           <button
             onClick={scrollToCategories}
             className="w-[150px] h-[40px] sm:w-[180px] sm:h-[50px] 
-             bg-gray-800 text-white border border-transparent rounded-[40px] 
-             hover:bg-gray-300 hover:!text-gray-900 hover:!border-gray-900 
+             bg-[#1a0029] text-white border border-transparent rounded-[40px] 
+             hover:bg-gray-300 hover:!text-[#1a0029] hover:!border-[#1a0029] 
              transition-colors duration-300"
           >
             Alış-veriş edin
@@ -48,26 +48,26 @@ export default function PromoOverlay({ scrollToCategories }) {
         {/* Stats */}
         <div className="mt-10 flex flex-wrap justify-start gap-x-20 gap-y-6 text-left">
           <div className="flex flex-col items-start max-w-[181px]">
-            <span className="text-gray-800 font-bold text-[30px] sm:text-[35px]">
+            <span className="text-[#1a0029] font-bold text-[30px] sm:text-[35px]">
               200+
             </span>
-            <span className="text-gray-800 text-[14px] sm:text-[18px]">
+            <span className="text-[#1a0029] text-[14px] sm:text-[18px]">
               Beynəlxalq Brendlər
             </span>
           </div>
           <div className="flex flex-col items-start max-w-[260px]">
-            <span className="text-gray-900 font-bold text-[30px] sm:text-[35px]">
+            <span className="text-[#1a0029] font-bold text-[30px] sm:text-[35px]">
               2,000+
             </span>
-            <span className="text-gray-900 text-[14px] sm:text-[18px]">
+            <span className="text-[#1a0029] text-[14px] sm:text-[18px]">
               Yüksək Keyfiyyətli Məhsullar
             </span>
           </div>
           <div className="flex flex-col items-start max-w-[174px]">
-            <span className="text-gray-900 font-bold text-[30px] sm:text-[35px]">
+            <span className="text-[#1a0029] font-bold text-[30px] sm:text-[35px]">
               30,000+
             </span>
-            <span className="text-gray-900 text-[14px] sm:text-[18px]">
+            <span className="text-[#1a0029]text-[14px] sm:text-[18px]">
               Məmnun Müştərilər
             </span>
           </div>
@@ -76,3 +76,4 @@ export default function PromoOverlay({ scrollToCategories }) {
     </div>
   );
 }
+

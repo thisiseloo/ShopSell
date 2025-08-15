@@ -67,8 +67,8 @@ const Filter = ({
       className={`px-3 py-1 rounded-md font-semibold select-none transition
         ${
           selected
-            ? "bg-[#290041] text-gray-100"
-            : "bg-gray-100 text-[#290041] hover:bg-gray-300"
+            ? "bg-[#290041] text-[#1a0029]"
+            : "bg-gray-100 text-[#1a0029] hover:bg-gray-300"
         }`}
     >
       {children}
@@ -101,7 +101,7 @@ const Filter = ({
   const CloseButton = () => (
     <button
       onClick={() => setIsOpen(false)}
-      className="absolute top-3 right-3 text-gray-600 hover:text-gray-900"
+      className="absolute top-3 right-3  text-[#1a0029]/80 hover: text-[#1a0029]"
       aria-label="Filtrləri bağla"
       type="button"
     >
@@ -133,15 +133,19 @@ const Filter = ({
         className={`
           bg-white rounded-xl shadow-md p-6 max-w-md flex flex-col
           md:relative
-          ${isOpen ? "fixed inset-0 m-auto z-50 max-w-md max-h-[90vh] overflow-y-auto" : "hidden md:block"}
+          ${
+            isOpen
+              ? "fixed inset-0 m-auto z-50 max-w-md max-h-[90vh] overflow-y-auto"
+              : "hidden md:block"
+          }
         `}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Mobil/Tablet bağlama düyməsi */}
         {isOpen && <CloseButton />}
 
-        <div className="text-2xl font-bold mb-6 flex items-center gap-[10px]">
-          <FilterIcon size={22} className="text-[#290041] font-bold" />
+        <div className="text-2xl text-[#1a0029] font-bold mb-6 flex items-center gap-[10px]">
+          <FilterIcon size={22} className="text-[#1a0029] font-bold" />
           Filtrlər
         </div>
 
@@ -229,9 +233,9 @@ const Filter = ({
         </Section>
 
         <Section
-          title="Kategoriya"
-          isOpen={openSections["Kategoriya"]}
-          toggle={() => toggleSection("Kategoriya")}
+          title="Kateqoriya"
+          isOpen={openSections["Kateqoriya"]}
+          toggle={() => toggleSection("Kateqoriya")}
         >
           {categories.map((cat) => (
             <OptionButton
@@ -267,8 +271,8 @@ const Filter = ({
         >
           <div className="mt-2 px-2">
             <div className="flex justify-between mb-2 font-medium text-sm">
-              <span>{filters.price[0]} AZN</span>
-              <span>{filters.price[1]} AZN</span>
+              <span>{filters.price[0]} ₼</span>
+              <span>{filters.price[1]} ₼</span>
             </div>
 
             <div className="relative h-8">
@@ -281,7 +285,6 @@ const Filter = ({
                   right: `${100 - (filters.price[1] / 1000) * 100}%`,
                 }}
               ></div>
-
               <input
                 type="range"
                 min="0"

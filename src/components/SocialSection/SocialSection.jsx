@@ -26,8 +26,8 @@ const socialData = [
 const SocialSection = () => {
   return (
     <div className="social-section">
-      <h2>GƏLİN SOSİALLAŞAQ!</h2>
-      <p className="socialText">
+      <h2 className="text-[#1a0029]">GƏLİN SOSİALLAŞAQ!</h2>
+      <p className="socialText text-[#1a0029]/80">
         Cəmiyyətimizə indi qoşul, məhsullarımızı geyindikdə şərh yaz və özünü
         etiketlə.
       </p>

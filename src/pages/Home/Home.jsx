@@ -10,13 +10,15 @@ import Shopsell from "../../components/Shopsell/Shopsell";
 
 const Home = () => {
   const categoriesRef = useRef(null);
-const scrollToCategories = () => {
-  if (categoriesRef.current) {
-    categoriesRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.scrollBy(0, -155); // navbar hündürlüyü üçün offset
-  }
-};
 
+  const scrollToCategories = () => {
+    if (categoriesRef.current) {
+      categoriesRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   return (
     <div className="overflow-x-hidden">

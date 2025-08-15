@@ -1,6 +1,6 @@
 import React from "react";
 import Newsletter from "../NewsLetter/NewsLetter";
-import { Link } from "react-router-dom"; // ← Burada import vacibdir
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import {
   FaFacebookF,
@@ -80,16 +80,17 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">
                 Bizimlə əlaqə saxlayın
               </h3>
-              {/* Əlaqə nömrəsi əlavə edildi */}
-              <p className="text-white text-sm mt-2">
+              {/* Əlaqə nömrəsi */}
+              <p className="text-white text-sm mt-3">
                 Əlaqə: +994 55 622 71 01
               </p>
-              <div className="flex items-center gap-3 text-2xl justify-center sm:justify-start mb-2">
+              {/* Sosial ikonlar arasında 20px məsafə */}
+              <div className="flex items-center gap-3 justify-center sm:justify-start mt-[10px] mb-2">
                 <a
                   href="https://www.facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-gray-200"
+                  className="text-white hover:text-gray-200 w-7 h-7 flex items-center justify-center text-xl"
                 >
                   <FaFacebookF />
                 </a>
@@ -97,7 +98,7 @@ const Footer = () => {
                   href="https://www.instagram.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-gray-200"
+                  className="text-white hover:text-gray-200 w-7 h-7 flex items-center justify-center text-xl"
                 >
                   <FaInstagram />
                 </a>
@@ -105,7 +106,7 @@ const Footer = () => {
                   href="https://www.pinterest.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-gray-200"
+                  className="text-white hover:text-gray-200 w-7 h-7 flex items-center justify-center text-xl"
                 >
                   <FaPinterestP />
                 </a>
@@ -113,7 +114,7 @@ const Footer = () => {
                   href="https://www.twitter.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-gray-200"
+                  className="text-white hover:text-gray-200 w-7 h-7 flex items-center justify-center text-xl"
                 >
                   <FaTwitter />
                 </a>

@@ -35,8 +35,11 @@ export default function PromoOverlay({ scrollToCategories }) {
         {/* Düymə */}
         <div className="mt-3 flex justify-start">
           <button
-            onClick={scrollToCategories} // <- scroll funksiyasını çağırır
-            className="w-[150px] h-[40px] sm:w-[180px] sm:h-[50px] bg-gray-800 text-white rounded-[40px] hover:bg-gray-300 transition"
+            onClick={scrollToCategories}
+            className="w-[150px] h-[40px] sm:w-[180px] sm:h-[50px] 
+             bg-gray-800 text-white border border-transparent rounded-[40px] 
+             hover:bg-gray-300 hover:!text-gray-900 hover:!border-gray-900 
+             transition-colors duration-300"
           >
             Alış-veriş edin
           </button>

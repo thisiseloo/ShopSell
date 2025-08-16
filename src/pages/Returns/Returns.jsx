@@ -9,22 +9,30 @@ import {
 const Returns = () => {
   const steps = [
     {
-      icon: <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Məhsulu hazırlayın",
       text: "Məhsulu istifadə etməmiş və orijinal qablaşdırmada saxlayın. Sifariş qəbzini məhsul qutusunun içərisinə qoyun.",
     },
     {
-      icon: <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Bizimlə əlaqə saxlayın",
       text: "Qaytarma üçün +994 55 622 71 01 nömrəsi ilə əlaqə saxlayın və ya sosial şəbəkələrimiz vasitəsilə mesaj göndərin.",
     },
     {
-      icon: <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Məhsulu göndərin",
       text: "Məhsulu göstərilən ünvana göndərin və ya kuryer vasitəsilə təhvil verin.",
     },
     {
-      icon: <PiNumberCircleFourLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleFourLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Ödənişin geri qaytarılması",
       text: "Qaytarılan məhsul təsdiqləndikdən sonra ödənişiniz 3-5 iş günü ərzində kart hesabınıza oturacaq.",
     },
@@ -49,9 +57,13 @@ const Returns = () => {
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               {step.icon}
-              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">{step.title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">
+                {step.title}
+              </h3>
             </div>
-            <p className="text-[#290041]/70 text-sm sm:text-base">{step.text}</p>
+            <p className="text-[#290041]/70 text-sm sm:text-base">
+              {step.text}
+            </p>
           </div>
         ))}
       </div>

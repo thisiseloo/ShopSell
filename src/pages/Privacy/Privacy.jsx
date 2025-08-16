@@ -8,17 +8,23 @@ import {
 const Privacy = () => {
   const points = [
     {
-      icon: <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Toplanan məlumatlar",
       text: "Sizdən sifariş və ödəniş üçün ad, email, telefon nömrəsi və çatdırılma ünvanı kimi məlumatlar toplanır.",
     },
     {
-      icon: <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Məlumatların qorunması",
       text: "Bütün şəxsi məlumatlar şifrələnmiş şəkildə saxlanılır və üçüncü şəxslərlə paylaşılmır.",
     },
     {
-      icon: <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Məlumatların istifadəsi",
       text: "Toplanmış məlumatlar yalnız sifarişin icrası, müştəri dəstəyi və sayt təkmilləşdirməsi məqsədilə istifadə olunur.",
     },
@@ -31,7 +37,9 @@ const Privacy = () => {
       </h2>
 
       <p className="mb-6 sm:mb-8 text-center text-[#290041]/70 text-base sm:text-lg">
-        ShopSell-də sizin şəxsi məlumatlarınız bizim üçün önəmlidir. Aşağıda məlumatların toplanması, qorunması və istifadəsi barədə əsas məqamlar verilmişdir:
+        ShopSell-də sizin şəxsi məlumatlarınız bizim üçün önəmlidir. Aşağıda
+        məlumatların toplanması, qorunması və istifadəsi barədə əsas məqamlar
+        verilmişdir:
       </p>
 
       <div className="space-y-4 sm:space-y-6">
@@ -42,9 +50,13 @@ const Privacy = () => {
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               {point.icon}
-              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">{point.title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">
+                {point.title}
+              </h3>
             </div>
-            <p className="text-[#290041]/70 text-sm sm:text-base">{point.text}</p>
+            <p className="text-[#290041]/70 text-sm sm:text-base">
+              {point.text}
+            </p>
           </div>
         ))}
       </div>

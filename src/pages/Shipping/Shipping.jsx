@@ -8,17 +8,23 @@ import {
 const Shipping = () => {
   const steps = [
     {
-      icon: <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Sifarişi tamamlayın",
       text: "Seçilmiş məhsulları səbətinizə əlavə edin və ödənişi tamamlayın.",
     },
     {
-      icon: <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Sifariş təsdiqi",
       text: "Ödəniş tamamlandıqdan sonra sizə email və ya SMS vasitəsilə təsdiq göndərilir.",
     },
     {
-      icon: <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Çatdırılma",
       text: "Məhsul 1-3 iş günü ərzində Bakıya, digər bölgələrə isə 3-7 iş günü ərzində çatdırılır.",
     },
@@ -31,7 +37,8 @@ const Shipping = () => {
       </h2>
 
       <p className="mb-6 sm:mb-8 text-center text-[#290041]/70 text-base sm:text-lg">
-        ShopSell-də sifarişlərin çatdırılması prosesi sadə və rahatdır. Aşağıdakı addımları izləyin:
+        ShopSell-də sifarişlərin çatdırılması prosesi sadə və rahatdır.
+        Aşağıdakı addımları izləyin:
       </p>
 
       <div className="space-y-4 sm:space-y-6">
@@ -42,9 +49,13 @@ const Shipping = () => {
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               {step.icon}
-              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">{step.title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">
+                {step.title}
+              </h3>
             </div>
-            <p className="text-[#290041]/70 text-sm sm:text-base">{step.text}</p>
+            <p className="text-[#290041]/70 text-sm sm:text-base">
+              {step.text}
+            </p>
           </div>
         ))}
       </div>

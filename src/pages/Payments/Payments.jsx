@@ -8,17 +8,23 @@ import {
 const Payments = () => {
   const steps = [
     {
-      icon: <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Sifariş Seçimi",
       text: "İstədiyiniz məhsulları seçin və səbətə əlavə edin.",
     },
     {
-      icon: <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Ödəniş Metodunu Seçin",
       text: "Visa, MasterCard, nağd ödəmə və ya digər mövcud ödəniş üsullarından birini seçin.",
     },
     {
-      icon: <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Ödənişi Tamamlayın",
       text: "Seçilmiş metodla ödənişi tamamlayın. Ödəniş təsdiqi email və ya SMS vasitəsilə sizə göndəriləcək.",
     },
@@ -31,7 +37,8 @@ const Payments = () => {
       </h2>
 
       <p className="mb-6 sm:mb-8 text-center text-[#290041]/70 text-base sm:text-lg">
-        ShopSell-də ödəniş prosesi sadə və təhlükəsizdir. Aşağıdakı addımları izləyin:
+        ShopSell-də ödəniş prosesi sadə və təhlükəsizdir. Aşağıdakı addımları
+        izləyin:
       </p>
 
       <div className="space-y-4 sm:space-y-6">
@@ -42,9 +49,13 @@ const Payments = () => {
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               {step.icon}
-              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">{step.title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">
+                {step.title}
+              </h3>
             </div>
-            <p className="text-[#290041]/70 text-sm sm:text-base">{step.text}</p>
+            <p className="text-[#290041]/70 text-sm sm:text-base">
+              {step.text}
+            </p>
           </div>
         ))}
       </div>

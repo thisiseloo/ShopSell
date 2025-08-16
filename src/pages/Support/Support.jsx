@@ -8,17 +8,23 @@ import {
 const Support = () => {
   const steps = [
     {
-      icon: <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Əlaqə yolları",
       text: "Bizimlə telefon (+994 55 622 71 01), email və ya sosial şəbəkələr vasitəsilə əlaqə saxlaya bilərsiniz.",
     },
     {
-      icon: <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Sorğu göndərmək",
       text: "Sayt üzərindən sorğu forması dolduraraq hər hansı bir problem və ya sual barədə bizə mesaj göndərin.",
     },
     {
-      icon: <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />,
+      icon: (
+        <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
+      ),
       title: "Dəstək prosesi",
       text: "Sorğunuz daxil olduqdan sonra müştəri dəstək komandamız ən qısa zamanda sizinlə əlaqə saxlayacaq.",
     },
@@ -31,7 +37,8 @@ const Support = () => {
       </h2>
 
       <p className="mb-6 sm:mb-8 text-center text-[#290041]/70 text-base sm:text-lg">
-        ShopSell-də hər zaman sizə dəstək olmağa hazırıq. Aşağıdakı addımlar ilə bizimlə əlaqə saxlaya bilərsiniz:
+        ShopSell-də hər zaman sizə dəstək olmağa hazırıq. Aşağıdakı addımlar ilə
+        bizimlə əlaqə saxlaya bilərsiniz:
       </p>
 
       <div className="space-y-4 sm:space-y-6">
@@ -42,9 +49,13 @@ const Support = () => {
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-2">
               {step.icon}
-              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">{step.title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-[#290041]">
+                {step.title}
+              </h3>
             </div>
-            <p className="text-[#290041]/70 text-sm sm:text-base">{step.text}</p>
+            <p className="text-[#290041]/70 text-sm sm:text-base">
+              {step.text}
+            </p>
           </div>
         ))}
       </div>

@@ -6,22 +6,21 @@ const kidsBags = [
     price: 132,
     image:
       "https://i.pinimg.com/1200x/0d/2f/8e/0d2f8ed74cb51d3e9cdfa38ce99aa319.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Puma",
+    color: "Çəhrayı",
+    material: "Perlamontnu dəri",
   },
   {
     id: 2,
     uniqueId: "kbag-2",
     name: "Kids Lunch Bag",
     price: 65,
-    
+
     image:
       "https://i.pinimg.com/1200x/20/1d/f6/201df619feb9abb6a968179cb8639d37.jpg",
-    
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Prada",
+    color: "Açıq mavi",
+    material: "Dəri",
   },
   {
     id: 3,
@@ -30,10 +29,10 @@ const kidsBags = [
     price: 98,
     image:
       "https://i.pinimg.com/1200x/31/15/21/3115213b236e0ae33f1d198e8ac543de.jpg",
-    
+
     brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    color: "Çəhrayı",
+    material: "Pambıq",
   },
   {
     id: 4,
@@ -42,20 +41,20 @@ const kidsBags = [
     price: 176,
     image:
       "https://i.pinimg.com/1200x/05/4a/0e/054a0e84595745ddd29cbf9dc73d3c2b.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Puma",
+    color: "Qəhvəyi",
+    material: "Pambıq",
   },
-   {
+  {
     id: 5,
     uniqueId: "kbag-5",
     name: "Kids Crossbody Bag",
     price: 54,
     image:
       "https://i.pinimg.com/736x/55/ed/cf/55edcf0f605113f19b84dea8add48b1f.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Adidas",
+    color: "Açıq yaşıl",
+    material: "Dəri",
   },
   {
     id: 6,
@@ -65,11 +64,10 @@ const kidsBags = [
     image:
       "https://i.pinimg.com/1200x/54/ef/52/54ef524d70af2c1f39532f0200fef58d.jpg",
     brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    color: "Bej",
+    material: "Pambıq",
   },
- 
- 
+
   {
     id: 7,
     uniqueId: "kbag-7",
@@ -78,19 +76,19 @@ const kidsBags = [
     image:
       "https://i.pinimg.com/1200x/6f/97/dc/6f97dc190344a1d753ecc7168cb82d0d.jpg",
     brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    color: "Çəhrayı",
+    material: "Polyeser",
   },
-   {
+  {
     id: 8,
     uniqueId: "kbag-8",
     name: "Kids Backpack",
     price: 123,
     image:
       "https://i.pinimg.com/1200x/5f/3c/82/5f3c820472e8acb802670accf60d0dcd.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Puma",
+    color: "Bəyaz",
+    material: "Polyester",
   },
   {
     id: 9,
@@ -99,9 +97,9 @@ const kidsBags = [
     price: 87,
     image:
       "https://i.pinimg.com/1200x/21/2a/8b/212a8b1172909be30b64aa05016e03e6.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Nike",
+    color: "Açıq mavi",
+    material: "Polyester",
   },
   {
     id: 10,
@@ -110,9 +108,9 @@ const kidsBags = [
     price: 42,
     image:
       "https://i.pinimg.com/736x/d7/fd/ae/d7fdaef849c57928604725394da3e991.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Puma",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 11,
@@ -122,8 +120,8 @@ const kidsBags = [
     image:
       "https://i.pinimg.com/1200x/7a/6a/11/7a6a110ba1678bae98e45dd922bb6fb0.jpg",
     brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    color: "Çəhrayı",
+    material: "Dəri",
   },
   {
     id: 12,
@@ -132,9 +130,9 @@ const kidsBags = [
     price: 90,
     image:
       "https://i.pinimg.com/1200x/48/52/52/485252484164c49bd2d61ce699f2f8b5.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Prada",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 13,
@@ -144,8 +142,8 @@ const kidsBags = [
     image:
       "https://i.pinimg.com/1200x/b1/ae/0a/b1ae0aa2310011a52549f23bb7807a42.jpg",
     brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 14,
@@ -154,9 +152,9 @@ const kidsBags = [
     price: 185,
     image:
       "https://i.pinimg.com/1200x/2a/4b/fb/2a4bfb5e0cd126d5624e29176fe6e1ca.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Puma",
+    color: "Qırmızı",
+    material: "Polyester",
   },
   {
     id: 15,
@@ -165,9 +163,9 @@ const kidsBags = [
     price: 38,
     image:
       "https://i.pinimg.com/736x/40/04/f2/4004f20001685bc8b9e2d57aac6ba0ea.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Adidas",
+    color: "Açıq mavi",
+    material: "Perlamontnu dəri",
   },
   {
     id: 16,
@@ -176,9 +174,9 @@ const kidsBags = [
     price: 178,
     image:
       "https://i.pinimg.com/1200x/a2/68/69/a26869f53d2832925e6a37503077560c.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "U.S Polo Assn",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 17,
@@ -187,9 +185,9 @@ const kidsBags = [
     price: 69,
     image:
       "https://i.pinimg.com/1200x/cc/01/c9/cc01c9a5b151e2d918c1493a13210df7.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Adidas",
+    color: "Açıq mavi",
+    material: "Polyester",
   },
   {
     id: 18,
@@ -198,20 +196,20 @@ const kidsBags = [
     price: 52,
     image:
       "https://i.pinimg.com/1200x/fa/a1/30/faa130f62feb66f81d7e1bee7d3ffa75.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Balenciaga",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 19,
     uniqueId: "kbag-19",
-    name: "Kids Backpack",
+    name: "Bel Çantası",
     price: 156,
     image:
       "https://i.pinimg.com/736x/00/47/c2/0047c2cdf7776386e428798ba28b82fe.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Gucci",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 20,
@@ -220,9 +218,9 @@ const kidsBags = [
     price: 80,
     image:
       "https://i.pinimg.com/1200x/e2/96/58/e296589364f85a38a8128078b38c33cd.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Gucci",
+    color: "Sarı",
+    material: "Kətan",
   },
   {
     id: 21,
@@ -231,9 +229,9 @@ const kidsBags = [
     price: 127,
     image:
       "https://i.pinimg.com/736x/10/f1/21/10f12194c7bc2f05f88267a1a0348752.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Christion Louboutin",
+    color: "Qara",
+    material: "Dəri",
   },
   {
     id: 22,
@@ -242,9 +240,9 @@ const kidsBags = [
     price: 154,
     image:
       "https://i.pinimg.com/1200x/8f/18/3a/8f183abfc770013a64d2b08388af06aa.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Gucci",
+    color: "Boz",
+    material: "Kətan",
   },
   {
     id: 23,
@@ -253,9 +251,9 @@ const kidsBags = [
     price: 42,
     image:
       "https://i.pinimg.com/1200x/d1/f8/85/d1f885285407641098254c19c58bbf7e.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Gucci",
+    color: "Boz",
+    material: "Kətan",
   },
   {
     id: 24,
@@ -265,8 +263,8 @@ const kidsBags = [
     image:
       "https://i.pinimg.com/1200x/f6/ff/6e/f6ff6e9f9765bfdac8e7237b7c4a85df.jpg",
     brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 25,
@@ -275,9 +273,9 @@ const kidsBags = [
     price: 101,
     image:
       "https://i.pinimg.com/736x/e6/7f/68/e67f689cffc99fdcc8e8b9178b094f8a.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Chanel",
+    color: "Çəhrayı",
+    material: "Pambıq",
   },
   {
     id: 26,
@@ -286,9 +284,9 @@ const kidsBags = [
     price: 94,
     image:
       "https://i.pinimg.com/736x/4b/81/35/4b8135c10e097a137cb506548676f1f5.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Chanel",
+    color: "Çəhrayı",
+    material: "Dəri",
   },
   {
     id: 27,
@@ -297,9 +295,9 @@ const kidsBags = [
     price: 188,
     image:
       "https://i.pinimg.com/1200x/5a/51/78/5a5178e85ae7b7406b6c2b36e2bd21a5.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "U.S Polo Assn",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 28,
@@ -308,9 +306,9 @@ const kidsBags = [
     price: 50,
     image:
       "https://i.pinimg.com/736x/bb/a6/bb/bba6bbbeacbf0bcdc8d82f8f72f743f2.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Gucci",
+    color: "Qəhvəyi",
+    material: "Kətan",
   },
   {
     id: 29,
@@ -319,9 +317,9 @@ const kidsBags = [
     price: 99,
     image:
       "https://i.pinimg.com/1200x/d0/a8/c3/d0a8c3da6e3c10543fb24521946b62d7.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Chanel",
+    color: "Çəhrayı",
+    material: "Dəri",
   },
   {
     id: 30,
@@ -330,9 +328,9 @@ const kidsBags = [
     price: 63,
     image:
       "https://i.pinimg.com/1200x/33/68/77/336877a38041ba3faa37751288b788a5.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Lacoste",
+    color: "Tünd mavi",
+    material: "Dəri",
   },
   {
     id: 31,
@@ -341,9 +339,9 @@ const kidsBags = [
     price: 189,
     image:
       "https://i.pinimg.com/1200x/3e/e0/bd/3ee0bdd8843c3cd9bdc82eb8933b6e7d.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Nike",
+    color: "Sarı",
+    material: "Pambıq",
   },
   {
     id: 32,
@@ -352,9 +350,9 @@ const kidsBags = [
     price: 154,
     image:
       "https://i.pinimg.com/1200x/5e/ac/a6/5eaca6da89fede7c3874e0b19a7b70d7.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Lacoste",
+    color: "Qara",
+    material: "Dəri",
   },
   {
     id: 33,
@@ -363,9 +361,9 @@ const kidsBags = [
     price: 140,
     image:
       "https://i.pinimg.com/1200x/41/88/33/418833e4b8cc380073d43a8fc332c9a6.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Lacoste",
+    color: "Tünd mavi",
+    material: "Polyester",
   },
   {
     id: 34,
@@ -374,9 +372,9 @@ const kidsBags = [
     price: 199,
     image:
       "https://i.pinimg.com/1200x/04/a7/7e/04a77e38bfd21a43b0682dfb513121a9.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Tommy Hilfiger",
+    color: "Qırmızı",
+    material: "Dəri",
   },
   {
     id: 35,
@@ -385,9 +383,9 @@ const kidsBags = [
     price: 45,
     image:
       "https://i.pinimg.com/1200x/2a/d5/08/2ad508602ab20c58d2785010df2e1f1f.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Fendi",
+    color: "Sarı",
+    material: "Dəri",
   },
   {
     id: 36,
@@ -396,9 +394,9 @@ const kidsBags = [
     price: 123,
     image:
       "https://i.pinimg.com/1200x/67/ba/7b/67ba7b52e9635e783c2d1a39fffd8842.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Chanel",
+    color: "Çəhrayı",
+    material: "Dəri",
   },
   {
     id: 37,
@@ -407,9 +405,9 @@ const kidsBags = [
     price: 109,
     image:
       "https://i.pinimg.com/1200x/f0/64/c3/f064c3b30e504114d4e41b1896592eab.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Dior",
+    color: "Qara",
+    material: "Kətan",
   },
   {
     id: 38,
@@ -419,8 +417,8 @@ const kidsBags = [
     image:
       "https://i.pinimg.com/1200x/23/40/ac/2340ac038b5c9ea61b685c36855d9702.jpg",
     brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    color: "Açıq mavi",
+    material: "Kətan",
   },
   {
     id: 39,
@@ -429,9 +427,9 @@ const kidsBags = [
     price: 77,
     image:
       "https://i.pinimg.com/1200x/a4/27/6d/a4276d1ae5a0d1cbebd1c0e70683a554.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Fendi",
+    color: "Bej",
+    material: "Polyester",
   },
   {
     id: 40,
@@ -441,8 +439,8 @@ const kidsBags = [
     image:
       "https://i.pinimg.com/736x/08/be/d7/08bed7bff54c69186c7d472ddb8ae406.jpg",
     brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 41,
@@ -451,9 +449,9 @@ const kidsBags = [
     price: 176,
     image:
       "https://i.pinimg.com/1200x/41/de/57/41de577be59093a5bd4d3a35be54efbc.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Nike",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 42,
@@ -462,9 +460,9 @@ const kidsBags = [
     price: 121,
     image:
       "https://i.pinimg.com/1200x/04/72/04/047204d103b338cc25787fdb1d0ea21f.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Nike",
+    color: "Tünd mavi",
+    material: "Polyester",
   },
   {
     id: 43,
@@ -473,9 +471,9 @@ const kidsBags = [
     price: 190,
     image:
       "https://i.pinimg.com/1200x/53/dd/a6/53dda6c24178a2d439709255239a713b.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Nike",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 44,
@@ -484,9 +482,9 @@ const kidsBags = [
     price: 157,
     image:
       "https://i.pinimg.com/1200x/e4/15/c1/e415c1bb7be01515c5d01d775c10aff0.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Nike",
+    color: "Sarı",
+    material: "Pambıq",
   },
   {
     id: 45,
@@ -495,9 +493,9 @@ const kidsBags = [
     price: 176,
     image:
       "https://i.pinimg.com/1200x/99/f5/0e/99f50e82fa8e8618b80c5ed296057b69.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Nike",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 46,
@@ -506,9 +504,9 @@ const kidsBags = [
     price: 140,
     image:
       "https://i.pinimg.com/736x/2d/15/22/2d152295b6f1205be7207acfacd88c48.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Nike",
+    color: "Tünd yaşıl",
+    material: "Polyester",
   },
   {
     id: 47,
@@ -517,9 +515,9 @@ const kidsBags = [
     price: 51,
     image:
       "https://i.pinimg.com/736x/bc/c3/95/bcc395fe5bbf205b1e6c30c2592e5d3f.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Nike",
+    color: "Boz",
+    material: "Polyester",
   },
   {
     id: 48,
@@ -548,9 +546,9 @@ const kidsBags = [
     price: 81,
     image:
       "https://i.pinimg.com/1200x/11/28/11/1128116e28b27d43aee7298a04651dde.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Nike",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 51,
@@ -569,9 +567,9 @@ const kidsBags = [
     price: 63,
     image:
       "https://i.pinimg.com/1200x/1d/9a/a5/1d9aa56bb38dce9b9135f90b20be2130.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Nike",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 53,
@@ -580,9 +578,9 @@ const kidsBags = [
     price: 198,
     image:
       "https://i.pinimg.com/1200x/df/fc/d2/dffcd2f402d7a05431555f7dbb17f608.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Tommy Hilfiger",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 54,
@@ -591,9 +589,9 @@ const kidsBags = [
     price: 75,
     image:
       "https://i.pinimg.com/736x/f9/45/ef/f945efce2ad1f6c21c841dd51c33e33b.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Nike",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 55,
@@ -602,9 +600,9 @@ const kidsBags = [
     price: 131,
     image:
       "https://i.pinimg.com/1200x/e6/c8/34/e6c834316bee0d3bc2c4cd8ffd8593d4.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Tommy Hilfiger",
+    color: "Rəngli",
+    material: "Polyester",
   },
   {
     id: 56,
@@ -614,8 +612,8 @@ const kidsBags = [
     image:
       "https://i.pinimg.com/1200x/3c/79/98/3c7998d3fde900cad0262f7bc2ed8d60.jpg",
     brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 57,
@@ -624,9 +622,9 @@ const kidsBags = [
     price: 114,
     image:
       "https://i.pinimg.com/1200x/cf/46/03/cf46032ddba49e1360d1d15ec7e1f014.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Nike",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 58,
@@ -635,9 +633,9 @@ const kidsBags = [
     price: 156,
     image:
       "https://i.pinimg.com/1200x/38/94/9f/38949f007509f52abdc6276fff97fd02.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "U.S Polo Assn",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 59,
@@ -646,9 +644,9 @@ const kidsBags = [
     price: 139,
     image:
       "https://i.pinimg.com/1200x/08/20/19/082019f41effa7aec3d05da83258f052.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Nike",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 60,
@@ -657,9 +655,9 @@ const kidsBags = [
     price: 126,
     image:
       "https://i.pinimg.com/736x/61/2f/2e/612f2ef62e69a1f858ac37a6fbce40c2.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Nike",
+    color: "Bəyaz",
+    material: "Perlamontnu dəri",
   },
   {
     id: 61,
@@ -668,9 +666,9 @@ const kidsBags = [
     price: 114,
     image:
       "https://i.pinimg.com/736x/6a/f5/bf/6af5bf8a8301dea18819da76f2837d9e.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Nike",
+    color: "Qırmızı",
+    material: "Polyester",
   },
   {
     id: 62,
@@ -679,9 +677,9 @@ const kidsBags = [
     price: 185,
     image:
       "https://i.pinimg.com/1200x/bd/b1/a3/bdb1a3e6f6212ec805a441fa15908e81.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Nike",
+    color: "Açıq mavi",
+    material: "Dəri",
   },
   {
     id: 63,
@@ -690,9 +688,9 @@ const kidsBags = [
     price: 150,
     image:
       "https://i.pinimg.com/736x/75/c8/39/75c839abbfc79ec626f2599ee03e2422.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Gucci",
+    color: "Çəhrayı",
+    material: "Kətan",
   },
   {
     id: 64,
@@ -701,9 +699,9 @@ const kidsBags = [
     price: 126,
     image:
       "https://i.pinimg.com/736x/ff/59/35/ff59352ce7a0491ccc9408f8ea041e02.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Adidas",
+    color: "Açıq mavi",
+    material: "Polyester",
   },
   {
     id: 65,
@@ -712,9 +710,9 @@ const kidsBags = [
     price: 103,
     image:
       "https://i.pinimg.com/1200x/56/4b/d3/564bd320127d48e8acb55eade373e675.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Adidas",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 66,
@@ -723,9 +721,9 @@ const kidsBags = [
     price: 141,
     image:
       "https://i.pinimg.com/1200x/a1/5f/14/a15f14bfd957fbbd0bc0985afa5d7ad2.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Tommy Hilfiger",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 67,
@@ -734,9 +732,9 @@ const kidsBags = [
     price: 44,
     image:
       "https://i.pinimg.com/1200x/95/ef/5b/95ef5be332edb425587dbb2f4839c0c0.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "U.S Polo Assn",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 68,
@@ -745,9 +743,9 @@ const kidsBags = [
     price: 176,
     image:
       "https://i.pinimg.com/1200x/0c/5d/63/0c5d637b3039427b91716890ae07846a.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Tommy Hilfiger",
+    color: "Çəhrayı",
+    material: "Kətan",
   },
   {
     id: 69,
@@ -756,9 +754,9 @@ const kidsBags = [
     price: 52,
     image:
       "https://i.pinimg.com/1200x/2d/e8/70/2de870f2d8c49d307574305eefa9d0fd.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Calvin Klein",
+    color: "Qara",
+    material: "Polyester",
   },
   {
     id: 70,
@@ -767,9 +765,9 @@ const kidsBags = [
     price: 186,
     image:
       "https://i.pinimg.com/1200x/3f/19/62/3f1962fd850e3177bdfbff1896900d2f.jpg",
-    brand: "Zara Kids",
-    color: "Yellow",
-    material: "Cotton",
+    brand: "Calvin Klein",
+    color: "Haki",
+    material: "Dəri",
   },
   {
     id: 71,
@@ -778,9 +776,9 @@ const kidsBags = [
     price: 172,
     image:
       "https://i.pinimg.com/736x/5f/dc/a2/5fdca27b294bc1f6499035e6a6cfa0e4.jpg",
-    brand: "Gucci Kids",
-    color: "Green",
-    material: "Synthetic",
+    brand: "Adidas",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 72,
@@ -789,9 +787,9 @@ const kidsBags = [
     price: 154,
     image:
       "https://i.pinimg.com/1200x/07/27/67/0727677b35cb5f6088b7dc247cfbeb07.jpg",
-    brand: "Prada Kids",
-    color: "Blue",
-    material: "Leather",
+    brand: "Adidas",
+    color: "Tünd yaşıl",
+    material: "Polyester",
   },
 ];
 

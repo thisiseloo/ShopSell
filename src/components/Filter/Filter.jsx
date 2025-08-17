@@ -95,21 +95,21 @@ const Filter = ({
 
   // Rəng palitrası: qırmızı, açıq qırmızı, göy, yaşıl, açıq yaşıl, sarı, çəhrayı, narıncı, bənövşəyi, açıq mavi, bej, ağ, qara, tünd boz, qeyveyi
   const colorPalette = [
-    { name: "qirmizi", bg: "red" },
-    { name: "aciq-qirmizi", bg: "#ff7f7f" },
-    { name: "goy", bg: "blue" },
-    { name: "yasil", bg: "green" },
-    { name: "aciq-yasil", bg: "#90ee90" },
-    { name: "sari", bg: "yellow" },
-    { name: "cehrayi", bg: "pink" },
-    { name: "narinci", bg: "orange" },
-    { name: "benovseyi", bg: "purple" },
-    { name: "aciq-mavi", bg: "#add8e6" },
-    { name: "bej", bg: "#f5f5dc" },
-    { name: "ag", bg: "white" },
-    { name: "qara", bg: "black" },
-    { name: "tund-boz", bg: "#555555" },
-    { name: "qeyveyi", bg: "#d2b48c" },
+    { name: "Qırmızı", bg: "red" },
+    { name: "Çəhrayı", bg: "#ff7f7f" },
+    { name: "Bənövşəyi", bg: "purple" },
+    { name: "Göy", bg: "blue" },
+    { name: "Açıq mavi", bg: "#add8e6" },
+    { name: "Yaşıl", bg: "green" },
+    { name: "Açıq yaşıl", bg: "#90ee90" },
+    { name: "Narıncı", bg: "orange" },
+    { name: "Sarı", bg: "yellow" },
+    { name: "Qəhvəyi", bg: "#844521" },
+    { name: "Bej", bg: "#ffeebf" },
+    { name: "Ağ", bg: "white" },
+    { name: "Boz", bg: "grey" },
+    { name: "Tünd boz", bg: "#555555" },
+    { name: "Qara", bg: "black" },
   ];
 
   return (

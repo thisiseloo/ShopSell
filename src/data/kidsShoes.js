@@ -4,166 +4,165 @@ const kidsShoes = [
     uniqueId: "kshoe-1",
     name: "Kids Sport Shoe 1",
     price: 164,
-    image: "https://i.pinimg.com/1200x/1e/e2/86/1ee2862dfba2864008fc6eb973ab636a.jpg",
-    brand: "Nike Kids",
-    color: "Blue",
-    size: 32,
-    material: "Mesh",
+    image:
+      "https://i.pinimg.com/1200x/1e/e2/86/1ee2862dfba2864008fc6eb973ab636a.jpg",
+    brand: "Adidas",
+    color: "Çəhrayı",
+    material: "Nabuk",
   },
   {
     id: 2,
     uniqueId: "kshoe-2",
     name: "Kids Casual Shoe",
     price: 180,
-    image: "https://i.pinimg.com/736x/fe/98/d5/fe98d5bdaca2f3491eb5853fcb2cb152.jpg",
-    brand: "Adidas Kids",
-    color: "White",
-    size: 31,
-    material: "Textile",
-
+    image:
+      "https://i.pinimg.com/736x/fe/98/d5/fe98d5bdaca2f3491eb5853fcb2cb152.jpg",
+    brand: "Puma",
+    color: "Açıq mavi",
+    material: "Dəri",
   },
   {
     id: 3,
     uniqueId: "kshoe-3",
     name: "Kids Running Shoe",
     price: 198,
-    image: "https://i.pinimg.com/1200x/e8/2f/3c/e82f3c8bc6f41d6395e65b57b4ceea99.jpg",
-    brand: "Puma Kids",
-    color: "Red",
-    size: 33,
-    material: "Leather",
+    image:
+      "https://i.pinimg.com/1200x/e8/2f/3c/e82f3c8bc6f41d6395e65b57b4ceea99.jpg",
+    brand: "Lacoste",
+    color: "Bənövşəyi",
+    material: "Dəri",
   },
   {
     id: 4,
     uniqueId: "kshoe-4",
     name: "Kids Sport Shoe 1",
     price: 109,
-    image: "https://i.pinimg.com/736x/f4/11/7e/f4117e8f1f9c1c44e3931b6f2d64d980.jpg",
-    brand: "Nike Kids",
-    color: "Blue",
-    size: 32,
-    material: "Mesh",
+    image:
+      "https://i.pinimg.com/736x/f4/11/7e/f4117e8f1f9c1c44e3931b6f2d64d980.jpg",
+    brand: "Lacoste",
+    color: "Çəhrayı",
+    material: "Dəri",
   },
   {
     id: 5,
     uniqueId: "kshoe-5",
     name: "Kids Casual Shoe",
     price: 139,
-    image: "https://i.pinimg.com/1200x/aa/e1/73/aae173aa12a8ba86429f63e7b9435cc7.jpg",
-    brand: "Adidas Kids",
-    color: "White",
-    size: 31,
-    material: "Textile",
+    image:
+      "https://i.pinimg.com/1200x/aa/e1/73/aae173aa12a8ba86429f63e7b9435cc7.jpg",
+    brand: "Nike",
+    color: "Tünd yaşıl",
+    material: "Dəri",
   },
   {
     id: 6,
     uniqueId: "kshoe-6",
     name: "Kids Running Shoe",
     price: 165,
-    image: "https://i.pinimg.com/1200x/6a/3b/6f/6a3b6ffddefb41981a08721efb14d4f1.jpg",
-    brand: "Puma Kids",
-    color: "Red",
-    size: 33,
-    material: "Leather",
+    image:
+      "https://i.pinimg.com/1200x/6a/3b/6f/6a3b6ffddefb41981a08721efb14d4f1.jpg",
+    brand: "Nike",
+    color: "Qırmızı",
+    material: "Polyester",
   },
   {
     id: 7,
     uniqueId: "kshoe-7",
     name: "Kids Sport Shoe 1",
     price: 117,
-    image: "https://i.pinimg.com/1200x/84/0a/38/840a385e096de1c9511f9e96080f111d.jpg",
-    brand: "Nike Kids",
-    color: "Blue",
-    size: 32,
-    material: "Mesh",
+    image:
+      "https://i.pinimg.com/1200x/84/0a/38/840a385e096de1c9511f9e96080f111d.jpg",
+    brand: "Lacoste",
+    color: "Tünd yaşıl",
+    material: "Dəri",
   },
   {
     id: 8,
     uniqueId: "kshoe-8",
     name: "Kids Casual Shoe",
-    price: 35,
-    image: "https://i.pinimg.com/1200x/57/9a/47/579a47e253c31a58a481d24b494607f6.jpg",
-    brand: "Adidas Kids",
-    color: "White",
-    size: 31,
-    material: "Textile",
+    price: 135,
+    image:
+      "https://i.pinimg.com/1200x/57/9a/47/579a47e253c31a58a481d24b494607f6.jpg",
+    brand: "Lacoste",
+    color: "Bəyaz",
+    material: "Dəri",
   },
   {
     id: 9,
     uniqueId: "kshoe-9",
     name: "Kids Running Shoe",
     price: 134,
-    image: "https://i.pinimg.com/736x/10/62/c3/1062c33f0ca75822aed7cdde86276b79.jpg",
-    brand: "Puma Kids",
-    color: "Red",
-    size: 33,
-    material: "Leather",
+    image:
+      "https://i.pinimg.com/736x/10/62/c3/1062c33f0ca75822aed7cdde86276b79.jpg",
+    brand: "Lacoste",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 10,
     uniqueId: "kshoe-10",
     name: "Kids Sport Shoe 1",
     price: 111,
-    image: "https://i.pinimg.com/1200x/d4/46/ac/d446acba823c2d761ed2dfb0252bad8e.jpg",
-    brand: "Nike Kids",
-    color: "Blue",
-    size: 32,
-    material: "Mesh",
+    image:
+      "https://i.pinimg.com/1200x/d4/46/ac/d446acba823c2d761ed2dfb0252bad8e.jpg",
+    brand: "Skechers",
+    color: "Boz",
+    material: "Polyester",
   },
   {
     id: 11,
     uniqueId: "kshoe-11",
     name: "Kids Casual Shoe",
     price: 174,
-    image: "https://i.pinimg.com/1200x/66/44/77/6644777b3791087c3c6db9bf0e8450fe.jpg",
-    brand: "Adidas Kids",
-    color: "White",
-    size: 31,
-    material: "Textile",
+    image:
+      "https://i.pinimg.com/1200x/66/44/77/6644777b3791087c3c6db9bf0e8450fe.jpg",
+    brand: "Skechers",
+    color: "Çəhrayı",
+    material: "Polyester",
   },
   {
     id: 12,
     uniqueId: "kshoe-12",
     name: "Kids Running Shoe",
     price: 195,
-    image: "https://i.pinimg.com/736x/e0/e4/77/e0e477c617a94cf930810a6121728e07.jpg",
-    brand: "Puma Kids",
-    color: "Red",
-    size: 33,
-    material: "Leather",
+    image:
+      "https://i.pinimg.com/736x/e0/e4/77/e0e477c617a94cf930810a6121728e07.jpg",
+    brand: "Calvin Klein",
+    color: "Bəyaz",
+    material: "Dəri",
   },
   {
     id: 13,
     uniqueId: "kshoe-13",
     name: "Kids Sport Shoe 1",
     price: 145,
-    image: "https://i.pinimg.com/1200x/53/c4/13/53c41391e25a93f75666e99b934fa974.jpg",
-    brand: "Nike Kids",
-    color: "Blue",
-    size: 32,
-    material: "Mesh",
+    image:
+      "https://i.pinimg.com/1200x/53/c4/13/53c41391e25a93f75666e99b934fa974.jpg",
+    brand: "Tommy Hilfiger",
+    color: "Qara",
+    material: "Dəri",
   },
   {
     id: 14,
     uniqueId: "kshoe-14",
     name: "Kids Casual Shoe",
     price: 87,
-    image: "https://i.pinimg.com/1200x/14/3e/69/143e698c3798aabcf3d681cda052494d.jpg",
-    brand: "Adidas Kids",
-    color: "White",
-    size: 31,
-    material: "Textile",
+    image:
+      "https://i.pinimg.com/1200x/14/3e/69/143e698c3798aabcf3d681cda052494d.jpg",
+    brand: "Skechers",
+    color: "Çəhrayı",
+    material: "Dəri",
   },
   {
     id: 15,
     uniqueId: "kshoe-15",
     name: "Kids Running Shoe",
     price: 147,
-    image: "https://i.pinimg.com/736x/bf/fe/8d/bffe8d7d8e009d0f10df664f785d1400.jpg",
-    brand: "Pumaa Kids",
-    color: "Red",
-    size: 33,
-    material: "Leather",
+    image:
+      "https://i.pinimg.com/736x/bf/fe/8d/bffe8d7d8e009d0f10df664f785d1400.jpg",
+    brand: "Balenicaga",
+    color: "Qara",
+    material: "Dəri",
   },
   {
     id: 16,
@@ -173,7 +172,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -184,7 +182,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -195,7 +192,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -206,7 +202,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -217,7 +212,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -228,7 +222,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -239,7 +232,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -250,7 +242,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -261,7 +252,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -272,7 +262,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -283,7 +272,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -294,7 +282,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -305,7 +292,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -316,7 +302,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -327,7 +312,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -338,7 +322,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -349,7 +332,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -360,7 +342,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -371,7 +352,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -382,7 +362,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -393,7 +372,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -404,7 +382,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -415,7 +392,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -426,7 +402,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -437,7 +412,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -448,7 +422,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -459,7 +432,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -470,7 +442,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -481,7 +452,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -492,7 +462,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -503,7 +472,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -514,7 +482,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -525,7 +492,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -536,7 +502,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -547,7 +512,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -558,7 +522,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -569,7 +532,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -580,7 +542,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -591,7 +552,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -602,7 +562,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -613,7 +572,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -624,7 +582,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -635,7 +592,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -646,7 +602,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -657,7 +612,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -668,7 +622,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -679,7 +632,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -690,7 +642,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -701,7 +652,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -712,7 +662,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -723,7 +672,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -734,7 +682,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -745,7 +692,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -756,7 +702,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
   {
@@ -767,7 +712,6 @@ const kidsShoes = [
     image: "",
     brand: "Nike Kids",
     color: "Blue",
-    size: 32,
     material: "Mesh",
   },
   {
@@ -778,7 +722,6 @@ const kidsShoes = [
     image: "",
     brand: "Adidas Kids",
     color: "White",
-    size: 31,
     material: "Textile",
   },
   {
@@ -789,7 +732,6 @@ const kidsShoes = [
     image: "",
     brand: "Puma Kids",
     color: "Red",
-    size: 33,
     material: "Leather",
   },
 ];

@@ -30,59 +30,37 @@ const brandsList = [
   "Calvin Klein",
   "Skechers",
   "Aldo",
-  "Greyder",
-  "Penti",
 ];
-
 const sizes = [36, 37, 38, 39, 40, 41, 42];
 const colorsList = [
-  "mavi",
-  "qırmızı",
-  "yaşıl",
-  "sarı",
-  "narıncı",
-  "bənövşəyi",
-  "çəhrayı",
-  "ağ",
-  "qara",
-  "boz",
-  "qəhvəyi",
+  "Tünd mavi",
+  "Açıq mavi",
+  "Qırmızı",
+  "Tünd yaşıl",
+  "Açıq yaşıl",
+  "Sarı",
+  "Narıncı",
+  "Bənövşəyi",
+  "Çəhrayı",
+  "Bəyaz",
+  "Qara",
+  "Boz",
+  "Qəhvəyi",
+  "Bej",
 ];
-const materialsShoe = [
-  "dəri",
-  "nubuk",
-  "zamşa",
-  "kətan",
-  "rezin",
-  "eva",
-  "mesh",
-  "pvc",
-  "pu dəri",
-];
-const materialsBag = [
-  "Pambıq",
-  "Dəri",
-  "Süni dəri",
-  "Tekstil",
-  "Hörmə",
-  "Kətan",
-  "Polyester",
-];
+const materialsShoe = ["Dəri", "Nabuk", "Kətan", "Rezin", "Polyester"];
+const materialsBag = ["Dəri", "Nabuk", "Polyester"];
 const heelList = ["Topuqsuz", "Qısa topuqlu(1-4sm)"];
 const categoryShoe = [
   "İdman ayaqqabıları",
   "Gündəlik ayaqqabılar",
   "Klassik ayaqqabılar",
   "Çəkmələr",
-  "Sandaletlər",
 ];
-const categoryBag = [
-  "İdman çantaları",
-  "Əl çantası",
-  "Çiyin çantası",
-  "Bel çantası",
-  "Pul kisəsi",
-];
+const categoryBag = ["Çiyin çantası", "Əl çantası", "Bel çantası"];
+const contextList = ["İdman", "Gündəlik", "Ziyafət"];
+
+const normalize = (value) => value?.toString().toLowerCase();
 
 const Men = ({ searchQuery }) => {
   const itemsPerPage = 12;
@@ -94,6 +72,7 @@ const Men = ({ searchQuery }) => {
     material: [],
     heel: [],
     category: [],
+    context: [],
     price: [0, 1000],
   });
   const [currentPage, setCurrentPage] = useState(1);
@@ -110,6 +89,7 @@ const Men = ({ searchQuery }) => {
       material: [],
       heel: [],
       category: [],
+      context: [],
       price: [0, 1000],
     });
     setCurrentPage(1);
@@ -117,43 +97,54 @@ const Men = ({ searchQuery }) => {
 
   const filteredProducts = allProducts.filter((product) => {
     if (selectedType !== "all" && product.type !== selectedType) return false;
-    if (filters.brand.length > 0 && !filters.brand.includes(product.brand))
+    if (
+      filters.brand.length &&
+      !filters.brand.map(normalize).includes(normalize(product.brand))
+    )
       return false;
     if (
-      filters.size.length > 0 &&
+      filters.size.length &&
       product.size !== undefined &&
       !filters.size.includes(product.size)
     )
       return false;
     if (
-      filters.color.length > 0 &&
-      product.color !== undefined &&
-      !filters.color.includes(product.color.toLowerCase())
+      filters.color.length &&
+      product.color &&
+      !filters.color.map(normalize).includes(normalize(product.color))
     )
       return false;
     if (
-      filters.material.length > 0 &&
-      product.material !== undefined &&
-      !filters.material.includes(product.material.toLowerCase())
+      filters.material.length &&
+      product.material &&
+      !filters.material.map(normalize).includes(normalize(product.material))
     )
       return false;
     if (
       selectedType === "shoe" &&
-      filters.heel.length > 0 &&
-      product.heel !== undefined &&
-      !filters.heel.includes(product.heel)
+      filters.heel.length &&
+      product.heel &&
+      !filters.heel.map(normalize).includes(normalize(product.heel))
     )
       return false;
     if (
-      filters.category.length > 0 &&
-      !filters.category.includes(product.category)
+      filters.category.length &&
+      product.category &&
+      !filters.category.map(normalize).includes(normalize(product.category))
+    )
+      return false;
+    if (
+      selectedType === "bag" &&
+      filters.context.length &&
+      product.context &&
+      !filters.context.map(normalize).includes(normalize(product.context))
     )
       return false;
     if (product.price < filters.price[0] || product.price > filters.price[1])
       return false;
     if (
       searchQuery &&
-      !product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      !normalize(product.name).includes(normalize(searchQuery))
     )
       return false;
     return true;
@@ -184,11 +175,15 @@ const Men = ({ searchQuery }) => {
             <button
               key={btn.value}
               onClick={() => setSelectedType(btn.value)}
-              className={`rounded-full font-semibold shadow-sm transition-all duration-300 transform text-white ${
-                isActive
-                  ? "bg-[#290041] opacity-100 scale-105 shadow-lg"
-                  : "bg-[#290041]/60 opacity-70 hover:opacity-100 hover:shadow-md"
-              } text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-2.5`}
+              className={`
+          rounded-lg font-medium transition-all duration-200
+          text-sm sm:text-base px-5 py-2 border-2
+          ${
+            isActive
+              ? "bg-white text-purple-700 border-purple-700 shadow-sm"
+              : "bg-purple-50 text-purple-500 border-purple-200 hover:bg-purple-100 hover:text-purple-700"
+          }
+        `}
             >
               {btn.label}
             </button>
@@ -204,10 +199,12 @@ const Men = ({ searchQuery }) => {
             availableSizes={selectedType === "bag" ? [] : sizes}
             availableColors={colorsList}
             availableMaterials={{ shoe: materialsShoe, bag: materialsBag }}
-            availableHeels={selectedType === "shoe" ? heelList : []}
+            availableHeels={heelList}
             availableCategories={{ shoe: categoryShoe, bag: categoryBag }}
+            availableContexts={contextList}
             onApply={applyFilters}
             onClear={clearFilters}
+            selectedType={selectedType}
           />
         </aside>
 

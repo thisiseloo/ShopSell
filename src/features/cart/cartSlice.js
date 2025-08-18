@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  items: [], // { uniqueId, id, name, price, image, quantity, size? }
+  items: [],
 };
 
 const cartSlice = createSlice({
@@ -9,63 +9,45 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, action) => {
-      const newItem = action.payload;
+      const { uniqueId, size } = action.payload;
       const existingItem = state.items.find(
         (item) =>
-          item.uniqueId === newItem.uniqueId &&
-          (item.size || "") === (newItem.size || "")
+          item.uniqueId === uniqueId && (item.size || "") === (size || "")
       );
+
       if (existingItem) {
         existingItem.quantity += 1;
       } else {
-        state.items.push({ ...newItem, quantity: 1 });
+        state.items.push({ ...action.payload, quantity: 1 });
       }
     },
-
     removeItem: (state, action) => {
-      const itemToRemove = action.payload;
+      const { uniqueId, size } = action.payload;
       state.items = state.items.filter(
         (item) =>
-          !(
-            item.uniqueId === itemToRemove.uniqueId &&
-            (item.size || "") === (itemToRemove.size || "")
-          )
+          !(item.uniqueId === uniqueId && (item.size || "") === (size || ""))
       );
     },
-
     increaseQty: (state, action) => {
+      const { uniqueId, size } = action.payload;
       const item = state.items.find(
-        (i) =>
-          i.uniqueId === action.payload.uniqueId &&
-          (i.size || "") === (action.payload.size || "")
+        (i) => i.uniqueId === uniqueId && (i.size || "") === (size || "")
       );
-      if (item) {
-        item.quantity += 1;
-      }
+      if (item) item.quantity += 1;
     },
-
     decreaseQty: (state, action) => {
+      const { uniqueId, size } = action.payload;
       const item = state.items.find(
-        (i) =>
-          i.uniqueId === action.payload.uniqueId &&
-          (i.size || "") === (action.payload.size || "")
+        (i) => i.uniqueId === uniqueId && (i.size || "") === (size || "")
       );
-      if (item) {
-        if (item.quantity > 1) {
-          item.quantity -= 1;
-        } else {
-          // Əgər say 1-dirsə və azaltmaq istəyirsə, səbətdən sil
-          state.items = state.items.filter(
-            (i) =>
-              !(
-                i.uniqueId === item.uniqueId &&
-                (i.size || "") === (item.size || "")
-              )
-          );
-        }
+      if (item && item.quantity > 1) {
+        item.quantity -= 1;
+      } else if (item) {
+        state.items = state.items.filter(
+          (i) => !(i.uniqueId === uniqueId && (i.size || "") === (size || ""))
+        );
       }
     },
-
     clearCart: (state) => {
       state.items = [];
     },
@@ -74,9 +56,6 @@ const cartSlice = createSlice({
 
 export const { addItem, removeItem, increaseQty, decreaseQty, clearCart } =
   cartSlice.actions;
-
-// Selectorlar:
-export const selectCartItems = (state) => state.cart.items;
 
 export const selectTotalQuantity = (state) =>
   state.cart.items.reduce((total, item) => total + item.quantity, 0);

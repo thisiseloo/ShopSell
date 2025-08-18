@@ -29,7 +29,7 @@ const womenShoes = [
     image:
       "https://i.pinimg.com/1200x/6a/a2/1f/6aa21f60a8799fdadb87c26bc91284e6.jpg",
     brand: "Christion Louboutin",
-    color: "Ağ",
+    color: "Bəyaz",
     material: "Süni dəri",
   },
   {
@@ -128,7 +128,7 @@ const womenShoes = [
     image:
       "https://i.pinimg.com/736x/f0/00/b7/f000b79ef76799542fc71bb24ab9ec20.jpg",
     brand: "Balenciaga",
-    color: "Göy",
+    color: "Tünd mavi",
     material: "Süni dəri",
   },
   {
@@ -579,7 +579,7 @@ const womenShoes = [
     image:
       "https://i.pinimg.com/736x/e2/0a/4f/e20a4f039f7a73ad85c7750ff92288eb.jpg",
     brand: "Adidas",
-    color: "Göy",
+    color: "Tünd mavi",
     material: "Dəri",
   },
   {
@@ -790,17 +790,6 @@ const womenShoes = [
     brand: "Christion Louboutin",
     color: "Qırmızı",
     material: "Dəri",
-  },
-  {
-    id: 73,
-    uniqueId: "wshoe-73",
-    name: "Sport Ayaqqabı",
-    price: 159,
-    image:
-      "https://i.pinimg.com/736x/70/67/14/706714cbaa61d99d1d6a4b710b6e14f3.jpg",
-    brand: "Aldo",
-    color: "Bəyaz",
-    material: "Süni dəri",
   },
 ];
 

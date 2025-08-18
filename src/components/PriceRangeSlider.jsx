@@ -1,7 +1,6 @@
 import React from "react";
 
 const PriceRangeSlider = ({ min, max, values, onChange }) => {
-  // values = [minVal, maxVal]
   const handleMinChange = (e) => {
     const val = Math.min(Number(e.target.value), values[1]);
     onChange([val, values[1]]);
@@ -53,10 +52,8 @@ const PriceRangeSlider = ({ min, max, values, onChange }) => {
           style={{ pointerEvents: "auto" }}
         />
 
-        {/* Background track */}
         <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-300 rounded"></div>
 
-        {/* Selected range */}
         <div
           className="absolute top-1/2 h-1 bg-pink-600 rounded"
           style={{

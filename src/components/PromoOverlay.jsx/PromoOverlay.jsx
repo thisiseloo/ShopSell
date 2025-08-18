@@ -9,7 +9,6 @@ export default function PromoOverlay({ scrollToCategories }) {
         className="w-full h-[700px] sm:h-[550px] object-cover"
       />
 
-      {/* Overlay mətni */}
       <div
         className="
           absolute top-1/2 left-1/2 
@@ -19,20 +18,17 @@ export default function PromoOverlay({ scrollToCategories }) {
           text-left
         "
       >
-        {/* Başlıq */}
         <h2 className="text-[#1a0029] font-extrabold leading-tight text-[30px] sm:text-[45px] max-w-[800px]">
           ÜSLUBUNUZU TAMAMLAYAN <br /> AYAQQABI VƏ ÇANTALARIMIZI <br />
           KƏŞF EDİN
         </h2>
 
-        {/* Paraqraf */}
         <p className="text-[#1a0029] mt-3 leading-relaxed text-[14px] sm:text-[18px] max-w-[660px]">
           Zövqünüzə uyğun və fərdiliyinizi ön plana çıxaracaq şəkildə
           hazırlanmış, müxtəlif və incəliklə işlənmiş ayaqqabı və çantalarımızın
           geniş çeşidini nəzərdən keçirin.
         </p>
 
-        {/* Düymə */}
         <div className="mt-3 flex justify-start">
           <button
             onClick={scrollToCategories}
@@ -45,7 +41,6 @@ export default function PromoOverlay({ scrollToCategories }) {
           </button>
         </div>
 
-        {/* Stats */}
         <div className="mt-10 flex flex-wrap justify-start gap-x-20 gap-y-6 text-left">
           <div className="flex flex-col items-start max-w-[181px]">
             <span className="text-[#1a0029] font-bold text-[30px] sm:text-[35px]">
@@ -76,4 +71,3 @@ export default function PromoOverlay({ scrollToCategories }) {
     </div>
   );
 }
-

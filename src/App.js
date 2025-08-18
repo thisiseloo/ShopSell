@@ -8,8 +8,6 @@ import Women from "./pages/Women/Women";
 import Men from "./pages/Men/Men";
 import Kids from "./pages/Kids/Kids";
 import CartPage from "./pages/CartPage/CartPage";
-import Login from "./pages/Login/Login";
-import Signup from "./pages/Signup/Signup";
 import FAQ from "./pages/Faq/Faq";
 import Returns from "./pages/Returns/Returns";
 import Shipping from "./pages/Shipping/Shipping";
@@ -17,6 +15,7 @@ import Payments from "./pages/Payments/Payments";
 import Privacy from "./pages/Privacy/Privacy";
 import Terms from "./pages/Terms/Terms";
 import Support from "./pages/Support/Support";
+import AuthPage from "./pages/AuthPage/AuthPage";
 import "./App.css";
 
 function App() {
@@ -37,8 +36,6 @@ function App() {
             <Route path="/kids" element={<Kids searchQuery={searchQuery} />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/product/:id" element={<ProductDetail />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/returns" element={<Returns />} />
             <Route path="/shipping" element={<Shipping />} />
@@ -46,6 +43,7 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/auth" element={<AuthPage />} />
           </Routes>
         </main>
         <Footer />

@@ -10,5 +10,3 @@ function Shopsell() {
 }
 
 export default Shopsell;
-
-

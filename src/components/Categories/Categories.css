@@ -1,6 +1,6 @@
 .category-container {
   display: flex;
-  align-items: stretch; /* bütün elementlər eyni hündürlükdə */
+  align-items: stretch;
   justify-content: center;
   margin: 0 auto;
   max-width: 1230px;
@@ -8,11 +8,11 @@
   padding: 0 10px;
   box-sizing: border-box;
   position: relative;
-  overflow-x: hidden; /* yatay scroll-u blokla */
+  overflow-x: hidden;
 }
 
 .category-item {
-  flex: 1 1 0; /* hər biri bərabər eni alsın */
+  flex: 1 1 0; 
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -21,8 +21,8 @@
 
 .category-image {
   width: 100%;
-  aspect-ratio: 3 / 4; /* eni-hündürlük nisbəti eyni olsun */
-  object-fit: cover; /* şəkil kəsilərək doldurulsun */
+  aspect-ratio: 3 / 4; 
+  object-fit: cover;
   transition: transform 0.3s ease;
   border-radius: 8px;
 }
@@ -57,7 +57,6 @@
   margin-top: 80px;
 }
 
-/* Desktop */
 @media (min-width: 1025px) {
   .category-title {
     font-size: 40px;
@@ -89,7 +88,6 @@
   }
 }
 
-/* Mobil */
 @media (max-width: 767px) {
   .category-container {
     flex-direction: column;
@@ -111,7 +109,6 @@
   }
 }
 
-/* Bütün səhifədə yatay scroll-un qarşısını al */
 body {
   overflow-x: hidden;
 }

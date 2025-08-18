@@ -3,7 +3,6 @@ import cartReducer from "../features/cart/cartSlice";
 import favoriteReducer from "../features/favorites/favoriteSlice";
 import { loadState, saveState } from "./localStorage";
 
-// Əvvəlki state-i oxu
 const persistedState = loadState();
 
 export const store = configureStore({
@@ -11,10 +10,9 @@ export const store = configureStore({
     cart: cartReducer,
     favorites: favoriteReducer,
   },
-  preloadedState: persistedState, // localStorage-dan gələn state
+  preloadedState: persistedState,
 });
 
-// Store hər dəyişəndə localStorage-a yaz
 store.subscribe(() => {
   saveState({
     cart: store.getState().cart,

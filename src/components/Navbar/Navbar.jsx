@@ -23,7 +23,6 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
   return (
     <nav className="w-full sticky top-0 z-50 bg-[#290041] shadow-md">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-[70px]">
-        {/* Sol menyular (desktop) */}
         <div className="hidden md:flex space-x-6 font-semibold text-[16px] sm:text-[18px] md:text-[21px]">
           {visiblePaths.map((path) => {
             const label =
@@ -45,7 +44,6 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
           })}
         </div>
 
-        {/* Logo */}
         <div
           className="shopsell-img-wrapper mx-auto md:mx-0 w-24 sm:w-28 h-full overflow-hidden cursor-pointer"
           onClick={() => navigate("/")}
@@ -57,9 +55,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
           />
         </div>
 
-        {/* Sağ ikonlar */}
         <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-6">
-          {/* Desktop axtarış input */}
           {isVisibleSearch && (
             <div className="hidden md:flex">
               <input
@@ -72,10 +68,9 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             </div>
           )}
 
-          {/* Desktop Hesab, Favorit, Səbət */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              to="/login"
+              to="/auth"   
               className="text-white hover:text-blue-400 transition"
             >
               <User className="w-5 sm:w-6 h-5 sm:h-6" />
@@ -114,7 +109,6 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             </button>
           </div>
 
-          {/* Hamburger menyu (mobil) */}
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
             {isOpen ? (
               <X className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
@@ -125,10 +119,8 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
         </div>
       </div>
 
-      {/* Mobil menyu */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 shadow-inner bg-[#290041] text-[14px] sm:text-[16px] space-y-3">
-          {/* Alt hissə: Kreatif kateqoriya kartları YUXARI */}
           <div className="flex justify-around mt-3 space-x-3">
             {[
               {
@@ -162,9 +154,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             ))}
           </div>
 
-          {/* Üst hissə: Axtarış inputu + Hesab/Favorit/Səbət ICONLARI ALTDA */}
           <div className="flex justify-between items-center space-x-2 mt-4">
-            {/* Sol: Axtarış */}
             {isVisibleSearch && (
               <input
                 type="text"
@@ -175,10 +165,9 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
               />
             )}
 
-            {/* Sağ: Hesab, Favorit, Səbət */}
             <div className="flex items-center space-x-3">
               <Link
-                to="/login"
+                to="/auth" 
                 className="text-white hover:text-blue-400 transition"
               >
                 <User className="w-5 sm:w-6 h-5 sm:h-6" />

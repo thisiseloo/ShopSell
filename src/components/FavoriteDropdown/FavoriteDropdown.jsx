@@ -28,10 +28,8 @@ const FavoriteDropdown = ({ onClose }) => {
 
   return (
     <>
-      {/* Overlay */}
       <div className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>
 
-      {/* Dropdown container */}
       <div
         ref={dropdownRef}
         className="

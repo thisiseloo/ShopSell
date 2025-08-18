@@ -1,10 +1,8 @@
-// redux/localStorage.js
-
 export const loadState = () => {
   try {
     const serializedState = localStorage.getItem("appState");
     if (serializedState === null) {
-      return undefined; // default state ilə davam et
+      return undefined;
     }
     return JSON.parse(serializedState);
   } catch (err) {
@@ -16,7 +14,5 @@ export const saveState = (state) => {
   try {
     const serializedState = JSON.stringify(state);
     localStorage.setItem("appState", serializedState);
-  } catch (err) {
-    // ignore errors
-  }
+  } catch (err) {}
 };

@@ -882,5 +882,3 @@ const womenBags = [
 ];
 
 export default womenBags;
-
-

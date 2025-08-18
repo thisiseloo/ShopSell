@@ -1,5 +1,3 @@
-// constants.js
-
 export const brandsList = [
   "Nike",
   "Adidas",

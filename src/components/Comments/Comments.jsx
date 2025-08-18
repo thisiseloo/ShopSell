@@ -14,7 +14,6 @@ const Star = ({ filled, onClick }) => (
 );
 
 const Comments = () => {
-  // localStorage-dan yalnız istifadəçi əlavə etdiyi şərhləri yükləyirik
   const [userComments, setUserComments] = useState(() => {
     const savedComments = localStorage.getItem("userComments");
     return savedComments ? JSON.parse(savedComments) : [];
@@ -29,7 +28,6 @@ const Comments = () => {
   const [commentText, setCommentText] = useState("");
   const [rating, setRating] = useState(0);
 
-  // LocalStorage-a yalnız istifadəçi əlavə etdiyi şərhləri yazırıq
   useEffect(() => {
     localStorage.setItem("userComments", JSON.stringify(userComments));
   }, [userComments]);
@@ -50,7 +48,6 @@ const Comments = () => {
     );
   };
 
-  // visibleComments = default + istifadəçi şərhləri
   const allComments = [...commentsData, ...userComments];
   const visibleComments = allComments
     .concat(allComments)
@@ -74,7 +71,6 @@ const Comments = () => {
 
   return (
     <div className="max-w-7xl mx-auto mt-[70px] py-8 px-4 sm:py-10 sm:px-6 lg:py-12 lg:px-8">
-      {/* Başlıq və oxlar */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
         <h2 className="text-[28px] sm:text-[35px] font-bold text-[#1a0029] text-center sm:text-left mb-3 sm:mb-0">
           XOŞBƏXT MÜŞTƏRİLƏRİMİZ
@@ -91,7 +87,6 @@ const Comments = () => {
         </div>
       </div>
 
-      {/* Şərhlər slider */}
       <div className="flex flex-wrap gap-4 sm:gap-6 mb-8 sm:mb-12">
         {visibleComments.map((t) => (
           <div
@@ -120,7 +115,6 @@ const Comments = () => {
         ))}
       </div>
 
-      {/* Form + Şəkil + Button */}
       <div className="bg-gray-50 p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <div className="w-full md:w-3/5">
           <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center md:text-left text-[#1a0029]">

@@ -5,7 +5,6 @@ const Filter = ({
   filters,
   availableBrands,
   availableSizes,
-  availableColors,
   availableMaterials,
   availableHeels,
   availableCategories,
@@ -17,13 +16,10 @@ const Filter = ({
   const [localFilters, setLocalFilters] = useState(filters);
   const [openSections, setOpenSections] = useState({});
 
-  useEffect(() => {
-    setLocalFilters(filters);
-  }, [filters]);
+  useEffect(() => setLocalFilters(filters), [filters, selectedType]);
 
-  const toggleSection = (key) => {
+  const toggleSection = (key) =>
     setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
 
   const handleSelect = (section, value) => {
     setLocalFilters((prev) => {
@@ -44,21 +40,22 @@ const Filter = ({
 
   const renderSection = (title, sectionKey, options, isColor = false) => {
     if (!options || options.length === 0) return null;
+    const isOpen = openSections[sectionKey];
     return (
-      <div className="mb-4">
+      <div className="mb-4 bg-gray-50 rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div
-          className="flex justify-between items-center cursor-pointer px-2 py-1 font-semibold text-[#290041]"
+          className="flex justify-between items-center cursor-pointer px-3 py-2 font-semibold text-gray-800 bg-gray-100"
           onClick={() => toggleSection(sectionKey)}
         >
           {title}
-          {openSections[sectionKey] ? (
-            <ChevronUp size={18} />
-          ) : (
-            <ChevronDown size={18} />
-          )}
+          {isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
         </div>
-        {openSections[sectionKey] && (
-          <div className="mt-2 flex flex-wrap gap-2 px-2">
+        <div
+          className={`transition-all duration-300 ease-in-out ${
+            isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+          } overflow-hidden px-3`}
+        >
+          <div className="mt-3 flex flex-wrap gap-2 pb-3">
             {options.map((option) => {
               const value = isColor ? option.name : option;
               const isActive = localFilters[sectionKey]?.includes(value);
@@ -67,20 +64,18 @@ const Filter = ({
                   key={value}
                   onClick={() => handleSelect(sectionKey, value)}
                   style={{ backgroundColor: option.bg }}
-                  className={`w-8 h-8 rounded-full cursor-pointer border transition-all ${
-                    isActive
-                      ? "border-3 border-black"
-                      : "border border-gray-700"
+                  className={`w-8 h-8 rounded-full cursor-pointer border ${
+                    isActive ? "ring-2 ring-indigo-600" : "border-gray-300"
                   }`}
                 ></div>
               ) : (
                 <div
                   key={value}
                   onClick={() => handleSelect(sectionKey, value)}
-                  className={`px-3 py-1 rounded-md cursor-pointer text-sm font-medium border transition ${
+                  className={`px-3 py-1 rounded-full cursor-pointer text-sm font-medium border transition ${
                     isActive
-                      ? "bg-[#290041] text-white border-[#290041]"
-                      : "bg-white text-[#290041] border-[#ccc] hover:bg-[#f0e6ff]"
+                      ? "bg-indigo-600 text-white border-indigo-600"
+                      : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
                   }`}
                 >
                   {value}
@@ -88,17 +83,17 @@ const Filter = ({
               );
             })}
           </div>
-        )}
+        </div>
       </div>
     );
   };
 
-  // Rəng palitrası: qırmızı, açıq qırmızı, göy, yaşıl, açıq yaşıl, sarı, çəhrayı, narıncı, bənövşəyi, açıq mavi, bej, ağ, qara, tünd boz, qeyveyi
   const colorPalette = [
+    { name: "Bordo", bg: "#7b0000" },
     { name: "Qırmızı", bg: "red" },
     { name: "Çəhrayı", bg: "#ff7f7f" },
     { name: "Bənövşəyi", bg: "purple" },
-    { name: "Göy", bg: "blue" },
+    { name: "Mavi", bg: "blue" },
     { name: "Açıq mavi", bg: "#add8e6" },
     { name: "Yaşıl", bg: "green" },
     { name: "Açıq yaşıl", bg: "#90ee90" },
@@ -108,12 +103,11 @@ const Filter = ({
     { name: "Bej", bg: "#ffeebf" },
     { name: "Ağ", bg: "white" },
     { name: "Boz", bg: "grey" },
-    { name: "Tünd boz", bg: "#555555" },
     { name: "Qara", bg: "black" },
   ];
 
   return (
-    <div className="bg-white p-4 shadow-md rounded-md sticky top-6">
+    <div className="bg-white p-5 shadow-md rounded-2xl sticky top-6 border border-gray-100">
       {renderSection("Brend", "brand", availableBrands)}
       {selectedType !== "bag" && renderSection("Ölçü", "size", availableSizes)}
       {selectedType !== "bag" &&
@@ -136,40 +130,37 @@ const Filter = ({
           ? availableCategories.bag
           : []
       )}
-      {selectedType !== "all" &&
-      selectedType !== "shoe" &&
-      selectedType !== "bag"
-        ? null
-        : selectedType === "shoe"
-        ? renderSection("Ortam", "context", availableContexts)
-        : null}
-      <div className="mb-4 px-2">
-        <div className="font-semibold text-[#290041] mb-2">Qiymət aralığı</div>
+      {selectedType === "shoe" &&
+        renderSection("Ortam", "context", availableContexts)}
+      <div className="mb-4 bg-gray-50 p-3 rounded-xl border border-gray-200">
+        <div className="font-semibold text-gray-800 mb-2">Qiymət aralığı</div>
         <div className="flex gap-2">
           <input
             type="number"
             value={localFilters.price[0]}
             onChange={(e) => handlePriceChange(e, 0)}
-            className="w-1/2 p-1 border rounded-md"
+            className="w-1/2 p-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            placeholder="min"
           />
           <input
             type="number"
             value={localFilters.price[1]}
             onChange={(e) => handlePriceChange(e, 1)}
-            className="w-1/2 p-1 border rounded-md"
+            className="w-1/2 p-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            placeholder="max"
           />
         </div>
       </div>
-      <div className="flex justify-between gap-2 mt-4">
+      <div className="flex justify-between gap-3 mt-5">
         <button
-          onClick={() => onClear()}
-          className="flex-1 bg-white text-[#290041] border border-[#290041] py-2 rounded-md font-semibold hover:bg-[#f0e6ff]"
+          onClick={onClear}
+          className="flex-1 bg-white text-gray-700 border border-gray-400 py-2 rounded-lg font-medium hover:bg-gray-100 transition"
         >
           Təmizlə
         </button>
         <button
           onClick={() => onApply(localFilters)}
-          className="flex-1 bg-[#290041] text-white py-2 rounded-md font-semibold hover:opacity-90"
+          className="flex-1 bg-[#290041] text-white py-2 rounded-lg font-medium shadow hover:bg-indigo-700 transition"
         >
           Tətbiq et
         </button>

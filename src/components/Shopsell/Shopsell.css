@@ -11,7 +11,8 @@
 
 /* Span içindəki "Shop" sözü üçün */
 .shopsell span {
-  color: #a78bfa; /* text-purple-300 rəngi */
+  color: #a78bfa;
+  /* text-purple-300 rəngi */
   font-size: 330px;
 }
 
@@ -22,6 +23,7 @@
     padding-bottom: 60px;
     margin-bottom: 100px;
   }
+
   .shopsell span {
     font-size: 200px;
   }
@@ -30,11 +32,12 @@
 /* Mobil üçün */
 @media (max-width: 640px) {
   .shopsell {
-    font-size: 80px;
+    font-size: 65px;
     padding-bottom: 40px;
     margin-bottom: 80px;
   }
+
   .shopsell span {
-    font-size: 100px;
+    font-size: 85px;
   }
 }

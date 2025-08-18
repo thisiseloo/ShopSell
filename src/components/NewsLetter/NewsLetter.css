@@ -1,16 +1,14 @@
 .newsletter-title {
-  font-size: 40px; /* masaüstü */
+  font-size: 40px;
   line-height: 1.2;
 }
 
-/* Planşet */
 @media (max-width: 1024px) {
   .newsletter-title {
     font-size: 30px;
   }
 }
 
-/* Telefon */
 @media (max-width: 640px) {
   .newsletter-title {
     font-size: 25px;
@@ -18,7 +16,6 @@
   }
 }
 
-/* Kiçik telefonlar */
 @media (max-width: 480px) {
   .newsletter-title {
     font-size: 20px;

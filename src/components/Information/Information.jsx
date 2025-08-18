@@ -6,7 +6,7 @@ import {
   FaShieldAlt,
   FaBoxOpen,
 } from "react-icons/fa";
-import { MdDiscount } from "react-icons/md"; // <- burada əlavə etdik
+import { MdDiscount } from "react-icons/md"; 
 
 
 const infoData = [
@@ -42,7 +42,6 @@ const Information = () => {
   return (
   <div className="h-auto py-5">
     <Container style={{ maxWidth: "1250px" }}>
-      {/* Ümumi başlıq */}
       <h2 className="text-[35px] text-[#1a0029] fw-bold mb-5">HƏR ADDIMDA RAHATLIQ</h2>
 
       <Row className="g-4">

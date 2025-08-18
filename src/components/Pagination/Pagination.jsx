@@ -18,7 +18,6 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
   };
 
   if (isMobile) {
-    // Mobil və planşet görünüşü
     return (
       <div className="flex justify-center items-center gap-3 mt-6 mb-10 pb-[80px] select-none">
         <button
@@ -34,7 +33,6 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
           ←
         </button>
 
-        {/* Ortadakı rəqəmlər — fon yoxdur, yazı qara */}
         <span className=" text-[#1a0029] font-semibold">
           {currentPage} / {totalPages}
         </span>
@@ -55,7 +53,6 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
     );
   }
 
-  // Desktop görünüşü
   return (
     <div className="flex justify-center items-center gap-3 mt-6 mb-10 select-none">
       <button

@@ -64,7 +64,6 @@ const CartPage = () => {
               </p>
             </div>
 
-            {/* Say idarəsi */}
             <div className="flex justify-center sm:justify-start items-center h-[30px] sm:h-[35px] border border-gray-400 rounded-full overflow-hidden">
               <button
                 onClick={() => dispatch(decreaseQty(item))}
@@ -83,7 +82,6 @@ const CartPage = () => {
               </button>
             </div>
 
-            {/* Sil düyməsi */}
             <button
               onClick={() => dispatch(removeItem(item))}
               className="p-1 sm:p-2 text-[#1a0029]/80 rounded hover:text-red-600 transition"
@@ -95,7 +93,6 @@ const CartPage = () => {
         ))}
       </div>
 
-      {/* Ümumi məbləğ */}
       <div className="mt-6 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
         <span className="text-base sm:text-lg font-semibold text-[#1a0029]">
           Ümumi məbləğ: <span className="text-pink-600">{totalPrice} ₼</span>
@@ -109,7 +106,6 @@ const CartPage = () => {
         </button>
       </div>
 
-      {/* Düymələr konteyneri */}
       <div className="mt-4 flex flex-col items-center sm:items-end gap-3 w-full sm:w-auto mx-auto sm:mx-0">
         <button
           onClick={() => setIsOrderModalOpen(true)}
@@ -127,5 +123,3 @@ const CartPage = () => {
 };
 
 export default CartPage;
-
-

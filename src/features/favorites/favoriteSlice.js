@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  items: [], // favorit məhsulların arrayi
+  items: [],
 };
 
 const favoriteSlice = createSlice({
@@ -11,7 +11,9 @@ const favoriteSlice = createSlice({
     toggleFavorite: (state, action) => {
       const exists = state.items.find((item) => item.id === action.payload.id);
       if (exists) {
-        state.items = state.items.filter((item) => item.id !== action.payload.id);
+        state.items = state.items.filter(
+          (item) => item.id !== action.payload.id
+        );
       } else {
         state.items.push(action.payload);
       }

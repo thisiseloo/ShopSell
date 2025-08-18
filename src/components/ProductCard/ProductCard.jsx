@@ -54,10 +54,9 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
   return (
     <div
       onClick={() => navigate(`/product/${product.uniqueId}`)}
-      className="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300 w-full max-w-[300px]"
+      className="relative bg-purple-50 rounded-lg shadow-md overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300 w-full max-w-[300px]"
     >
-      {/* Şəkil */}
-      <div className="relative">
+      <div className="relative overflow-hidden rounded-[10px] border border-[#1a0029] m-3">
         <img
           src={product.image}
           alt={product.name}
@@ -67,7 +66,6 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
           Daha ətraflı məlumat
         </div>
 
-        {/* Ürək ikonu */}
         <button
           onClick={(e) => {
             e.stopPropagation();
@@ -83,14 +81,12 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
         </button>
       </div>
 
-      {/* Məhsul məlumatları */}
       <div className="p-3 sm:p-4 flex flex-col gap-2">
         <h3 className="font-semibold text-base text-[#1a0029] sm:text-lg truncate">
           {product.name}
         </h3>
         <p className="text-[#1a0029]/80 text-xs sm:text-sm">{product.brand}</p>
 
-        {/* Ulduzlama */}
         <div className="flex items-center">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
@@ -105,24 +101,23 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
           {product.price} ₼
         </p>
 
-        {/* Səbət düyməsi */}
         <button
-  onClick={(e) => {
-    e.stopPropagation();
-    dispatch(addItem(product));
-    onAddToCart?.();
-  }}
-  className="relative bg-[#290041] text-white border border-purple-700 rounded font-semibold 
-             hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] 
-             transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
->
-  Səbətə əlavə et
-  {cartCount > 0 && (
-    <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
-      {cartCount}
-    </span>
-  )}
-</button>
+          onClick={(e) => {
+            e.stopPropagation();
+            dispatch(addItem(product));
+            onAddToCart?.();
+          }}
+          className="relative bg-[#290041] text-white border border-purple-700 rounded font-semibold 
+                     hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] 
+                     transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
+        >
+          Səbətə əlavə et
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
+              {cartCount}
+            </span>
+          )}
+        </button>
       </div>
     </div>
   );

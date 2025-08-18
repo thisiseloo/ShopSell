@@ -24,14 +24,12 @@ function Newsletter() {
     <div className="newsletter-section bg-[#290041] text-white rounded-[30px] p-8 shadow-lg">
       <div className="container-fluid px-0">
         <div className="row align-items-center mx-0">
-          {/* Sol tərəf */}
           <div className="col-lg-7 col-md-6 mb-4 mb-md-0 ps-3">
             <div className="newsletter-title fw-bold display-5">
               ƏN SON TƏKLİFLƏRİMİZDƏN XƏBƏRDAR OLUN
             </div>
           </div>
 
-          {/* Sağ tərəf */}
           <div className="col-lg-5 col-md-6">
             <form
               onSubmit={handleSubmit}

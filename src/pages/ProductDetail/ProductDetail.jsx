@@ -52,7 +52,7 @@ const colorsList = [
   "qəhvəyi",
 ];
 const materialsShoe = [
-  "dəri",
+  "Dəri",
   "nubuk",
   "zamşa",
   "kətan",

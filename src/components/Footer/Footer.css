@@ -27,7 +27,6 @@ footer .flex.items-center {
   z-index: 10;
 }
 
-/* Planşet */
 @media (max-width: 1024px) {
   footer h3 {
     font-size: 16px;
@@ -43,7 +42,6 @@ footer .flex.items-center {
   }
 }
 
-/* Telefon */
 @media (max-width: 640px) {
   footer {
     text-align: center;
@@ -75,7 +73,6 @@ footer .flex.items-center {
   }
 }
 
-/* Sola-sağa scroll olmaması */
 html, body {
   overflow-x: hidden;
 }

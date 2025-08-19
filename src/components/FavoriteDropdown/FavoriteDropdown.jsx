@@ -5,12 +5,13 @@ import {
   toggleFavorite,
 } from "../../features/favorites/favoriteSlice";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const FavoriteDropdown = ({ onClose }) => {
+  const { t } = useTranslation();
   const favorites = useSelector(selectFavorites);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -21,9 +22,7 @@ const FavoriteDropdown = ({ onClose }) => {
     }
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [onClose]);
 
   return (
@@ -32,18 +31,11 @@ const FavoriteDropdown = ({ onClose }) => {
 
       <div
         ref={dropdownRef}
-        className="
-          fixed top-1/2 left-1/2 
-          transform -translate-x-1/2 -translate-y-1/2
-          bg-white shadow-lg p-4 rounded-lg 
-          w-[90%] max-w-md max-h-[80vh] overflow-y-auto 
-          z-50
-        "
+        className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+          bg-white shadow-lg p-4 rounded-lg w-[90%] max-w-md max-h-[80vh] overflow-y-auto z-50"
       >
         {favorites.length === 0 ? (
-          <p className="text-center text-[#1a0029]/90">
-            Favorit məhsul yoxdur.
-          </p>
+          <p className="text-center text-[#1a0029]/90">{t("no_favorites")}</p>
         ) : (
           favorites.map((item) => (
             <div
@@ -59,7 +51,7 @@ const FavoriteDropdown = ({ onClose }) => {
                   alt={item.name}
                   className="w-14 h-14 sm:w-16 sm:h-16 object-cover rounded"
                 />
-                <span className="text-sm  text-[#1a0029] sm:text-base font-semibold">
+                <span className="text-sm text-[#1a0029] sm:text-base font-semibold">
                   {item.name}
                 </span>
               </div>
@@ -70,7 +62,7 @@ const FavoriteDropdown = ({ onClose }) => {
 
               <button
                 onClick={() => dispatch(toggleFavorite(item))}
-                title="Favoritdən çıxar"
+                title={t("remove_favorite")}
               >
                 <span className="text-red-500 text-lg sm:text-xl">❤</span>
               </button>

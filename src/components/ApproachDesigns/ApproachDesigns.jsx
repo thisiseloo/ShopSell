@@ -1,5 +1,6 @@
 import React from "react";
 import "./ApproachDesigns.css";
+import { useTranslation } from "react-i18next";
 
 const ImageRow = () => {
   const images = [
@@ -21,17 +22,17 @@ const ImageRow = () => {
 };
 
 function ApproachDesigns() {
+  const { t } = useTranslation();
+
   return (
     <div className="approach-container text-center">
-      <div className="approachDesigns text-[#1a0029]">MODA DİZAYNINA YANAŞMAMIZ</div>
-      <div className="approachDesignsText">
-        <span className="approachDesignsSpan text-[#1a0029]/90">ShopSell</span> olaraq biz hər
-        addımda sizə özünüzü xüsusi hiss etdirəcək dizaynlar yaradırıq.
-        Yaradıcılığı dəqiqliklə, estetikani funksionallıqla birləşdirərək,
-        trendlərə yox, zamansızlığa yönəlirik. Hər bir ayaqqabı və çantamız
-        keyfiyyətli materiallardan hazırlanır, incə detallarla tamamlanaraq həm
-        gündəlik, həm də xüsusi günlər üçün ideal seçimə çevrilir.
+      <div className="approachDesigns text-[#1a0029]">
+        {t("approach_title")}
       </div>
+      <div
+        className="approachDesignsText"
+        dangerouslySetInnerHTML={{ __html: t("approach_desc") }}
+      />
 
       <ImageRow />
     </div>
@@ -39,6 +40,3 @@ function ApproachDesigns() {
 }
 
 export default ApproachDesigns;
-
-
-

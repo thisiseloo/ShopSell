@@ -1,9 +1,11 @@
+
 import React, { useState, useEffect } from "react";
 import Filter from "../../components/Filter/Filter";
 import kidsShoes from "../../data/kidsShoes";
 import kidsBags from "../../data/kidsBags";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import Pagination from "../../components/Pagination/Pagination";
+import { useTranslation } from "react-i18next";
 
 const allProducts = [
   ...kidsShoes.map((item) => ({
@@ -35,7 +37,7 @@ const brandsList = [
   "Skechers",
   "Aldo",
 ];
-const sizes = [36, 37, 38, 39, 40, 41, 42];
+const sizes = [28, 29, 30, 31, 32, 33, 34, 35, 36];
 const colorsList = [
   "Tünd mavi",
   "Açıq mavi",
@@ -52,36 +54,17 @@ const colorsList = [
   "Qəhvəyi",
   "Bej",
 ];
-const materialsShoe = [
-  "Dəri",
-  "Nabuk",
-  "Kətan",
-  "Rezin",
-  "Polyester",
-  "Perlamontnu dəri",
-];
-const materialsBag = [
-  "Dəri",
-  "Nabuk",
-  "Kətan",
-  "Rezin",
-  "Polyester",
-  "Pambıq",
-  "Perlamontnu dəri",
-];
-const heelList = ["Topuqsuz", "Qısa topuqlu(1-4sm)"];
-const categoryShoe = [
-  "İdman ayaqqabıları",
-  "Gündəlik ayaqqabılar",
-  "Klassik ayaqqabılar",
-  "Çəkmələr",
-];
+const materialsShoe = ["Dəri", "Nabuk", "Kətan", "Rezin", "Polyester"];
+const materialsBag = ["Dəri", "Kətan", "Polyester"];
+const heelList = ["Topuqsuz"];
+const categoryShoe = ["İdman ayaqqabıları", "Gündəlik ayaqqabılar", "Çəkmələr"];
 const categoryBag = ["Çiyin çantası", "Əl çantası", "Bel çantası"];
 const contextList = ["İdman", "Gündəlik", "Ziyafət"];
 
 const normalize = (value) => value?.toString().toLowerCase();
 
 const Kids = ({ searchQuery }) => {
+  const { t } = useTranslation();
   const itemsPerPage = 12;
   const [selectedType, setSelectedType] = useState("all");
   const [filters, setFilters] = useState({
@@ -185,24 +168,20 @@ const Kids = ({ searchQuery }) => {
     <div className="min-h-screen pb-[70px]">
       <div className="flex justify-center items-center flex-wrap gap-4 min-h-[150px]">
         {[
-          { label: "Ayaqqabılar", value: "shoe" },
-          { label: "Çantalar", value: "bag" },
-          { label: "Hamısı", value: "all" },
+          { label: t("shoes"), value: "shoe" },
+          { label: t("bags"), value: "bag" },
+          { label: t("all"), value: "all" },
         ].map((btn) => {
           const isActive = selectedType === btn.value;
           return (
             <button
               key={btn.value}
               onClick={() => setSelectedType(btn.value)}
-              className={`
-          rounded-lg font-medium transition-all duration-200
-          text-sm sm:text-base px-5 py-2 border-2
-          ${
-            isActive
-              ? "bg-white text-purple-700 border-purple-700 shadow-sm"
-              : "bg-purple-50 text-purple-500 border-purple-200 hover:bg-purple-100 hover:text-purple-700"
-          }
-        `}
+              className={`rounded-lg font-medium transition-all duration-200 text-sm sm:text-base px-5 py-2 border-2 ${
+                isActive
+                  ? "bg-white text-purple-700 border-purple-700 shadow-sm"
+                  : "bg-purple-50 text-purple-500 border-purple-200 hover:bg-purple-100 hover:text-purple-700"
+              }`}
             >
               {btn.label}
             </button>
@@ -210,8 +189,9 @@ const Kids = ({ searchQuery }) => {
         })}
       </div>
 
-      <div className="max-w-7xl mx-auto flex gap-8 p-6">
-        <aside className="hidden md:block md:w-1/4 lg:w-1/4">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 p-6">
+        {/* Mobil + Tablet */}
+        <div className="block lg:hidden w-full mb-4">
           <Filter
             filters={filters}
             availableBrands={brandsList}
@@ -224,13 +204,32 @@ const Kids = ({ searchQuery }) => {
             onApply={applyFilters}
             onClear={clearFilters}
             selectedType={selectedType}
+            t={t}
+          />
+        </div>
+
+        {/* Desktop */}
+        <aside className="hidden lg:block lg:w-1/4">
+          <Filter
+            filters={filters}
+            availableBrands={brandsList}
+            availableSizes={selectedType === "bag" ? [] : sizes}
+            availableColors={colorsList}
+            availableMaterials={{ shoe: materialsShoe, bag: materialsBag }}
+            availableHeels={heelList}
+            availableCategories={{ shoe: categoryShoe, bag: categoryBag }}
+            availableContexts={contextList}
+            onApply={applyFilters}
+            onClear={clearFilters}
+            selectedType={selectedType}
+            t={t}
           />
         </aside>
 
         <section className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-6">
           {visibleProducts.length === 0 ? (
             <p className="col-span-full text-center text-[#1a0029]/80">
-              Heç bir məhsul tapılmadı.
+              {t("noProductsFound")}
             </p>
           ) : (
             visibleProducts.map((product) => (

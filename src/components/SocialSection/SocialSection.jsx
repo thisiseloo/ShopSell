@@ -1,5 +1,6 @@
 import React from "react";
 import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import "./SocialSection.css";
 
 const images = [
@@ -24,13 +25,12 @@ const socialData = [
 ];
 
 const SocialSection = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="social-section">
-      <h2 className="text-[#1a0029]">GƏLİN SOSİALLAŞAQ!</h2>
-      <p className="socialText text-[#1a0029]/80">
-        Cəmiyyətimizə indi qoşul, məhsullarımızı geyindikdə şərh yaz və özünü
-        etiketlə.
-      </p>
+      <h2 className="text-[#1a0029]">{t("socialTitle")}</h2>
+      <p className="socialText text-[#1a0029]/80">{t("socialDescription")}</p>
 
       <div className="image-gallery">
         {images.map((src, index) => {
@@ -45,7 +45,7 @@ const SocialSection = () => {
                 <a href={link} target="_blank" rel="noopener noreferrer">
                   <IconComponent className="social-icon" />
                 </a>
-                <p className="overlay-text">DAHA ÇOX BAXIN</p>
+                <p className="overlay-text">{t("socialOverlayText")}</p>
                 <div className="underline"></div>
               </div>
             </div>

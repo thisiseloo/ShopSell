@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import commentsData from "../../data/comments";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const Star = ({ filled, onClick }) => (
   <span
@@ -14,6 +15,8 @@ const Star = ({ filled, onClick }) => (
 );
 
 const Comments = () => {
+  const { t } = useTranslation();
+
   const [userComments, setUserComments] = useState(() => {
     const savedComments = localStorage.getItem("userComments");
     return savedComments ? JSON.parse(savedComments) : [];
@@ -55,7 +58,7 @@ const Comments = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (rating === 0) return alert("Zəhmət olmasa ulduz seçin!");
+    if (rating === 0) return alert(t("star_alert"));
     const newComment = {
       id: commentsData.length + userComments.length + 1,
       name: name + " " + surname,
@@ -73,7 +76,7 @@ const Comments = () => {
     <div className="max-w-7xl mx-auto mt-[70px] py-8 px-4 sm:py-10 sm:px-6 lg:py-12 lg:px-8">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
         <h2 className="text-[28px] sm:text-[35px] font-bold text-[#1a0029] text-center sm:text-left mb-3 sm:mb-0">
-          XOŞBƏXT MÜŞTƏRİLƏRİMİZ
+          {t("comments_title")}
         </h2>
         <div className="flex gap-[10px] space-x-3 mt-2 sm:mt-0">
           <FaArrowLeftLong
@@ -118,31 +121,31 @@ const Comments = () => {
       <div className="bg-gray-50 p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <div className="w-full md:w-3/5">
           <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center md:text-left text-[#1a0029]">
-            Sən də öz rəyini bizimlə paylaş
+            {t("comment_form_title")}
           </h3>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Adınız"
+              placeholder={t("first_name_placeholder")}
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full mb-4 sm:mb-5 p-2 sm:p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#290041] transition"
+              className="w-full mb-4 sm:mb-5 p-2 sm:p-3 border border-gray-300 rounded-[50px] focus:outline-none focus:ring-2 focus:ring-[#290041] transition"
             />
             <input
               type="text"
-              placeholder="Soyadınız"
+              placeholder={t("last_name_placeholder")}
               value={surname}
               onChange={(e) => setSurname(e.target.value)}
               required
-              className="w-full mb-4 sm:mb-5 p-2 sm:p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#290041] transition"
+              className="w-full mb-4 sm:mb-5 p-2 sm:p-3 border border-gray-300 rounded-[50px] focus:outline-none focus:ring-2 focus:ring-[#290041] transition"
             />
             <textarea
-              placeholder="Rəyiniz"
+              placeholder={t("comment_placeholder")}
               value={commentText}
               onChange={(e) => setCommentText(e.target.value)}
               required
-              className="w-full mb-4 sm:mb-6 p-3 sm:p-4 border border-gray-300 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-[#290041] transition text-sm sm:text-base"
+              className="w-full mb-4 sm:mb-6 p-3 sm:p-4 border border-gray-300 rounded-[50px] resize-none focus:outline-none focus:ring-2 focus:ring-[#290041] transition text-sm sm:text-base"
             />
             <div className="mb-4 sm:mb-5 flex items-center justify-center space-x-1 sm:space-x-2">
               {Array.from({ length: 5 }).map((_, i) => (
@@ -155,9 +158,10 @@ const Comments = () => {
             </div>
             <button
               type="submit"
-              className="bg-[#290041] text-white px-4 sm:px-6 py-2 sm:py-3 text-[18px] sm:text-[20px] rounded-xl hover:bg-[#3c005d] transition w-full"
+              className="bg-[#290041] text-white px-4 sm:px-6 py-2 sm:py-3 text-[18px] sm:text-[20px] rounded-[50px] hover:!bg-gray-200 hover:!text-[#1a0029] border-1 hover:!border-[#290041] 
+             transition w-full"
             >
-              Əlavə et
+              {t("submit_button")}
             </button>
           </form>
         </div>

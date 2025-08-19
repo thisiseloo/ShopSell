@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
+  const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -28,12 +30,12 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
               ? "bg-gray-300 text-[#1a0029]/80 cursor-not-allowed"
               : "bg-[#1a0029] text-white hover:bg-[#290041b5]"
           }`}
-          aria-label="Əvvəlki səhifə"
+          aria-label={t("previousPage")}
         >
           ←
         </button>
 
-        <span className=" text-[#1a0029] font-semibold">
+        <span className="text-[#1a0029] font-semibold">
           {currentPage} / {totalPages}
         </span>
 
@@ -45,7 +47,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
               ? "bg-gray-300 text-[#1a0029]/80 cursor-not-allowed"
               : "bg-[#1a0029] text-white hover:bg-[#290041b5]"
           }`}
-          aria-label="Növbəti səhifə"
+          aria-label={t("nextPage")}
         >
           →
         </button>
@@ -54,7 +56,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
   }
 
   return (
-    <div className="flex justify-center items-center gap-3 mt-6 mb-10 select-none">
+    <div className="flex justify-center items-center gap-3 mt-6 mb-[100px] select-none">
       <button
         onClick={() => goToPage(currentPage - 1)}
         disabled={currentPage === 1}
@@ -63,7 +65,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
             ? "bg-gray-300 text-[#1a0029]/80 cursor-not-allowed"
             : "bg-[#1a0029] text-white hover:bg-[#290041b5]"
         }`}
-        aria-label="Əvvəlki səhifə"
+        aria-label={t("previousPage")}
       >
         ←
       </button>
@@ -76,10 +78,10 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
             className={`px-4 py-2 rounded-full transition ${
               currentPage === page
                 ? "bg-[#2900419d] text-white"
-                : "bg-gray-200 text-text-[#1a0029] hover:bg-[#29004128]"
+                : "bg-gray-200 text-[#1a0029] hover:bg-[#29004128]"
             }`}
             aria-current={currentPage === page ? "page" : undefined}
-            aria-label={`Səhifə ${page}`}
+            aria-label={`${t("page")} ${page}`}
           >
             {page}
           </button>
@@ -94,7 +96,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
             ? "bg-gray-300 text-[#1a0029]/80 cursor-not-allowed"
             : "bg-[#1a0029] text-white hover:bg-[#290041b5]"
         }`}
-        aria-label="Növbəti səhifə"
+        aria-label={t("nextPage")}
       >
         →
       </button>

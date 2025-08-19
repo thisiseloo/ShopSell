@@ -6,6 +6,7 @@ import {
   selectFavorites,
 } from "../../features/favorites/favoriteSlice";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Star = ({ filled, onClick }) => (
   <svg
@@ -17,32 +18,23 @@ const Star = ({ filled, onClick }) => (
     fill="currentColor"
     viewBox="0 0 22 20"
   >
-    <path
-      d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 
-    1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 
-    1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 
-    2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 
-    2.226-1.617l-.863-5.03L20.537 9.2a1.523 
-    1.523 0 0 0 .387-1.575Z"
-    />
+    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
   </svg>
 );
 
 const ProductCard = ({ product, cartCount, onAddToCart }) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
   const isFavorited = favorites.some((f) => f.uniqueId === product.uniqueId);
   const navigate = useNavigate();
-
   const [rating, setRating] = useState(0);
 
   useEffect(() => {
     const savedRating = localStorage.getItem(
       `product-rating-${product.uniqueId}`
     );
-    if (savedRating) {
-      setRating(Number(savedRating));
-    }
+    if (savedRating) setRating(Number(savedRating));
   }, [product.uniqueId]);
 
   const handleRating = (e, star) => {
@@ -54,7 +46,7 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
   return (
     <div
       onClick={() => navigate(`/product/${product.uniqueId}`)}
-      className="relative bg-purple-50 rounded-lg shadow-md overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300 w-full max-w-[300px]"
+      className="relative bg-purple-50 rounded-lg shadow-md overflow-hidden h-[470px] cursor-pointer hover:scale-[1.02] transition-transform duration-300 w-full max-w-[300px]"
     >
       <div className="relative overflow-hidden rounded-[10px] border border-[#1a0029] m-3">
         <img
@@ -63,7 +55,7 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
           className="w-full h-40 sm:h-48 md:h-56 object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 hover:opacity-100 flex items-center justify-center text-white font-semibold text-sm sm:text-lg transition-opacity">
-          Daha ətraflı məlumat
+          {t("moreInfo")}
         </div>
 
         <button
@@ -81,13 +73,13 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
         </button>
       </div>
 
-      <div className="p-3 sm:p-4 flex flex-col gap-2">
-        <h3 className="font-semibold text-base text-[#1a0029] sm:text-lg truncate">
+      <div className="p-3 sm:p-4 flex flex-col">
+        <h3 className="font-semibold text-base text-[#1a0029] sm:text-xl truncate">
           {product.name}
         </h3>
         <p className="text-[#1a0029]/80 text-xs sm:text-sm">{product.brand}</p>
 
-        <div className="flex items-center">
+        <div className="flex items-center mt-1">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
               key={star}
@@ -97,7 +89,7 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
           ))}
         </div>
 
-        <p className="font-bold text-lg sm:text-xl text-purple-800">
+        <p className="font-bold text-lg sm:text-xl mt-[7px] text-purple-800">
           {product.price} ₼
         </p>
 
@@ -107,11 +99,9 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
             dispatch(addItem(product));
             onAddToCart?.();
           }}
-          className="relative bg-[#290041] text-white border border-purple-700 rounded font-semibold 
-                     hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] 
-                     transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
+          className="relative bg-[#290041] text-white border border-purple-700 rounded-[50px] font-semibold hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
         >
-          Səbətə əlavə et
+          {t("addToCart")}
           {cartCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-lg">
               {cartCount}
@@ -124,3 +114,4 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
 };
 
 export default ProductCard;
+

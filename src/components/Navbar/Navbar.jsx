@@ -12,7 +12,7 @@ import i18n from "../../i18n";
 export default function Navbar({ searchQuery, setSearchQuery }) {
   const [isOpen, setIsOpen] = useState(false);
   const [showFavorites, setShowFavorites] = useState(false);
-  const [lang, setLang] = useState("az");
+  const [lang, setLang] = useState("az"); 
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -22,8 +22,9 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
 
   const { t } = useTranslation();
 
+  // 🔥 Dil dəyişmə funksiyası (AZ → EN → RU → AZ)
   const toggleLanguage = () => {
-    const newLang = lang === "az" ? "en" : "az";
+    const newLang = lang === "az" ? "en" : lang === "en" ? "ru" : "az";
     i18n.changeLanguage(newLang);
     setLang(newLang);
   };
@@ -61,7 +62,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
           className="shopsell-img-wrapper mx-auto md:mx-0 cursor-pointer flex items-center justify-center"
           onClick={() => navigate("/")}
         >
-          <h1 className="text-[#ffffff] font-extrabold text-2xl sm:text-3xl md:text-4xl tracking-wide font-sans">
+          <h1 className="text-[#E8BBF5] font-extrabold text-2xl sm:text-3xl md:text-4xl tracking-wide font-sans">
             ShopSell
           </h1>
         </div>
@@ -85,6 +86,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             <button
               onClick={toggleLanguage}
               className="!text-white hover:!text-yellow-400 transition"
+              title={`Current: ${lang.toUpperCase()}`}
             >
               <Globe className="w-5 sm:w-6 h-5 sm:h-6" />
             </button>
@@ -199,6 +201,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
               <button
                 onClick={toggleLanguage}
                 className="!text-white hover:!text-yellow-400 transition"
+                title={`Current: ${lang.toUpperCase()}`}
               >
                 <Globe className="w-5 sm:w-6 h-5 sm:h-6" />
               </button>

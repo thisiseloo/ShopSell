@@ -7,6 +7,7 @@ import SocialSection from "../../components/SocialSection/SocialSection";
 import Information from "../../components/Information/Information";
 import Comments from "../../components/Comments/Comments";
 import Shopsell from "../../components/Shopsell/Shopsell";
+import Location from "../../components/Location/Location";
 
 const Home = () => {
   const categoriesRef = useRef(null);
@@ -29,6 +30,7 @@ const Home = () => {
       <SocialSection />
       <Information />
       <Comments />
+      <Location />
       <Shopsell />
     </div>
   );

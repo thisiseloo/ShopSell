@@ -46,7 +46,7 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
   return (
     <div
       onClick={() => navigate(`/product/${product.uniqueId}`)}
-      className="relative bg-purple-50 rounded-lg shadow-md overflow-hidden h-[470px] cursor-pointer hover:scale-[1.02] transition-transform duration-300 w-full max-w-[300px]"
+      className="relative bg-purple-50 rounded-lg shadow-md overflow-hidden h-[460px] cursor-pointer hover:scale-[1.02] transition-transform duration-300 w-full max-w-[300px]"
     >
       <div className="relative overflow-hidden rounded-[10px] border border-[#1a0029] m-3">
         <img
@@ -77,9 +77,9 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
         <h3 className="font-semibold text-base text-[#1a0029] sm:text-xl truncate">
           {product.name}
         </h3>
-        <p className="text-[#1a0029]/80 text-xs sm:text-sm">{product.brand}</p>
+        <p className="text-[#1a0029]/80 text-xs mt-[10px] sm:text-sm">{product.brand}</p>
 
-        <div className="flex items-center mt-1">
+        <div className="flex items-center mt-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
               key={star}
@@ -99,7 +99,7 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
             dispatch(addItem(product));
             onAddToCart?.();
           }}
-          className="relative bg-[#290041] text-white border border-purple-700 rounded-[50px] font-semibold hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
+          className="relative bg-[#290041] text-white border border-purple-700 rounded-[50px] mt-[15px] font-semibold hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
         >
           {t("addToCart")}
           {cartCount > 0 && (
@@ -114,4 +114,3 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
 };
 
 export default ProductCard;
-

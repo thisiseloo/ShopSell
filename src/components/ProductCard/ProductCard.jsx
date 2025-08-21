@@ -44,10 +44,14 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
   };
 
   return (
-    <div
-      onClick={() => navigate(`/product/${product.uniqueId}`)}
-      className="relative bg-purple-50 rounded-lg shadow-md overflow-hidden h-[460px] cursor-pointer hover:scale-[1.02] transition-transform duration-300 w-full max-w-[300px]"
-    >
+   <div
+  onClick={() => navigate(`/product/${product.uniqueId}`)}
+  className="relative bg-purple-50 rounded-lg shadow-md overflow-hidden  
+             cursor-pointer hover:scale-[1.02] transition-transform duration-300 
+             w-[220px] sm:w-[240px] md:w-[260px] lg:w-[280px] xl:w-[300px] 
+             h-[380px] sm:h-[430px] md:h-[460px] lg:h-[460px] mx-auto"
+>
+
       <div className="relative overflow-hidden rounded-[10px] border border-[#1a0029] m-3">
         <img
           src={product.image}
@@ -114,3 +118,4 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
 };
 
 export default ProductCard;
+

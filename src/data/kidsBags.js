@@ -794,3 +794,89 @@ const kidsBags = [
 ];
 
 export default kidsBags;
+
+
+
+
+
+
+
+
+
+
+// const kidsBags = [
+//   { id: 1, uniqueId: "kbag-1", name: "Kids Backpack", price: 132, image: "images/k-bag1.jpeg", brand: "Puma", color: "Çəhrayı", material: "Perlamontnu dəri" },
+//   { id: 2, uniqueId: "kbag-2", name: "Kids Lunch Bag", price: 65, image: "images/k-bag2.jpeg", brand: "Prada", color: "Açıq mavi", material: "Dəri" },
+//   { id: 3, uniqueId: "kbag-3", name: "Kids Crossbody Bag", price: 98, image: "images/k-bag3.jpeg", brand: "Prada Kids", color: "Çəhrayı", material: "Pambıq" },
+//   { id: 4, uniqueId: "kbag-4", name: "Kids Backpack", price: 176, image: "images/k-bag4.jpeg", brand: "Puma", color: "Qəhvəyi", material: "Pambıq" },
+//   { id: 5, uniqueId: "kbag-5", name: "Kids Crossbody Bag", price: 54, image: "images/k-bag5.jpeg", brand: "Adidas", color: "Açıq yaşıl", material: "Dəri" },
+//   { id: 6, uniqueId: "kbag-6", name: "Kids Lunch Bag", price: 143, image: "images/k-bag6.jpeg", brand: "Gucci Kids", color: "Bej", material: "Pambıq" },
+//   { id: 7, uniqueId: "kbag-7", name: "Kids Lunch Bag", price: 199, image: "images/k-bag7.jpeg", brand: "Gucci Kids", color: "Çəhrayı", material: "Polyeser" },
+//   { id: 8, uniqueId: "kbag-8", name: "Kids Backpack", price: 123, image: "images/k-bag8.jpeg", brand: "Puma", color: "Bəyaz", material: "Polyester" },
+//   { id: 9, uniqueId: "kbag-9", name: "Kids Crossbody Bag", price: 87, image: "images/k-bag9.jpeg", brand: "Nike", color: "Açıq mavi", material: "Polyester" },
+//   { id: 10, uniqueId: "kbag-10", name: "Kids Backpack", price: 42, image: "images/k-bag10.jpeg", brand: "Puma", color: "Qara", material: "Polyester" },
+//   { id: 11, uniqueId: "kbag-11", name: "Kids Lunch Bag", price: 75, image: "images/k-bag11.jpeg", brand: "Gucci Kids", color: "Çəhrayı", material: "Dəri" },
+//   { id: 12, uniqueId: "kbag-12", name: "Kids Crossbody Bag", price: 90, image: "images/k-bag12.jpeg", brand: "Prada", color: "Qara", material: "Polyester" },
+//   { id: 13, uniqueId: "kbag-13", name: "Kids Backpack", price: 115, image: "images/k-bag13.jpeg", brand: "Zara Kids", color: "Qara", material: "Polyester" },
+//   { id: 14, uniqueId: "kbag-14", name: "Kids Lunch Bag", price: 185, image: "images/k-bag14.jpeg", brand: "Puma", color: "Qırmızı", material: "Polyester" },
+//   { id: 15, uniqueId: "kbag-15", name: "Kids Crossbody Bag", price: 38, image: "images/k-bag15.jpeg", brand: "Adidas", color: "Açıq mavi", material: "Perlamontnu dəri" },
+//   { id: 16, uniqueId: "kbag-16", name: "Kids Backpack", price: 178, image: "images/k-bag16.jpeg", brand: "U.S Polo Assn", color: "Çəhrayı", material: "Polyester" },
+//   { id: 17, uniqueId: "kbag-17", name: "Kids Lunch Bag", price: 69, image: "images/k-bag17.jpeg", brand: "Adidas", color: "Açıq mavi", material: "Polyester" },
+//   { id: 18, uniqueId: "kbag-18", name: "Kids Crossbody Bag", price: 52, image: "images/k-bag18.jpeg", brand: "Balenciaga", color: "Qara", material: "Polyester" },
+//   { id: 19, uniqueId: "kbag-19", name: "Bel Çantası", price: 156, image: "images/k-bag19.jpeg", brand: "Gucci", color: "Çəhrayı", material: "Polyester" },
+//   { id: 20, uniqueId: "kbag-20", name: "Kids Lunch Bag", price: 80, image: "images/k-bag20.jpeg", brand: "Gucci", color: "Sarı", material: "Kətan" },
+//   { id: 21, uniqueId: "kbag-21", name: "Kids Crossbody Bag", price: 127, image: "images/k-bag21.jpeg", brand: "Christion Louboutin", color: "Qara", material: "Dəri" },
+//   { id: 22, uniqueId: "kbag-22", name: "Kids Backpack", price: 154, image: "images/k-bag22.jpeg", brand: "Gucci", color: "Boz", material: "Kətan" },
+//   { id: 23, uniqueId: "kbag-23", name: "Kids Lunch Bag", price: 42, image: "images/k-bag23.jpeg", brand: "Gucci", color: "Boz", material: "Kətan" },
+//   { id: 24, uniqueId: "kbag-24", name: "Kids Crossbody Bag", price: 193, image: "images/k-bag24.jpeg", brand: "Prada Kids", color: "Çəhrayı", material: "Polyester" },
+//   { id: 25, uniqueId: "kbag-25", name: "Kids Backpack", price: 101, image: "images/k-bag25.jpeg", brand: "Chanel", color: "Çəhrayı", material: "Pambıq" },
+//   { id: 26, uniqueId: "kbag-26", name: "Kids Lunch Bag", price: 94, image: "images/k-bag26.jpeg", brand: "Chanel", color: "Çəhrayı", material: "Dəri" },
+//   { id: 27, uniqueId: "kbag-27", name: "Kids Crossbody Bag", price: 188, image: "images/k-bag27.jpeg", brand: "U.S Polo Assn", color: "Çəhrayı", material: "Polyester" },
+//   { id: 28, uniqueId: "kbag-28", name: "Kids Backpack", price: 50, image: "images/k-bag28.jpeg", brand: "Gucci", color: "Qəhvəyi", material: "Kətan" },
+//   { id: 29, uniqueId: "kbag-29", name: "Kids Lunch Bag", price: 99, image: "images/k-bag29.jpeg", brand: "Chanel", color: "Çəhrayı", material: "Dəri" },
+//   { id: 30, uniqueId: "kbag-30", name: "Kids Crossbody Bag", price: 63, image: "images/k-bag30.jpeg", brand: "Lacoste", color: "Tünd mavi", material: "Dəri" },
+//   { id: 31, uniqueId: "kbag-31", name: "Kids Backpack", price: 189, image: "images/k-bag31.jpeg", brand: "Nike", color: "Sarı", material: "Pambıq" },
+//   { id: 32, uniqueId: "kbag-32", name: "Kids Lunch Bag", price: 154, image: "images/k-bag32.jpeg", brand: "Lacoste", color: "Qara", material: "Dəri" },
+//   { id: 33, uniqueId: "kbag-33", name: "Kids Crossbody Bag", price: 140, image: "images/k-bag33.jpeg", brand: "Lacoste", color: "Tünd mavi", material: "Polyester" },
+//   { id: 34, uniqueId: "kbag-34", name: "Kids Backpack", price: 199, image: "images/k-bag34.jpeg", brand: "Tommy Hilfiger", color: "Qırmızı", material: "Dəri" },
+//   { id: 35, uniqueId: "kbag-35", name: "Kids Lunch Bag", price: 45, image: "images/k-bag35.jpeg", brand: "Fendi", color: "Sarı", material: "Dəri" },
+//   { id: 36, uniqueId: "kbag-36", name: "Kids Crossbody Bag", price: 123, image: "images/k-bag36.jpeg", brand: "Chanel", color: "Çəhrayı", material: "Dəri" },
+//   { id: 37, uniqueId: "kbag-37", name: "Kids Backpack", price: 109, image: "images/k-bag37.jpeg", brand: "Dior", color: "Qara", material: "Kətan" },
+//   { id: 38, uniqueId: "kbag-38", name: "Kids Lunch Bag", price: 80, image: "images/k-bag38.jpeg", brand: "Gucci Kids", color: "Açıq mavi", material: "Kətan" },
+//   { id: 39, uniqueId: "kbag-39", name: "Kids Crossbody Bag", price: 77, image: "images/k-bag39.jpeg", brand: "Fendi", color: "Bej", material: "Polyester" },
+//   { id: 40, uniqueId: "kbag-40", name: "Kids Backpack", price: 157, image: "images/k-bag40.jpeg", brand: "Zara Kids", color: "Çəhrayı", material: "Polyester" },
+//   { id: 41, uniqueId: "kbag-41", name: "Kids Lunch Bag", price: 176, image: "images/k-bag41.jpeg", brand: "Nike", color: "Qara", material: "Polyester" },
+//   { id: 42, uniqueId: "kbag-42", name: "Kids Crossbody Bag", price: 121, image: "images/k-bag42.jpeg", brand: "Nike", color: "Tünd mavi", material: "Polyester" },
+//   { id: 43, uniqueId: "kbag-43", name: "Kids Backpack", price: 190, image: "images/k-bag43.jpeg", brand: "Nike", color: "Qara", material: "Polyester" },
+//   { id: 44, uniqueId: "kbag-44", name: "Kids Lunch Bag", price: 157, image: "images/k-bag44.jpeg", brand: "Nike", color: "Sarı", material: "Pambıq" },
+//   { id: 45, uniqueId: "kbag-45", name: "Kids Crossbody Bag", price: 176, image: "images/k-bag45.jpeg", brand: "Nike", color: "Çəhrayı", material: "Polyester" },
+//   { id: 46, uniqueId: "kbag-46", name: "Kids Backpack", price: 140, image: "images/k-bag46.jpeg", brand: "Nike", color: "Tünd yaşıl", material: "Polyester" },
+//   { id: 47, uniqueId: "kbag-47", name: "Kids Lunch Bag", price: 51, image: "images/k-bag47.jpeg", brand: "Nike", color: "Boz", material: "Polyester" },
+//   { id: 48, uniqueId: "kbag-48", name: "Kids Crossbody Bag", price: 87, image: "images/k-bag48.jpeg", brand: "Prada Kids", color: "Blue", material: "Leather" },
+//   { id: 49, uniqueId: "kbag-49", name: "Kids Backpack", price: 144, image: "images/k-bag49.jpeg", brand: "Zara Kids", color: "Yellow", material: "Cotton" },
+//   { id: 50, uniqueId: "kbag-50", name: "Kids Lunch Bag", price: 81, image: "images/k-bag50.jpeg", brand: "Nike", color: "Çəhrayı", material: "Polyester" },
+//   { id: 51, uniqueId: "kbag-51", name: "Kids Crossbody Bag", price: 186, image: "images/k-bag51.jpeg", brand: "Prada Kids", color: "Blue", material: "Leather" },
+//   { id: 52, uniqueId: "kbag-52", name: "Kids Backpack", price: 63, image: "images/k-bag52.jpeg", brand: "Nike", color: "Çəhrayı", material: "Polyester" },
+//   { id: 53, uniqueId: "kbag-53", name: "Kids Lunch Bag", price: 198, image: "images/k-bag53.jpeg", brand: "Tommy Hilfiger", color: "Qara", material: "Polyester" },
+//   { id: 54, uniqueId: "kbag-54", name: "Kids Crossbody Bag", price: 75, image: "images/k-bag54.jpeg", brand: "Nike", color: "Çəhrayı", material: "Polyester" },
+//   { id: 55, uniqueId: "kbag-55", name: "Kids Backpack", price: 131, image: "images/k-bag55.jpeg", brand: "Tommy Hilfiger", color: "Rəngli", material: "Polyester" },
+//   { id: 56, uniqueId: "kbag-56", name: "Kids Lunch Bag", price: 178, image: "images/k-bag56.jpeg", brand: "Gucci Kids", color: "Qara", material: "Polyester" },
+//   { id: 57, uniqueId: "kbag-57", name: "Kids Crossbody Bag", price: 114, image: "images/k-bag57.jpeg", brand: "Nike", color: "Qara", material: "Polyester" },
+//   { id: 58, uniqueId: "kbag-58", name: "Kids Backpack", price: 156, image: "images/k-bag58.jpeg", brand: "U.S Polo Assn", color: "Çəhrayı", material: "Polyester" },
+//   { id: 59, uniqueId: "kbag-59", name: "Kids Lunch Bag", price: 139, image: "images/k-bag59.jpeg", brand: "Nike", color: "Qara", material: "Polyester" },
+//   { id: 60, uniqueId: "kbag-60", name: "Kids Crossbody Bag", price: 126, image: "images/k-bag60.jpeg", brand: "Nike", color: "Bəyaz", material: "Perlamontnu dəri" },
+//   { id: 61, uniqueId: "kbag-61", name: "Kids Backpack", price: 114, image: "images/k-bag61.jpeg", brand: "Nike", color: "Qırmızı", material: "Polyester" },
+//   { id: 62, uniqueId: "kbag-62", name: "Kids Lunch Bag", price: 185, image: "images/k-bag62.jpeg", brand: "Nike", color: "Açıq mavi", material: "Dəri" },
+//   { id: 63, uniqueId: "kbag-63", name: "Kids Backpack", price: 150, image: "images/k-bag63.jpeg", brand: "Gucci", color: "Çəhrayı", material: "Kətan" },
+//   { id: 64, uniqueId: "kbag-64", name: "Kids Lunch Bag", price: 126, image: "images/k-bag64.jpeg", brand: "Adidas", color: "Açıq mavi", material: "Polyester" },
+//   { id: 65, uniqueId: "kbag-65", name: "Kids Crossbody Bag", price: 103, image: "images/k-bag65.jpeg", brand: "Adidas", color: "Qara", material: "Polyester" },
+//   { id: 66, uniqueId: "kbag-66", name: "Kids Backpack", price: 141, image: "images/k-bag66.jpeg", brand: "Tommy Hilfiger", color: "Qara", material: "Polyester" },
+//   { id: 67, uniqueId: "kbag-67", name: "Kids Backpack", price: 44, image: "images/k-bag67.jpeg", brand: "U.S Polo Assn", color: "Çəhrayı", material: "Polyester" },
+//   { id: 68, uniqueId: "kbag-68", name: "Kids Lunch Bag", price: 176, image: "images/k-bag68.jpeg", brand: "Tommy Hilfiger", color: "Çəhrayı", material: "Kətan" },
+//   { id: 69, uniqueId: "kbag-69", name: "Kids Crossbody Bag", price: 52, image: "images/k-bag69.jpeg", brand: "Calvin Klein", color: "Qara", material: "Polyester" },
+//   { id: 70, uniqueId: "kbag-70", name: "Kids Backpack", price: 186, image: "images/k-bag70.jpeg", brand: "Calvin Klein", color: "Haki", material: "Dəri" },
+//   { id: 71, uniqueId: "kbag-71", name: "Kids Lunch Bag", price: 172, image: "images/k-bag71.jpeg", brand: "Adidas", color: "Çəhrayı", material: "Polyester" },
+//   { id: 72, uniqueId: "kbag-72", name: "Kids Crossbody Bag", price: 154, image: "images/k-bag72.jpeg", brand: "Adidas", color: "Tünd yaşıl", material: "Polyester" },
+// ];
+
+// export default kidsBags;

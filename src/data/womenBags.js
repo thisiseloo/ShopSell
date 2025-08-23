@@ -9,6 +9,7 @@ const womenBags = [
     brand: "Marc Jacobs",
     color: "Bej",
     material: "Kətan",
+    category: "Çiyin Çantası",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const womenBags = [
     brand: "Chanel",
     color: "Sarı",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const womenBags = [
     brand: "Dior",
     color: "Tünd mavi",
     material: "Polyester",
+    category: "Əl Çantası",
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const womenBags = [
     brand: "Lacoste",
     color: "Açıq mavi",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ const womenBags = [
     brand: "Chanel",
     color: "Bej",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ const womenBags = [
     brand: "Adidas",
     color: "Qara",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 7,
@@ -75,6 +81,7 @@ const womenBags = [
     brand: "Prada",
     color: "Bəyaz",
     material: "Polyester",
+    category: "Əl Çantası",
   },
   {
     id: 8,
@@ -86,6 +93,7 @@ const womenBags = [
     brand: "Fendi",
     color: "Mavi",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 9,
@@ -97,6 +105,7 @@ const womenBags = [
     brand: "Guess",
     color: "Qırmızı",
     material: "Dəri",
+    category: "Dəniz Çantası",
   },
   {
     id: 10,
@@ -108,6 +117,7 @@ const womenBags = [
     brand: "Balenciaga",
     color: "Mavi",
     material: "Polyester",
+    category: "Əl Çantası",
   },
   {
     id: 11,
@@ -119,6 +129,7 @@ const womenBags = [
     brand: "Fendi",
     color: "Sarı",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 12,
@@ -130,6 +141,7 @@ const womenBags = [
     brand: "Chanel",
     color: "Narıncı",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 13,
@@ -141,6 +153,7 @@ const womenBags = [
     brand: "Adidas",
     color: "Qara",
     material: "Dəri",
+    category: "Səyahət Çantası",
   },
   {
     id: 14,
@@ -152,6 +165,7 @@ const womenBags = [
     brand: "Guess",
     color: "Qırmızı",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 15,
@@ -163,6 +177,7 @@ const womenBags = [
     brand: "Puma",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Səyahət Çantası",
   },
   {
     id: 16,
@@ -174,6 +189,7 @@ const womenBags = [
     brand: "Guess",
     color: "Bənövşəyi",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 17,
@@ -185,6 +201,7 @@ const womenBags = [
     brand: "Christion Louboutin",
     color: "Qara",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 18,
@@ -196,6 +213,7 @@ const womenBags = [
     brand: "Lacoste",
     color: "Bej",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 19,
@@ -207,6 +225,7 @@ const womenBags = [
     brand: "Aldo",
     color: "Bej",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 20,
@@ -218,6 +237,7 @@ const womenBags = [
     brand: "Hermes",
     color: "Qəhvəyi",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 21,
@@ -229,6 +249,7 @@ const womenBags = [
     brand: "Aldo",
     color: "Qara",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 22,
@@ -240,6 +261,7 @@ const womenBags = [
     brand: "Guess",
     color: "Qara",
     material: "Dəri",
+    category: "Bel Çantası",
   },
   {
     id: 23,
@@ -251,6 +273,7 @@ const womenBags = [
     brand: "Prada",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 24,
@@ -262,6 +285,7 @@ const womenBags = [
     brand: "Miu Miu",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 25,
@@ -273,6 +297,7 @@ const womenBags = [
     brand: "Aldo",
     color: "Qara",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 26,
@@ -284,6 +309,7 @@ const womenBags = [
     brand: "Miu Miu",
     color: "Bej",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 27,
@@ -295,6 +321,7 @@ const womenBags = [
     brand: "Prada",
     color: "Açıq mavi",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 28,
@@ -306,6 +333,7 @@ const womenBags = [
     brand: "U.S Polo Assn",
     color: "Sarı",
     material: "Dəri",
+    category: "Səyahət Çantası",
   },
   {
     id: 29,
@@ -317,6 +345,7 @@ const womenBags = [
     brand: "Hermes",
     color: "Sarı",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 30,
@@ -328,6 +357,7 @@ const womenBags = [
     brand: "Calvin Klein",
     color: "Açıq mavi",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 31,
@@ -339,6 +369,7 @@ const womenBags = [
     brand: "Dior",
     color: "Tünd mavi",
     material: "Kətan",
+    category: "Çiyin Çantası",
   },
   {
     id: 32,
@@ -350,6 +381,7 @@ const womenBags = [
     brand: "Hermes",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 33,
@@ -361,6 +393,7 @@ const womenBags = [
     brand: "Balenciaga",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 34,
@@ -372,6 +405,7 @@ const womenBags = [
     brand: "Puma",
     color: "Qara",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 35,
@@ -383,6 +417,7 @@ const womenBags = [
     brand: "Guess",
     color: "Qəhvəyi",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 36,
@@ -394,6 +429,7 @@ const womenBags = [
     brand: "Gucci",
     color: "Bordo",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 37,
@@ -405,6 +441,7 @@ const womenBags = [
     brand: "Christion Louboutin",
     color: "Qara",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 38,
@@ -416,6 +453,7 @@ const womenBags = [
     brand: "Puma",
     color: "Qara",
     material: "Polyester",
+    category: "Əl Çantası",
   },
   {
     id: 39,
@@ -427,6 +465,7 @@ const womenBags = [
     brand: "U.S Polo Assn",
     color: "Açıq mavi",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 40,
@@ -438,6 +477,7 @@ const womenBags = [
     brand: "Gucci",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 41,
@@ -449,6 +489,7 @@ const womenBags = [
     brand: "Guess",
     color: "Qara",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 42,
@@ -460,6 +501,7 @@ const womenBags = [
     brand: "Guess",
     color: "Bej",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 43,
@@ -471,6 +513,7 @@ const womenBags = [
     brand: "Chanel",
     color: "Qara",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 44,
@@ -482,6 +525,7 @@ const womenBags = [
     brand: "Calvin Klein",
     color: "Qara",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 45,
@@ -493,6 +537,7 @@ const womenBags = [
     brand: "Dior",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 46,
@@ -504,6 +549,7 @@ const womenBags = [
     brand: "Chanel",
     color: "Narıncı",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 47,
@@ -515,6 +561,7 @@ const womenBags = [
     brand: "Gucci",
     color: "Boz",
     material: "Kətan",
+    category: "Çiyin Çantası",
   },
   {
     id: 48,
@@ -526,6 +573,7 @@ const womenBags = [
     brand: "Gucci",
     color: "Qəhvəyi",
     material: "Kətan",
+    category: "Əl Çantası",
   },
   {
     id: 49,
@@ -537,6 +585,7 @@ const womenBags = [
     brand: "Hermes",
     color: "Tünd yaşıl",
     material: "Perlamontnu dəri",
+    category: "Əl Çantası",
   },
   {
     id: 50,
@@ -548,6 +597,7 @@ const womenBags = [
     brand: "Prada",
     color: "Çəhrayı",
     material: "Kətan",
+    category: "Çiyin Çantası",
   },
   {
     id: 51,
@@ -559,6 +609,7 @@ const womenBags = [
     brand: "Chanel",
     color: "Açıq mavi",
     material: "Polyester",
+    category: "Çiyin Çantası",
   },
   {
     id: 52,
@@ -570,6 +621,7 @@ const womenBags = [
     brand: "Balenciaga",
     color: "Tünd yaşıl",
     material: "Perlamontnu dəri",
+    category: "Əl Çantası",
   },
   {
     id: 53,
@@ -581,6 +633,7 @@ const womenBags = [
     brand: "Christion Louboutin",
     color: "Qara",
     material: "Dəri",
+    category: "Pul Kisəsi",
   },
   {
     id: 54,
@@ -592,6 +645,7 @@ const womenBags = [
     brand: "Guess",
     color: "Qara",
     material: "Dəri",
+    category: "Bel Çantası",
   },
   {
     id: 55,
@@ -603,6 +657,7 @@ const womenBags = [
     brand: "Gucci",
     color: "Mavi",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 56,
@@ -614,6 +669,7 @@ const womenBags = [
     brand: "Christion Louboutin",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "",
   },
   {
     id: 57,
@@ -625,6 +681,7 @@ const womenBags = [
     brand: "Prada",
     color: "Boz",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 58,
@@ -636,6 +693,7 @@ const womenBags = [
     brand: "Guess",
     color: "Qara",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 59,
@@ -647,6 +705,7 @@ const womenBags = [
     brand: "Adidas",
     color: "Qara",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 60,
@@ -658,6 +717,7 @@ const womenBags = [
     brand: "Lacoste",
     color: "Qara",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 61,
@@ -669,6 +729,7 @@ const womenBags = [
     brand: "Dior",
     color: "Açıq mavi",
     material: "Kətan",
+    category: "Əl Çantası",
   },
   {
     id: 62,
@@ -680,6 +741,7 @@ const womenBags = [
     brand: "Puma",
     color: "Qara",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 63,
@@ -691,6 +753,7 @@ const womenBags = [
     brand: "Hermes",
     color: "Bənövşəyi",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 64,
@@ -702,6 +765,7 @@ const womenBags = [
     brand: "Guess",
     color: "Tünd bənövşəyi",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 65,
@@ -713,6 +777,7 @@ const womenBags = [
     brand: "Dior",
     color: "Tünd mavi",
     material: "Kətan",
+    category: "Əl Çantası",
   },
   {
     id: 66,
@@ -724,6 +789,7 @@ const womenBags = [
     brand: "Chanel",
     color: "Tünd yaşıl",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 67,
@@ -735,6 +801,7 @@ const womenBags = [
     brand: "Lacoste",
     color: "Açıq mavi",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 68,
@@ -746,6 +813,7 @@ const womenBags = [
     brand: "Gucci",
     color: "Qəhvəyi",
     material: "Polyester",
+    category: "Əl Çantası",
   },
   {
     id: 69,
@@ -757,6 +825,7 @@ const womenBags = [
     brand: "U.S Polo Assn",
     color: "Qəhvəyi",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 70,
@@ -768,6 +837,7 @@ const womenBags = [
     brand: "Lacoste",
     color: "Bej",
     material: "Dəri",
+    category: "",
   },
   {
     id: 71,
@@ -779,6 +849,7 @@ const womenBags = [
     brand: "Balenciaga",
     color: "Qara",
     material: "Dəri",
+    category: "Səyahət Çantası",
   },
   {
     id: 72,
@@ -790,6 +861,7 @@ const womenBags = [
     brand: "Prada",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 73,
@@ -801,6 +873,7 @@ const womenBags = [
     brand: "Tommy Hilfiger",
     color: "Qara",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 74,
@@ -812,6 +885,7 @@ const womenBags = [
     brand: "Dior",
     color: "Qırmızı",
     material: "Kətan",
+    category: "Əl Çantası",
   },
   {
     id: 75,
@@ -823,6 +897,7 @@ const womenBags = [
     brand: "Prada",
     color: "Haki",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 76,
@@ -834,6 +909,7 @@ const womenBags = [
     brand: "Prada",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Əl Çantası",
   },
   {
     id: 77,
@@ -845,6 +921,7 @@ const womenBags = [
     brand: "Tommy Hilfiger",
     color: "Tünd mavi",
     material: "Dəri",
+    category: "Çiyin Çantası",
   },
   {
     id: 78,
@@ -856,6 +933,7 @@ const womenBags = [
     brand: "Nike",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Bel Çantası",
   },
   {
     id: 79,
@@ -867,6 +945,7 @@ const womenBags = [
     brand: "Guess",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Pul Kisəsi",
   },
   {
     id: 80,
@@ -878,6 +957,7 @@ const womenBags = [
     brand: "Miu Miu",
     color: "Qəhvəyi",
     material: "Hörmə",
+    category: "Dəniz Çantası",
   },
 ];
 

@@ -25,9 +25,12 @@ const Star = ({ filled, onClick }) => (
 const ProductCard = ({ product, cartCount, onAddToCart }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const currentUser = useSelector((state) => state.user.currentUser);
   const favorites = useSelector(selectFavorites);
   const isFavorited = favorites.some((f) => f.uniqueId === product.uniqueId);
-  const navigate = useNavigate();
+
   const [rating, setRating] = useState(0);
 
   useEffect(() => {
@@ -39,34 +42,50 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
 
   const handleRating = (e, star) => {
     e.stopPropagation();
+    if (!currentUser) {
+      navigate("/auth");
+      return;
+    }
     setRating(star);
     localStorage.setItem(`product-rating-${product.uniqueId}`, star.toString());
   };
 
-  return (
-   <div
-  onClick={() => navigate(`/product/${product.uniqueId}`)}
-  className="relative bg-purple-50 rounded-lg shadow-md overflow-hidden  
-             cursor-pointer hover:scale-[1.02] transition-transform duration-300 
-             w-[220px] sm:w-[240px] md:w-[260px] lg:w-[280px] xl:w-[300px] 
-             h-[380px] sm:h-[430px] md:h-[460px] lg:h-[460px] mx-auto"
->
+  const handleFavorite = (e) => {
+    e.stopPropagation();
+    if (!currentUser) {
+      navigate("/auth");
+      return;
+    }
+    dispatch(toggleFavorite(product));
+  };
 
-      <div className="relative overflow-hidden rounded-[10px] border border-[#1a0029] m-3">
+  const handleAddToCart = (e) => {
+    e.stopPropagation();
+    if (!currentUser) {
+      navigate("/auth");
+      return;
+    }
+    dispatch(addItem(product));
+    onAddToCart?.();
+  };
+
+  return (
+    <div
+      onClick={() => navigate(`/product/${product.uniqueId}`)}
+      className="relative bg-purple-50 rounded-lg shadow-md overflow-hidden cursor-pointer hover:scale-[1.02] transition-transform duration-300 w-full max-w-[280px] min-h-[360px] sm:min-h-[390px] md:min-h-[420px] lg:min-h-[450px] mx-auto flex flex-col"
+    >
+      <div className="relative overflow-hidden rounded-[10px] border border-[#1a0029] m-3 flex-shrink-0">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-40 sm:h-48 md:h-56 object-cover"
+          className="w-full h-40 sm:h-44 md:h-48 lg:h-52 object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 hover:opacity-100 flex items-center justify-center text-white font-semibold text-sm sm:text-lg transition-opacity">
           {t("moreInfo")}
         </div>
 
         <button
-          onClick={(e) => {
-            e.stopPropagation();
-            dispatch(toggleFavorite(product));
-          }}
+          onClick={handleFavorite}
           className={`absolute top-2 right-2 text-lg sm:text-2xl ${
             isFavorited ? "text-red-500" : "text-gray-400"
           } hover:text-red-600 transition-colors`}
@@ -77,11 +96,13 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
         </button>
       </div>
 
-      <div className="p-3 sm:p-4 flex flex-col">
-        <h3 className="font-semibold text-base text-[#1a0029] sm:text-xl truncate">
+      <div className="p-3 sm:p-4 flex flex-col flex-grow">
+        <h3 className="font-semibold text-base text-[#1a0029] sm:text-lg md:text-xl truncate">
           {product.name}
         </h3>
-        <p className="text-[#1a0029]/80 text-xs mt-[10px] sm:text-sm">{product.brand}</p>
+        <p className="text-[#1a0029]/80 text-xs sm:text-sm mt-1">
+          {product.brand}
+        </p>
 
         <div className="flex items-center mt-2">
           {[1, 2, 3, 4, 5].map((star) => (
@@ -93,17 +114,13 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
           ))}
         </div>
 
-        <p className="font-bold text-lg sm:text-xl mt-[7px] text-purple-800">
+        <p className="font-bold text-lg sm:text-xl mt-2 text-purple-800">
           {product.price} ₼
         </p>
 
         <button
-          onClick={(e) => {
-            e.stopPropagation();
-            dispatch(addItem(product));
-            onAddToCart?.();
-          }}
-          className="relative bg-[#290041] text-white border border-purple-700 rounded-[50px] mt-[15px] font-semibold hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] transition text-center w-full h-[36px] sm:h-[40px] text-sm sm:text-[18px]"
+          onClick={handleAddToCart}
+          className="relative bg-[#290041] text-white border border-purple-700 rounded-[50px] mt-auto font-semibold hover:!bg-gray-200 hover:!text-[#1a0029] hover:!border-[#290041] transition text-center w-full h-[38px] sm:h-[42px] text-sm sm:text-[16px]"
         >
           {t("addToCart")}
           {cartCount > 0 && (
@@ -118,4 +135,3 @@ const ProductCard = ({ product, cartCount, onAddToCart }) => {
 };
 
 export default ProductCard;
-

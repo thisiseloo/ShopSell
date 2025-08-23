@@ -12,7 +12,7 @@
 }
 
 .category-item {
-  flex: 1 1 0; 
+  flex: 1 1 0;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -21,7 +21,7 @@
 
 .category-image {
   width: 100%;
-  aspect-ratio: 3 / 4; 
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   transition: transform 0.3s ease;
   border-radius: 8px;
@@ -61,6 +61,7 @@
   .category-title {
     font-size: 40px;
   }
+
   .category-subtitle {
     font-size: 20px;
   }
@@ -71,18 +72,22 @@
   .category-container {
     flex-direction: column;
     gap: 30px;
-    max-width: 100%; /* overflow-un qarşısını al */
+    max-width: 100%;
     padding: 0 5vw;
   }
+
   .category-item:hover .category-image {
     transform: scale(1.03);
   }
+
   .category-title {
     font-size: 32px;
   }
+
   .category-subtitle {
     font-size: 18px;
   }
+
   .category-heading {
     font-size: 35px;
   }
@@ -92,18 +97,22 @@
   .category-container {
     flex-direction: column;
     gap: 20px;
-    width: 100%; /* 100vw əvəzinə */
+    width: 100%;
     padding: 0 10px;
   }
+
   .category-item:hover .category-image {
     transform: scale(1.02);
   }
+
   .category-title {
     font-size: 24px;
   }
+
   .category-subtitle {
     font-size: 14px;
   }
+
   .category-heading {
     font-size: 30px;
   }

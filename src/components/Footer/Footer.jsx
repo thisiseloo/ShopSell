@@ -22,12 +22,10 @@ const Footer = () => {
       <footer className="bg-[#1a0029] text-white pt-[180px] relative z-0">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-16 pb-8">
           <div className="sm:w-1/3 text-center sm:text-left">
-            <img
-              src="/images/shopsell_logo.png"
-              alt="ShopSell Logo"
-              className="w-28 sm:w-34 mx-auto sm:mx-0"
-            />
-            <p className="text-sm text-gray-100 leading-relaxed mt-2">
+            <h2 className="text-4xl font-bold text-[#E8BBF5]">
+              Shop<span className="text-[#dbd2dd] text-2xl">Sell</span>
+            </h2>
+            <p className="text-sm text-gray-100 leading-relaxed mt-3">
               {t("description")}
             </p>
           </div>

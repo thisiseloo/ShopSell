@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addItem,
@@ -21,7 +21,9 @@ const ProductDetail = () => {
   const { t } = useTranslation();
   const { id } = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items);
+  const currentUser = useSelector((state) => state.user.currentUser);
 
   const allProducts = [
     ...womenShoes.map((item) => ({
@@ -74,11 +76,33 @@ const ProductDetail = () => {
   );
 
   const handleAddToCart = () => {
+    if (!currentUser) {
+      navigate("/auth");
+      return;
+    }
+
     if (product.type === "shoe" && !selectedSize) {
       alert(t("selectSize"));
       return;
     }
+
     dispatch(addItem({ ...product, size: selectedSize }));
+  };
+
+  const handleIncreaseQty = () => {
+    if (!currentUser) {
+      navigate("/auth");
+      return;
+    }
+    dispatch(increaseQty({ uniqueId: product.uniqueId, size: selectedSize }));
+  };
+
+  const handleDecreaseQty = () => {
+    if (!currentUser) {
+      navigate("/auth");
+      return;
+    }
+    dispatch(decreaseQty({ uniqueId: product.uniqueId, size: selectedSize }));
   };
 
   const materialDisplay =
@@ -163,14 +187,7 @@ const ProductDetail = () => {
             {cartItem ? (
               <div className="flex items-center gap-4">
                 <button
-                  onClick={() =>
-                    dispatch(
-                      decreaseQty({
-                        uniqueId: product.uniqueId,
-                        size: selectedSize,
-                      })
-                    )
-                  }
+                  onClick={handleDecreaseQty}
                   className="bg-gray-200 px-4 py-2 rounded text-lg font-bold"
                 >
                   -
@@ -179,14 +196,7 @@ const ProductDetail = () => {
                   {cartItem.quantity}
                 </span>
                 <button
-                  onClick={() =>
-                    dispatch(
-                      increaseQty({
-                        uniqueId: product.uniqueId,
-                        size: selectedSize,
-                      })
-                    )
-                  }
+                  onClick={handleIncreaseQty}
                   className="bg-gray-200 px-4 py-2 rounded text-lg font-bold"
                 >
                   +

@@ -2,61 +2,31 @@ const womenShoes = [
   {
     id: 1,
     uniqueId: "wshoe-1",
-    name: "Hündürdaban Ayaqqabı",
-    price: 174,
+    name: "Çəkmə",
+    price: 211,
     image:
-      "https://i.pinimg.com/1200x/6e/b6/3f/6eb63f9bdcea7e1b8320cfdee5910d9f.jpg",
-    brand: "Christion Louboutin",
-    color: "qara",
+      "https://i.pinimg.com/1200x/9a/50/f0/9a50f0e30c2c7491afd435cb339b7b43.jpg",
+    brand: "U.S Polo Assn",
+    color: "Çəhrayı",
     material: "Dəri",
+    category: "Qış ayaqqabısı",
   },
   {
     id: 2,
     uniqueId: "wshoe-2",
     name: "Sport Ayaqqabı",
-    price: 68,
+    price: 251,
     image:
-      "https://i.pinimg.com/736x/81/2d/83/812d836ba1479fe2bb6138c1dca93b02.jpg",
-    brand: "Puma",
-    color: "Çəhrayı",
-    material: "Süni dəri",
+      "https://i.pinimg.com/1200x/a2/52/93/a25293cfb8f4f1d42451b66a0a397ecf.jpg",
+    brand: "Chanel",
+    color: "Sarı",
+    material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
+
   {
     id: 3,
     uniqueId: "wshoe-3",
-    name: "Sport Ayaqqabı",
-    price: 77,
-    image:
-      "https://i.pinimg.com/1200x/6a/a2/1f/6aa21f60a8799fdadb87c26bc91284e6.jpg",
-    brand: "Christion Louboutin",
-    color: "Bəyaz",
-    material: "Süni dəri",
-  },
-  {
-    id: 4,
-    uniqueId: "wshoe-4",
-    name: "Baletka",
-    price: 84,
-    image:
-      "https://i.pinimg.com/736x/89/f4/08/89f408a71621bd6c3094c21706944a93.jpg",
-    brand: "Puma",
-    color: "Çəhrayı",
-    material: "Nabuk",
-  },
-  {
-    id: 5,
-    uniqueId: "wshoe-5",
-    name: "Baletka",
-    price: 72,
-    image:
-      "https://i.pinimg.com/736x/53/37/99/533799aff009f639fd8437287138e7d7.jpg",
-    brand: "Lacoste",
-    color: "Bəyaz",
-    material: "Kətan",
-  },
-  {
-    id: 6,
-    uniqueId: "wshoe-6",
     name: "Baletka",
     price: 92,
     image:
@@ -64,6 +34,43 @@ const womenShoes = [
     brand: "Dior",
     color: "Qara",
     material: "Kətan",
+    category: "Balerina",
+  },
+  {
+    id: 4,
+    uniqueId: "wshoe-4",
+    name: "Sport Ayaqqabı",
+    price: 98,
+    image:
+      "https://i.pinimg.com/736x/f0/00/b7/f000b79ef76799542fc71bb24ab9ec20.jpg",
+    brand: "Balenciaga",
+    color: "Tünd mavi",
+    material: "Süni dəri",
+    category: "Gündəlik ayaqqabı",
+  },
+  {
+    id: 5,
+    uniqueId: "wshoe-5",
+    name: "Sport Ayaqqabı",
+    price: 195,
+    image:
+      "https://i.pinimg.com/736x/84/8f/13/848f13ceee7ed35b1bc4611c03fb9e67.jpg",
+    brand: "Puma",
+    color: "Rəngli",
+    material: "Nabuk",
+    category: "Gündəlik ayaqqabı",
+  },
+  {
+    id: 6,
+    uniqueId: "wshoe-6",
+    name: "Sport Ayaqqabı",
+    price: 77,
+    image:
+      "https://i.pinimg.com/1200x/6a/a2/1f/6aa21f60a8799fdadb87c26bc91284e6.jpg",
+    brand: "Christion Louboutin",
+    color: "Bəyaz",
+    material: "Süni dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 7,
@@ -75,32 +82,11 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Sarı",
     material: "Rezin",
+    category: "Açıq ayaqqabı",
   },
   {
     id: 8,
     uniqueId: "wshoe-8",
-    name: "Sandal",
-    price: 46,
-    image:
-      "https://i.pinimg.com/1200x/34/fc/34/34fc34c1fcf78d7cf5cbaa6694370228.jpg",
-    brand: "Guess",
-    color: "Qara",
-    material: "Rezin",
-  },
-  {
-    id: 9,
-    uniqueId: "wshoe-9",
-    name: "Baletka",
-    price: 118,
-    image:
-      "https://i.pinimg.com/1200x/22/a8/83/22a8831aba1d842d3bdd84af620208b4.jpg",
-    brand: "Gucci",
-    color: "Mavi",
-    material: "Kətan",
-  },
-  {
-    id: 10,
-    uniqueId: "wshoe-10",
     name: "Hündürdaban Ayaqabı",
     price: 193,
     image:
@@ -108,28 +94,55 @@ const womenShoes = [
     brand: "Prada",
     color: "Çəhrayı",
     material: "Süni dəri",
+    category: "Ziyafət ayaqqabısı",
+  },
+  {
+    id: 9,
+    uniqueId: "wshoe-9",
+    name: "Sandal",
+    price: 46,
+    image:
+      "https://i.pinimg.com/1200x/34/fc/34/34fc34c1fcf78d7cf5cbaa6694370228.jpg",
+    brand: "Guess",
+    color: "Qara",
+    material: "Rezin",
+    category: "Açıq ayaqqabı",
+  },
+  {
+    id: 10,
+    uniqueId: "wshoe-10",
+    name: "Çəkmə",
+    price: 130,
+    image:
+      "https://i.pinimg.com/736x/a0/44/d9/a044d94b5d6368af714deb288927665a.jpg",
+    brand: "Lacoste",
+    color: "Bej",
+    material: "Dəri",
+    category: "Qış ayaqqabısı",
   },
   {
     id: 11,
     uniqueId: "wshoe-11",
     name: "Sport Ayaqqabı",
-    price: 195,
+    price: 125,
     image:
-      "https://i.pinimg.com/736x/84/8f/13/848f13ceee7ed35b1bc4611c03fb9e67.jpg",
-    brand: "Puma",
-    color: "Rəngli",
-    material: "Nabuk",
+      "https://i.pinimg.com/1200x/9e/37/07/9e3707a2e20782a5809b9f71683cbb58.jpg",
+    brand: "Calvin Klein",
+    color: "Bəyaz",
+    material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 12,
     uniqueId: "wshoe-12",
     name: "Sport Ayaqqabı",
-    price: 98,
+    price: 173,
     image:
-      "https://i.pinimg.com/736x/f0/00/b7/f000b79ef76799542fc71bb24ab9ec20.jpg",
-    brand: "Balenciaga",
-    color: "Tünd mavi",
-    material: "Süni dəri",
+      "https://i.pinimg.com/1200x/c9/0d/3f/c90d3f4ec18ee6de86c363dfa23af8a7.jpg",
+    brand: "Lacoste",
+    color: "Boz",
+    material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 13,
@@ -141,6 +154,7 @@ const womenShoes = [
     brand: "Chanel",
     color: "Bej",
     material: "Nabuk",
+    category: "Klassik ayaqqabı",
   },
   {
     id: 14,
@@ -152,6 +166,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Bej",
     material: "Süni dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 15,
@@ -163,18 +178,21 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Bəyaz",
     material: "Rezin",
+    category: "Açıq ayaqqabı",
   },
   {
     id: 16,
     uniqueId: "wshoe-16",
-    name: "Çəkmə",
-    price: 211,
+    name: "Baletka",
+    price: 72,
     image:
-      "https://i.pinimg.com/1200x/9a/50/f0/9a50f0e30c2c7491afd435cb339b7b43.jpg",
-    brand: "U.S Polo Assn",
-    color: "Çəhrayı",
-    material: "Dəri",
+      "https://i.pinimg.com/736x/53/37/99/533799aff009f639fd8437287138e7d7.jpg",
+    brand: "Lacoste",
+    color: "Bəyaz",
+    material: "Kətan",
+    category: "Balerina",
   },
+
   {
     id: 17,
     uniqueId: "wshoe-17",
@@ -185,6 +203,7 @@ const womenShoes = [
     brand: "Calvin Klein",
     color: "Bəyaz",
     material: "Süni dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 18,
@@ -196,6 +215,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Bəyaz",
     material: "Süni dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 19,
@@ -207,6 +227,7 @@ const womenShoes = [
     brand: "Christion Louboutin",
     color: "Bəyaz",
     material: "Perlamontnu dəri",
+    category: "Ziyafət ayaqqabısı",
   },
   {
     id: 20,
@@ -218,6 +239,7 @@ const womenShoes = [
     brand: "U.S Polo Assn",
     color: "Boz",
     material: "Leather",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 21,
@@ -229,6 +251,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 22,
@@ -240,6 +263,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 23,
@@ -251,6 +275,7 @@ const womenShoes = [
     brand: "Adidas",
     color: "Boz",
     material: "Süni dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 24,
@@ -262,6 +287,7 @@ const womenShoes = [
     brand: "U.S Polo Assn",
     color: "Bej",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 25,
@@ -273,6 +299,7 @@ const womenShoes = [
     brand: "Chanel",
     color: "Boz",
     material: "Nabuk",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 26,
@@ -284,6 +311,7 @@ const womenShoes = [
     brand: "Adidas",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 27,
@@ -295,6 +323,7 @@ const womenShoes = [
     brand: "U.S Polo Assn",
     color: "Boz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 28,
@@ -306,6 +335,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Bej",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 29,
@@ -317,6 +347,7 @@ const womenShoes = [
     brand: "Tommy Hilfiger",
     color: "Boz",
     material: "Dəri",
+    category: "Qış ayaqqabısı",
   },
   {
     id: 30,
@@ -328,40 +359,46 @@ const womenShoes = [
     brand: "Christion Louboutin",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 31,
     uniqueId: "wshoe-31",
-    name: "Çəkmə",
-    price: 130,
+    name: "Baletka",
+    price: 118,
     image:
-      "https://i.pinimg.com/736x/a0/44/d9/a044d94b5d6368af714deb288927665a.jpg",
-    brand: "Lacoste",
-    color: "Bej",
-    material: "Dəri",
+      "https://i.pinimg.com/1200x/22/a8/83/22a8831aba1d842d3bdd84af620208b4.jpg",
+    brand: "Gucci",
+    color: "Mavi",
+    material: "Kətan",
+    category: "Açıq ayaqqabı",
   },
   {
     id: 32,
     uniqueId: "wshoe-32",
     name: "Sport Ayaqqabı",
-    price: 125,
+    price: 276,
     image:
-      "https://i.pinimg.com/1200x/9e/37/07/9e3707a2e20782a5809b9f71683cbb58.jpg",
-    brand: "Calvin Klein",
+      "https://i.pinimg.com/1200x/51/95/fc/5195fc4023bd222999e1c08a7381dc97.jpg",
+    brand: "Guess",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
+
   {
     id: 33,
     uniqueId: "wshoe-33",
-    name: "Sport Ayaqqabı",
-    price: 173,
+    name: "Baletka",
+    price: 84,
     image:
-      "https://i.pinimg.com/1200x/c9/0d/3f/c90d3f4ec18ee6de86c363dfa23af8a7.jpg",
-    brand: "Lacoste",
-    color: "Boz",
-    material: "Dəri",
+      "https://i.pinimg.com/736x/89/f4/08/89f408a71621bd6c3094c21706944a93.jpg",
+    brand: "Puma",
+    color: "Çəhrayı",
+    material: "Nabuk",
+    category: "Balerina",
   },
+
   {
     id: 34,
     uniqueId: "wshoe-34",
@@ -372,6 +409,7 @@ const womenShoes = [
     brand: "Tommy Hilfiger",
     color: "Bej",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 35,
@@ -383,6 +421,7 @@ const womenShoes = [
     brand: "Tommy Hilfiger",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 36,
@@ -394,6 +433,7 @@ const womenShoes = [
     brand: "Tommy Hilfiger",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 37,
@@ -405,6 +445,7 @@ const womenShoes = [
     brand: "Tommy Hilfiger",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 38,
@@ -416,6 +457,7 @@ const womenShoes = [
     brand: "Nike",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Qış ayaqqabısı",
   },
   {
     id: 39,
@@ -427,6 +469,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 40,
@@ -438,6 +481,7 @@ const womenShoes = [
     brand: "Nike",
     color: "Green",
     material: "Leather",
+    category: "Ziyafət ayaqqabısı",
   },
   {
     id: 41,
@@ -449,6 +493,7 @@ const womenShoes = [
     brand: "Fendi",
     color: "Bənövşəyi",
     material: "Nabuk",
+    category: "Ziyafət ayaqqabısı",
   },
   {
     id: 42,
@@ -460,6 +505,7 @@ const womenShoes = [
     brand: "Dior",
     color: "Qırmızı",
     material: "Kətan",
+    category: "Ziyafət ayaqqabısı",
   },
   {
     id: 43,
@@ -471,6 +517,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 44,
@@ -482,6 +529,7 @@ const womenShoes = [
     brand: "Christion Louboutin",
     color: "Qara",
     material: "Perlamontnu dəri",
+    category: "Ziyafət ayaqqabısı",
   },
   {
     id: 45,
@@ -493,6 +541,7 @@ const womenShoes = [
     brand: "Dior",
     color: "Qara",
     material: "Kətan",
+    category: "Ziyafət ayaqqabısı",
   },
   {
     id: 46,
@@ -504,6 +553,7 @@ const womenShoes = [
     brand: "Dior",
     color: "Qara",
     material: "Kətan",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 47,
@@ -515,6 +565,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 48,
@@ -526,6 +577,7 @@ const womenShoes = [
     brand: "Gucci",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 49,
@@ -537,6 +589,7 @@ const womenShoes = [
     brand: "Balenciaga",
     color: "Rəngli",
     material: "Nabuk",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 50,
@@ -548,6 +601,7 @@ const womenShoes = [
     brand: "Prada",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 51,
@@ -559,6 +613,7 @@ const womenShoes = [
     brand: "Dior",
     color: "Bej",
     material: "Polyester",
+    category: "Balerina",
   },
   {
     id: 52,
@@ -570,6 +625,7 @@ const womenShoes = [
     brand: "Fendi",
     color: "Bej",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 53,
@@ -581,6 +637,7 @@ const womenShoes = [
     brand: "Adidas",
     color: "Tünd mavi",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 54,
@@ -592,17 +649,19 @@ const womenShoes = [
     brand: "U.S Polo Assn",
     color: "Bənövşəyi",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 55,
     uniqueId: "wshoe-55",
-    name: "Sport Ayaqqabı",
-    price: 276,
+    name: "Hündürdaban Ayaqqabı",
+    price: 174,
     image:
-      "https://i.pinimg.com/1200x/51/95/fc/5195fc4023bd222999e1c08a7381dc97.jpg",
-    brand: "Guess",
-    color: "Bəyaz",
+      "https://i.pinimg.com/1200x/6e/b6/3f/6eb63f9bdcea7e1b8320cfdee5910d9f.jpg",
+    brand: "Christion Louboutin",
+    color: "qara",
     material: "Dəri",
+    category: "Ziyafət ayaqqabısı",
   },
   {
     id: 56,
@@ -614,6 +673,7 @@ const womenShoes = [
     brand: "Skechers",
     color: "Bəyaz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 57,
@@ -625,6 +685,7 @@ const womenShoes = [
     brand: "U.S Polo Assn",
     color: "Boz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 58,
@@ -636,6 +697,7 @@ const womenShoes = [
     brand: "Adidas",
     color: "Bej",
     material: "Nabuk",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 59,
@@ -647,6 +709,7 @@ const womenShoes = [
     brand: "Puma",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 60,
@@ -658,6 +721,7 @@ const womenShoes = [
     brand: "Chanel",
     color: "Qara",
     material: "Nabuk",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 61,
@@ -669,6 +733,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 62,
@@ -680,6 +745,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Bej",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 63,
@@ -691,6 +757,7 @@ const womenShoes = [
     brand: "Adidas",
     color: "Boz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 64,
@@ -702,6 +769,7 @@ const womenShoes = [
     brand: "Adidas",
     color: "Boz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 65,
@@ -713,18 +781,22 @@ const womenShoes = [
     brand: "Skechers",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
+
   {
     id: 66,
     uniqueId: "wshoe-66",
     name: "Sport Ayaqqabı",
-    price: 251,
+    price: 68,
     image:
-      "https://i.pinimg.com/1200x/a2/52/93/a25293cfb8f4f1d42451b66a0a397ecf.jpg",
-    brand: "Chanel",
-    color: "Sarı",
-    material: "Dəri",
+      "https://i.pinimg.com/736x/81/2d/83/812d836ba1479fe2bb6138c1dca93b02.jpg",
+    brand: "Puma",
+    color: "Çəhrayı",
+    material: "Süni dəri",
+    category: "Gündəlik ayaqqabı",
   },
+
   {
     id: 67,
     uniqueId: "wshoe-67",
@@ -735,6 +807,7 @@ const womenShoes = [
     brand: "Lacoste",
     color: "Boz",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 68,
@@ -746,6 +819,7 @@ const womenShoes = [
     brand: "Nike",
     color: "Çəhrayı",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 69,
@@ -757,6 +831,7 @@ const womenShoes = [
     brand: "Dior",
     color: "Qara",
     material: "Dəri",
+    category: "Ziyafət ayaqqabısı",
   },
   {
     id: 70,
@@ -768,6 +843,7 @@ const womenShoes = [
     brand: "Chanel",
     color: "Qara",
     material: "Polyester",
+    category: "Gündəlik ayaqqabı",
   },
   {
     id: 71,
@@ -778,7 +854,8 @@ const womenShoes = [
       "https://i.pinimg.com/1200x/77/d2/1d/77d21da6dc8335561d8895e4e607fcf5.jpg",
     brand: "Adidas",
     color: "Red",
-    material: "Mesh",
+    material: "Polyester",
+    category: "Qış ayaqqabısı",
   },
   {
     id: 72,
@@ -790,6 +867,7 @@ const womenShoes = [
     brand: "Christion Louboutin",
     color: "Qırmızı",
     material: "Dəri",
+    category: "Gündəlik ayaqqabı",
   },
 ];
 

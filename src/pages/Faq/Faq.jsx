@@ -43,7 +43,7 @@ const FAQ = () => {
 
   return (
     <div className="max-w-3xl mx-auto mb-[100px] py-8 px-4 sm:py-12 sm:px-6">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-10 text-center text-[#290041]">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-10 text-center text-purple-900 ">
         Tez-tez verilən suallar
       </h2>
       <div className="space-y-4 sm:space-y-6">

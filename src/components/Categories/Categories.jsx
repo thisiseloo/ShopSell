@@ -14,14 +14,20 @@ const Categories = React.forwardRef((props, ref) => {
   };
 
   const categories = [
-    { title: t("women"), subtitle: t("for"), img: "/images/women_category.jpg" },
+    {
+      title: t("women"),
+      subtitle: t("for"),
+      img: "/images/women_category.jpg",
+    },
     { title: t("men"), subtitle: t("for"), img: "/images/men_category.jpg" },
     { title: t("kids"), subtitle: t("for"), img: "/images/kids_category.jpg" },
   ];
 
   return (
     <div ref={ref}>
-      <h2 className="category-heading text-[#1a0029]">{t("categories_title")}</h2>
+      <h2 className="category-heading text-[#1a0029]">
+        {t("categories_title")}
+      </h2>
       <div className="category-container">
         {categories.map((cat, i) => (
           <div

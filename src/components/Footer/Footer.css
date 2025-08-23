@@ -1,14 +1,13 @@
-/* Footer başlıqları və mətn */
 footer h3 {
   font-size: 18px;
 }
+
 footer a,
 footer p,
 footer span {
   font-size: 14px;
 }
 
-/* Sosial media */
 footer .flex.items-center {
   display: flex;
   flex-direction: row;
@@ -16,10 +15,9 @@ footer .flex.items-center {
   flex-wrap: nowrap;
 }
 
-/* Newsletter overlap */
 .newsletter-overlap {
   position: absolute;
-  top: -90px; /* yuxarı çək */
+  top: -90px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 20px);
@@ -31,11 +29,13 @@ footer .flex.items-center {
   footer h3 {
     font-size: 16px;
   }
+
   footer a,
   footer p,
   footer span {
     font-size: 13px;
   }
+
   .newsletter-overlap {
     top: -70px;
     width: calc(100% - 20px);
@@ -46,22 +46,27 @@ footer .flex.items-center {
   footer {
     text-align: center;
   }
+
   footer h3 {
     font-size: 15px;
     margin-bottom: 8px;
   }
+
   footer a,
   footer p,
   footer span {
     font-size: 12px;
     line-height: 1.5;
   }
+
   footer .grid {
     grid-template-columns: 1fr;
   }
+
   footer img {
     margin: 0 auto;
   }
+
   footer .flex:not(.items-center) {
     flex-direction: column;
     align-items: center;
@@ -73,6 +78,7 @@ footer .flex.items-center {
   }
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }

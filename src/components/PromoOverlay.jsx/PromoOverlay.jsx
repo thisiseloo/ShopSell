@@ -5,7 +5,7 @@ export default function PromoOverlay({ scrollToCategories }) {
   const { t } = useTranslation();
 
   return (
-    <div className="relative bg-[#D4D2D3] w-full pt-[50px] sm:pt-0">
+    <div className="relative bg-[#D4D2D3] w-full pt-[30px] sm:pt-0">
       <img
         src="/images/promo.jpg"
         alt="Promo"

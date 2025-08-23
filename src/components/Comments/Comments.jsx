@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from "../../redux/userSlice";
 import commentsData from "../../data/comments";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
@@ -16,6 +18,7 @@ const Star = ({ filled, onClick }) => (
 
 const Comments = () => {
   const { t } = useTranslation();
+  const currentUser = useSelector(selectCurrentUser);
 
   const [userComments, setUserComments] = useState(() => {
     const savedComments = localStorage.getItem("userComments");
@@ -119,52 +122,58 @@ const Comments = () => {
       </div>
 
       <div className="bg-gray-50 p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col md:flex-row items-center gap-8 md:gap-16">
-        <div className="w-full md:w-3/5">
-          <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center md:text-left text-[#1a0029]">
-            {t("comment_form_title")}
-          </h3>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder={t("first_name_placeholder")}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="w-full mb-4 sm:mb-5 p-2 sm:p-3 border border-gray-300 rounded-[50px] focus:outline-none focus:ring-2 focus:ring-[#290041] transition"
-            />
-            <input
-              type="text"
-              placeholder={t("last_name_placeholder")}
-              value={surname}
-              onChange={(e) => setSurname(e.target.value)}
-              required
-              className="w-full mb-4 sm:mb-5 p-2 sm:p-3 border border-gray-300 rounded-[50px] focus:outline-none focus:ring-2 focus:ring-[#290041] transition"
-            />
-            <textarea
-              placeholder={t("comment_placeholder")}
-              value={commentText}
-              onChange={(e) => setCommentText(e.target.value)}
-              required
-              className="w-full mb-4 sm:mb-6 p-3 sm:p-4 border border-gray-300 rounded-[50px] resize-none focus:outline-none focus:ring-2 focus:ring-[#290041] transition text-sm sm:text-base"
-            />
-            <div className="mb-4 sm:mb-5 flex items-center justify-center space-x-1 sm:space-x-2">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  filled={i < rating}
-                  onClick={() => setRating(i + 1)}
-                />
-              ))}
-            </div>
-            <button
-              type="submit"
-              className="bg-[#290041] text-white px-4 sm:px-6 py-2 sm:py-3 text-[18px] sm:text-[20px] rounded-[50px] hover:!bg-gray-200 hover:!text-[#1a0029] border-1 hover:!border-[#290041] 
-             transition w-full"
-            >
-              {t("submit_button")}
-            </button>
-          </form>
-        </div>
+        {currentUser ? (
+          <div className="w-full md:w-3/5">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center md:text-left text-[#1a0029]">
+              {t("comment_form_title")}
+            </h3>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder={t("first_name_placeholder")}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="w-full mb-4 sm:mb-5 p-2 sm:p-3 border border-gray-300 rounded-[50px] focus:outline-none focus:ring-2 focus:ring-[#290041] transition"
+              />
+              <input
+                type="text"
+                placeholder={t("last_name_placeholder")}
+                value={surname}
+                onChange={(e) => setSurname(e.target.value)}
+                required
+                className="w-full mb-4 sm:mb-5 p-2 sm:p-3 border border-gray-300 rounded-[50px] focus:outline-none focus:ring-2 focus:ring-[#290041] transition"
+              />
+              <textarea
+                placeholder={t("comment_placeholder")}
+                value={commentText}
+                onChange={(e) => setCommentText(e.target.value)}
+                required
+                className="w-full mb-4 sm:mb-6 p-2 sm:p-4 border border-gray-300 rounded-[50px] resize-none focus:outline-none focus:ring-2 focus:ring-[#290041] transition text-sm sm:text-base"
+              />
+              <div className="mb-4 sm:mb-5 flex items-center justify-center space-x-1 sm:space-x-2">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    filled={i < rating}
+                    onClick={() => setRating(i + 1)}
+                  />
+                ))}
+              </div>
+              <button
+                type="submit"
+                className="bg-[#290041] text-white px-4 sm:px-6 py-2 sm:py-3 text-[18px] sm:text-[20px] rounded-[50px] hover:!bg-gray-200 hover:!text-[#1a0029] border-1 hover:!border-[#290041] 
+               transition w-full"
+              >
+                {t("submit_button")}
+              </button>
+            </form>
+          </div>
+        ) : (
+          <p className="text-red-600 font-semibold text-center w-full md:w-3/5">
+            {t("login_to_comment")}
+          </p>
+        )}
 
         <div className="w-full md:w-2/5 flex flex-col items-center overflow-hidden rounded-2xl shadow-lg">
           <img

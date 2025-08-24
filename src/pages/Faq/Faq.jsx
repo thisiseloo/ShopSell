@@ -1,38 +1,37 @@
 import React, { useState } from "react";
 import { FaRegCircleQuestion } from "react-icons/fa6";
-
-const faqs = [
-  {
-    question: "Çatdırılma nə qədər sürür?",
-    answer:
-      "Bakı və ətraf bölgələrdə 1-3 iş günü, digər bölgələrdə 3-7 iş günü.",
-  },
-  {
-    question: "Ödənişi necə edə bilərəm?",
-    answer: "Kartla, bank köçürməsi və ya nağd ödəniş mümkündür.",
-  },
-  {
-    question: "Məhsulu qaytara bilərəm?",
-    answer:
-      "Bəli, 14 gün ərzində qaytarma mümkündür, məhsul istifadə edilməmiş olmalıdır.",
-  },
-  {
-    question: "Endirimlərdən necə yararlanmaq olar?",
-    answer:
-      "E-poçtla qeydiyyatdan keçməklə əlavə 25% endirim əldə edə bilərsiniz.",
-  },
-  {
-    question: "Çatdırılma ödənişi varmı?",
-    answer: "300 ₼-dan yuxarı sifarişlər üçün pulsuz çatdırılma mövcuddur.",
-  },
-  {
-    question: "Məhsul keyfiyyəti necədir?",
-    answer:
-      "Bütün məhsullarımız keyfiyyət standartlarına uyğun və orijinaldır.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const FAQ = () => {
+  const { t } = useTranslation();
+
+  const faqs = [
+    {
+      question: t("faq1_question"),
+      answer: t("faq1_answer"),
+    },
+    {
+      question: t("faq2_question"),
+      answer: t("faq2_answer"),
+    },
+    {
+      question: t("faq3_question"),
+      answer: t("faq3_answer"),
+    },
+    {
+      question: t("faq4_question"),
+      answer: t("faq4_answer"),
+    },
+    {
+      question: t("faq5_question"),
+      answer: t("faq5_answer"),
+    },
+    {
+      question: t("faq6_question"),
+      answer: t("faq6_answer"),
+    },
+  ];
+
   const [openStates, setOpenStates] = useState(Array(faqs.length).fill(false));
 
   const toggleFAQ = (index) => {
@@ -43,8 +42,8 @@ const FAQ = () => {
 
   return (
     <div className="max-w-3xl mx-auto mb-[100px] py-8 px-4 sm:py-12 sm:px-6">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-10 text-center text-purple-900 ">
-        Tez-tez verilən suallar
+      <h2 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-10 text-center text-purple-900">
+        {t("faq_main_title")}
       </h2>
       <div className="space-y-4 sm:space-y-6">
         {faqs.map((faq, index) => (

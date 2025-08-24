@@ -76,11 +76,11 @@ const Comments = () => {
     <div className="max-w-7xl mx-auto mt-[70px] py-8 px-4 sm:py-10 sm:px-6 lg:py-12 lg:px-8">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
         <h2
-  style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
-  className="text-[28px] sm:text-[35px] text-[#1a0029] text-center sm:text-left mb-3 sm:mb-0"
->
-  {t("comments_title")}
-</h2>
+          style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
+          className="text-[28px] sm:text-[35px] text-[#1a0029] text-center sm:text-left mb-3 sm:mb-0"
+        >
+          {t("comments_title")}
+        </h2>
 
         <div className="flex gap-[10px] space-x-3 mt-2 sm:mt-0">
           <FaArrowLeftLong

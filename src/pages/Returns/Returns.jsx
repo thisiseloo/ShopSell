@@ -5,48 +5,50 @@ import {
   PiNumberCircleThreeLight,
   PiNumberCircleFourLight,
 } from "react-icons/pi";
+import { useTranslation } from "react-i18next";
 
 const Returns = () => {
+  const { t } = useTranslation();
+
   const steps = [
     {
       icon: (
         <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Məhsulu hazırlayın",
-      text: "Məhsulu istifadə etməmiş və orijinal qablaşdırmada saxlayın. Sifariş qəbzini məhsul qutusunun içərisinə qoyun.",
+      title: t("return_step1_title"),
+      text: t("return_step1_text"),
     },
     {
       icon: (
         <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Bizimlə əlaqə saxlayın",
-      text: "Qaytarma üçün +994 55 622 71 01 nömrəsi ilə əlaqə saxlayın və ya sosial şəbəkələrimiz vasitəsilə mesaj göndərin.",
+      title: t("return_step2_title"),
+      text: t("return_step2_text"),
     },
     {
       icon: (
         <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Məhsulu göndərin",
-      text: "Məhsulu göstərilən ünvana göndərin və ya kuryer vasitəsilə təhvil verin.",
+      title: t("return_step3_title"),
+      text: t("return_step3_text"),
     },
     {
       icon: (
         <PiNumberCircleFourLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Ödənişin geri qaytarılması",
-      text: "Qaytarılan məhsul təsdiqləndikdən sonra ödənişiniz 3-5 iş günü ərzində kart hesabınıza oturacaq.",
+      title: t("return_step4_title"),
+      text: t("return_step4_text"),
     },
   ];
 
   return (
     <div className="max-w-4xl mx-auto py-10 px-4 sm:py-16 sm:px-6 mb-[90px]">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-purple-900">
-        Məhsul Qaytarma Prosesi
+        {t("return_main_title")}
       </h2>
 
       <p className="mb-6 sm:mb-8 text-center text-[#290041]/70 text-base sm:text-lg">
-        ShopSell-də sifarişlərin qaytarılması prosesi sadə və rahatdır. Məhsulu
-        qaytarmaq üçün aşağıdakı addımlara əməl etməyinizi xahiş edirik.
+        {t("return_intro")}
       </p>
 
       <div className="space-y-4 sm:space-y-6">
@@ -69,7 +71,7 @@ const Returns = () => {
       </div>
 
       <p className="mt-8 sm:mt-10 text-center text-[#290041]/70 italic text-sm sm:text-base">
-        Əlavə suallarınız üçün müştəri dəstəyi ilə əlaqə saxlayın.
+        {t("return_footer_note")}
       </p>
     </div>
   );

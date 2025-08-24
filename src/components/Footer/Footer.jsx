@@ -26,7 +26,7 @@ const Footer = () => {
               className="text-4xl font-bold text-[#E8BBF5]"
               style={{
                 fontFamily: '"Rubik Puddles", system-ui',
-                fontWeight: 400,
+                fontWeight: 600,
                 fontStyle: "normal",
               }}
             >

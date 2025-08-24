@@ -44,12 +44,11 @@ const Information = () => {
     <div className="h-auto py-5">
       <Container style={{ maxWidth: "1250px" }}>
         <h2
-  style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
-  className="text-[35px] text-[#1a0029] mb-5"
->
-  {t("info_main_title")}
-</h2>
-
+          style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
+          className="text-[35px] text-[#1a0029] mb-5"
+        >
+          {t("info_main_title")}
+        </h2>
 
         <Row className="g-4">
           {infoData.slice(0, 3).map((item, index) => (

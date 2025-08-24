@@ -4,42 +4,43 @@ import {
   PiNumberCircleTwoLight,
   PiNumberCircleThreeLight,
 } from "react-icons/pi";
+import { useTranslation } from "react-i18next";
 
 const Privacy = () => {
+  const { t } = useTranslation();
+
   const points = [
     {
       icon: (
         <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Toplanan məlumatlar",
-      text: "Sizdən sifariş və ödəniş üçün ad, email, telefon nömrəsi və çatdırılma ünvanı kimi məlumatlar toplanır.",
+      title: t("privacy_point1_title"),
+      text: t("privacy_point1_text"),
     },
     {
       icon: (
         <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Məlumatların qorunması",
-      text: "Bütün şəxsi məlumatlar şifrələnmiş şəkildə saxlanılır və üçüncü şəxslərlə paylaşılmır.",
+      title: t("privacy_point2_title"),
+      text: t("privacy_point2_text"),
     },
     {
       icon: (
         <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Məlumatların istifadəsi",
-      text: "Toplanmış məlumatlar yalnız sifarişin icrası, müştəri dəstəyi və sayt təkmilləşdirməsi məqsədilə istifadə olunur.",
+      title: t("privacy_point3_title"),
+      text: t("privacy_point3_text"),
     },
   ];
 
   return (
     <div className="max-w-4xl mx-auto py-10 px-4 sm:py-16 sm:px-6 mb-[90px]">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-purple-900">
-        Məxfilik Siyasəti
+        {t("privacy_main_title")}
       </h2>
 
       <p className="mb-6 sm:mb-8 text-center text-[#290041]/70 text-base sm:text-lg">
-        ShopSell-də sizin şəxsi məlumatlarınız bizim üçün önəmlidir. Aşağıda
-        məlumatların toplanması, qorunması və istifadəsi barədə əsas məqamlar
-        verilmişdir:
+        {t("privacy_intro")}
       </p>
 
       <div className="space-y-4 sm:space-y-6">
@@ -62,7 +63,7 @@ const Privacy = () => {
       </div>
 
       <p className="mt-8 sm:mt-10 text-center text-[#290041]/70 italic text-sm sm:text-base">
-        Əlavə suallarınız üçün müştəri dəstəyi ilə əlaqə saxlayın.
+        {t("privacy_footer_note")}
       </p>
     </div>
   );

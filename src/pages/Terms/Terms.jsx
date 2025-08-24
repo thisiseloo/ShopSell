@@ -5,48 +5,50 @@ import {
   PiNumberCircleThreeLight,
   PiNumberCircleFourLight,
 } from "react-icons/pi";
+import { useTranslation } from "react-i18next";
 
 const Terms = () => {
+  const { t } = useTranslation();
+
   const rules = [
     {
       icon: (
         <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Ümumi qaydalar",
-      text: "Saytdan istifadə edərək siz ShopSell-in qaydalarına riayət etməyi qəbul etməyi qəbul edirsiniz.",
+      title: t("terms_rule1_title"),
+      text: t("terms_rule1_text"),
     },
     {
       icon: (
         <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Sifariş şərtləri",
-      text: "Sifariş yalnız qeydiyyatdan keçmiş istifadəçilər üçün aktivdir. Məhsul seçimi və ödəniş zamanı düzgün məlumat daxil edin.",
+      title: t("terms_rule2_title"),
+      text: t("terms_rule2_text"),
     },
     {
       icon: (
         <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Ödəniş şərtləri",
-      text: "Ödənişlər yalnız təsdiq olunmuş ödəniş üsulları ilə qəbul edilir. Ödəniş tamamlanmadan sifariş göndərilmir.",
+      title: t("terms_rule3_title"),
+      text: t("terms_rule3_text"),
     },
     {
       icon: (
         <PiNumberCircleFourLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Çatdırılma və qaytarma",
-      text: "Məhsullar göstərilən ünvana çatdırılır və qaytarma siyasətinə uyğun olaraq geri qaytarıla bilər.",
+      title: t("terms_rule4_title"),
+      text: t("terms_rule4_text"),
     },
   ];
 
   return (
     <div className="max-w-4xl mx-auto py-10 px-4 sm:py-16 sm:px-6 mb-[90px]">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-purple-900">
-        Qaydalar və Şərtlər
+        {t("terms_main_title")}
       </h2>
 
       <p className="mb-6 sm:mb-8 text-center text-[#290041]/70 text-base sm:text-lg">
-        ShopSell-də alış-veriş etməzdən əvvəl saytın qaydaları və şərtləri ilə
-        tanış olun:
+        {t("terms_intro")}
       </p>
 
       <div className="space-y-4 sm:space-y-6">
@@ -69,7 +71,7 @@ const Terms = () => {
       </div>
 
       <p className="mt-8 sm:mt-10 text-center text-[#290041]/70 italic text-sm sm:text-base">
-        Əlavə suallarınız üçün müştəri dəstəyi ilə əlaqə saxlayın.
+        {t("terms_footer_note")}
       </p>
     </div>
   );

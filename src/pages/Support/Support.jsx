@@ -4,41 +4,43 @@ import {
   PiNumberCircleTwoLight,
   PiNumberCircleThreeLight,
 } from "react-icons/pi";
+import { useTranslation } from "react-i18next";
 
 const Support = () => {
+  const { t } = useTranslation();
+
   const steps = [
     {
       icon: (
         <PiNumberCircleOneLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Əlaqə yolları",
-      text: "Bizimlə telefon (+994 55 622 71 01), email və ya sosial şəbəkələr vasitəsilə əlaqə saxlaya bilərsiniz.",
+      title: t("support_step1_title"),
+      text: t("support_step1_text"),
     },
     {
       icon: (
         <PiNumberCircleTwoLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Sorğu göndərmək",
-      text: "Sayt üzərindən sorğu forması dolduraraq hər hansı bir problem və ya sual barədə bizə mesaj göndərin.",
+      title: t("support_step2_title"),
+      text: t("support_step2_text"),
     },
     {
       icon: (
         <PiNumberCircleThreeLight className="text-purple-900 w-6 h-6 sm:w-8 sm:h-8" />
       ),
-      title: "Dəstək prosesi",
-      text: "Sorğunuz daxil olduqdan sonra müştəri dəstək komandamız ən qısa zamanda sizinlə əlaqə saxlayacaq.",
+      title: t("support_step3_title"),
+      text: t("support_step3_text"),
     },
   ];
 
   return (
     <div className="max-w-4xl mx-auto py-10 px-4 sm:py-16 sm:px-6 mb-[90px]">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-purple-900">
-        Müştəri Dəstəyi
+        {t("support_main_title")}
       </h2>
 
       <p className="mb-6 sm:mb-8 text-center text-[#290041]/70 text-base sm:text-lg">
-        ShopSell-də hər zaman sizə dəstək olmağa hazırıq. Aşağıdakı addımlar ilə
-        bizimlə əlaqə saxlaya bilərsiniz:
+        {t("support_intro")}
       </p>
 
       <div className="space-y-4 sm:space-y-6">
@@ -61,7 +63,7 @@ const Support = () => {
       </div>
 
       <p className="mt-8 sm:mt-10 text-center text-[#290041]/70 italic text-sm sm:text-base">
-        Daha sürətli cavab üçün zəhmət olmasa sorğunuzu tam və ətraflı göndərin.
+        {t("support_footer_note")}
       </p>
     </div>
   );

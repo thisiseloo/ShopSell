@@ -42,7 +42,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             className="text-[#E8BBF5] text-3xl sm:text-3xl md:text-4xl tracking-wide"
             style={{
               fontFamily: '"Rubik Puddles", system-ui',
-              fontWeight: 400,
+              fontWeight: 600,
               fontStyle: "normal",
             }}
           >

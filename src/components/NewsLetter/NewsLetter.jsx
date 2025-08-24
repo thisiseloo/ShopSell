@@ -28,12 +28,11 @@ function Newsletter() {
         <div className="row align-items-center mx-0">
           <div className="col-lg-7 col-md-6 mb-4 mb-md-0 ps-3">
             <div
-  style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
-  className="newsletter-title text-white text-[30px] sm:text-[45px]"
->
-  {t("newsletter_title")}
-</div>
-
+              style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
+              className="newsletter-title text-white text-[30px] sm:text-[45px]"
+            >
+              {t("newsletter_title")}
+            </div>
           </div>
 
           <div className="col-lg-5 col-md-6">

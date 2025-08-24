@@ -29,7 +29,13 @@ const SocialSection = () => {
 
   return (
     <div className="social-section">
-      <h2 className="text-[#1a0029]">{t("socialTitle")}</h2>
+      <h2
+        style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
+        className="text-[#1a0029] text-[30px] sm:text-[45px]"
+      >
+        {t("socialTitle")}
+      </h2>
+
       <p className="socialText text-[#1a0029]/80">{t("socialDescription")}</p>
 
       <div className="image-gallery">

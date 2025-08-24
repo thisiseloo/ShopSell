@@ -166,14 +166,14 @@ const AuthPage = () => {
         </form>
       </div>
 
-      <div className="mt-10 md:mt-0 md:ml-8 flex justify-center items-start w-full max-w-[500px]">
+      <div className="mt-10 md:mt-0 md:ml-8 flex justify-center items-start w-full max-w-[700px]">
         <img
-          src="/images/login.png"
+          src="/images/account.png"
           alt="Illustration"
           className={`w-full ${
             isRegister
-              ? "max-w-[350px] md:max-w-[450px] lg:max-w-[470px]"
-              : "max-w-[250px] md:max-w-[300px] lg:max-w-[320px]"
+              ? "max-w-[350px] md:max-w-[1200px] lg:max-w-[1300px]"
+              : "max-w-[250px] md:max-w-[1000px] lg:max-w-[1100px]"
           } h-auto object-contain`}
         />
       </div>

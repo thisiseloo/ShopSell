@@ -14,7 +14,8 @@ export default function PromoOverlay({ scrollToCategories }) {
 
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 sm:p-6 max-w-[1280px] w-full text-left">
         <h2
-          className="text-[#1a0029] font-extrabold leading-tight text-[30px] sm:text-[45px] max-w-[800px]"
+          style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
+          className="text-[#1a0029] leading-tight text-[30px] sm:text-[42px] max-w-[800px]"
           dangerouslySetInnerHTML={{ __html: t("promo_title") }}
         />
 

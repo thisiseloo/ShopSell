@@ -38,7 +38,14 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
           className="shopsell-img-wrapper cursor-pointer flex items-center"
           onClick={() => navigate("/")}
         >
-          <h1 className="text-[#E8BBF5] font-extrabold text-3xl sm:text-3xl md:text-4xl tracking-wide font-sans">
+          <h1
+            className="text-[#E8BBF5] text-3xl sm:text-3xl md:text-4xl tracking-wide"
+            style={{
+              fontFamily: '"Rubik Puddles", system-ui',
+              fontWeight: 400,
+              fontStyle: "normal",
+            }}
+          >
             Shop<span className="text-[#dbd2dd] text-[25px]">Sell</span>
           </h1>
         </div>

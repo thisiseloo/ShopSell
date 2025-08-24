@@ -40,11 +40,13 @@ footer .flex.items-center {
     top: -70px;
     width: calc(100% - 20px);
   }
+
 }
 
 @media (max-width: 640px) {
   footer {
     text-align: center;
+
   }
 
   footer h3 {

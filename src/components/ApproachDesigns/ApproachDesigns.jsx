@@ -15,7 +15,7 @@ const ImageRow = () => {
   return (
     <div className="image-row">
       {images.map((src, index) => (
-        <img key={index} src={src} alt={`img-${index + 1}`} />
+        <img key={index} src={src} alt={`img-${index}`} />
       ))}
     </div>
   );
@@ -26,9 +26,13 @@ function ApproachDesigns() {
 
   return (
     <div className="approach-container text-center">
-      <div className="approachDesigns text-[#1a0029]">
+      <div
+        style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
+        className="approachDesigns text-[#1a0029] text-[28px] sm:text-[37px]"
+      >
         {t("approach_title")}
       </div>
+
       <div
         className="approachDesignsText"
         dangerouslySetInnerHTML={{ __html: t("approach_desc") }}

@@ -22,9 +22,17 @@ const Footer = () => {
       <footer className="bg-[#1a0029] text-white pt-[180px] relative z-0">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-16 pb-8">
           <div className="sm:w-1/3 text-center sm:text-left">
-            <h2 className="text-4xl font-bold text-[#E8BBF5]">
+            <h2
+              className="text-4xl font-bold text-[#E8BBF5]"
+              style={{
+                fontFamily: '"Rubik Puddles", system-ui',
+                fontWeight: 400,
+                fontStyle: "normal",
+              }}
+            >
               Shop<span className="text-[#dbd2dd] text-2xl">Sell</span>
             </h2>
+
             <p className="text-sm text-gray-100 leading-relaxed mt-3">
               {t("description")}
             </p>

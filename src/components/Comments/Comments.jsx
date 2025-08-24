@@ -19,16 +19,13 @@ const Star = ({ filled, onClick }) => (
 const Comments = () => {
   const { t } = useTranslation();
   const currentUser = useSelector(selectCurrentUser);
-
   const [userComments, setUserComments] = useState(() => {
     const savedComments = localStorage.getItem("userComments");
     return savedComments ? JSON.parse(savedComments) : [];
   });
-
   const [startIndex, setStartIndex] = useState(0);
   const visibleCount = 3;
-  const step = 2;
-
+  const step = 3;
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [commentText, setCommentText] = useState("");
@@ -78,9 +75,13 @@ const Comments = () => {
   return (
     <div className="max-w-7xl mx-auto mt-[70px] py-8 px-4 sm:py-10 sm:px-6 lg:py-12 lg:px-8">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
-        <h2 className="text-[28px] sm:text-[35px] font-bold text-[#1a0029] text-center sm:text-left mb-3 sm:mb-0">
-          {t("comments_title")}
-        </h2>
+        <h2
+  style={{ fontFamily: "'Noto Serif', serif", fontWeight: 800 }}
+  className="text-[28px] sm:text-[35px] text-[#1a0029] text-center sm:text-left mb-3 sm:mb-0"
+>
+  {t("comments_title")}
+</h2>
+
         <div className="flex gap-[10px] space-x-3 mt-2 sm:mt-0">
           <FaArrowLeftLong
             onClick={prev}
@@ -94,9 +95,9 @@ const Comments = () => {
       </div>
 
       <div className="flex flex-wrap gap-4 sm:gap-6 mb-8 sm:mb-12">
-        {visibleComments.map((t) => (
+        {visibleComments.map((comment) => (
           <div
-            key={t.id}
+            key={comment.id}
             className="bg-white p-4 sm:p-6 rounded-2xl shadow-lg flex flex-col transform transition-transform hover:-translate-y-1 sm:hover:-translate-y-2 duration-300 w-full sm:flex-1 sm:min-w-[300px]"
           >
             <div className="flex mb-2 sm:mb-3">
@@ -104,7 +105,9 @@ const Comments = () => {
                 <span
                   key={i}
                   className={`text-xl sm:text-2xl ${
-                    i < t.rating ? "text-yellow-400" : " text-[#1a0029]/20"
+                    i < comment.rating
+                      ? "text-yellow-400"
+                      : " text-[#1a0029]/20"
                   }`}
                 >
                   ★
@@ -112,10 +115,10 @@ const Comments = () => {
               ))}
             </div>
             <h3 className="font-semibold mb-1 sm:mb-2 text-md sm:text-lg text-[#1a0029]/90">
-              {t.name}
+              {comment.name}
             </h3>
             <p className=" text-[#1a0029]/80 italic text-sm sm:text-base">
-              {t.comment}
+              {comment.comment}
             </p>
           </div>
         ))}

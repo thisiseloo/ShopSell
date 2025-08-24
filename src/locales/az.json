@@ -225,5 +225,6 @@
   "terms_rule4_text": "Məhsullar göstərilən ünvana çatdırılır və qaytarma siyasətinə uyğun olaraq geri qaytarıla bilər.",
   "terms_footer_note": "Əlavə suallarınız üçün müştəri dəstəyi ilə əlaqə saxlayın.",
   "order_form_postal": "Poçt kodu",
-  "order_form_card_number": "Kart nömrəsini daxil edin"
+  "order_form_card_number": "Kart nömrəsini daxil edin",
+  "login_to_comment": "Rəy bildirmək üçün hesaba daxil olun!"
 }

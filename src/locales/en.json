@@ -224,5 +224,7 @@
   "terms_rule3_text": "Payments are only accepted via approved payment methods. Orders are not processed until payment is completed.",
   "terms_rule4_title": "Shipping and Returns",
   "terms_rule4_text": "Products are delivered to the specified address and can be returned according to the return policy.",
-  "terms_footer_note": "For additional questions, please contact customer support."
+  "terms_footer_note": "For additional questions, please contact customer support.",
+   "order_form_postal": "Postal code",
+  "order_form_card_number": "Enter card number"
 }

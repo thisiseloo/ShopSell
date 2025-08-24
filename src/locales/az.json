@@ -223,5 +223,8 @@
   "terms_rule3_text": "Ödənişlər yalnız təsdiq olunmuş ödəniş üsulları ilə qəbul edilir. Ödəniş tamamlanmadan sifariş göndərilmir.",
   "terms_rule4_title": "Çatdırılma və qaytarma",
   "terms_rule4_text": "Məhsullar göstərilən ünvana çatdırılır və qaytarma siyasətinə uyğun olaraq geri qaytarıla bilər.",
-  "terms_footer_note": "Əlavə suallarınız üçün müştəri dəstəyi ilə əlaqə saxlayın."
+  "terms_footer_note": "Əlavə suallarınız üçün müştəri dəstəyi ilə əlaqə saxlayın.",
+  "order_form_postal": "Poçt kodu",
+  "order_form_card_number": "Kart nömrəsini daxil edin"
+
 }
